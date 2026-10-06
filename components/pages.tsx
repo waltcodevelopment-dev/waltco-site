@@ -94,8 +94,12 @@ export function ServicesIndexPage() {
                 <div>
                   <p className="text-xs tracking-label text-gold-ink">{String(i + 1).padStart(2, '0')}</p>
                   <h2 className="h-display mt-3 text-3xl text-ink"><a href={`/services/${s.slug}`} className="hover:text-gold-ink">{s.label}</a></h2>
-                  <p className="mt-4 text-ink-2">{pg.tagline}</p>
-                  <a href={`/services/${s.slug}`} className="label mt-6 inline-block border-b border-ink pb-1 text-ink hover:text-gold-ink">Learn more</a>
+                  <p className="mt-4 text-lg text-ink">{pg.tagline}</p>
+                  <p className="mt-4 text-ink-2">{pg.intro[0]}</p>
+                  <ul className="mt-5 grid gap-2 sm:grid-cols-2">
+                    {pg.scope.slice(0, 6).map((x) => <li key={x} className="flex gap-3 text-[15px] text-ink-2"><span aria-hidden className="mt-2 h-1.5 w-1.5 shrink-0 bg-gold" />{x}</li>)}
+                  </ul>
+                  <a href={`/services/${s.slug}`} className="label mt-7 inline-block border-b border-ink pb-1 text-ink hover:text-gold-ink">{`More on ${s.label.toLowerCase()}`}</a>
                 </div>
               </article>
             );
