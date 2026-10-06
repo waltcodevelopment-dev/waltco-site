@@ -55,6 +55,7 @@ export const SERVICE_PAGES: ServicePage[] = [
     intro: [
       'We remodel kitchens in Los Angeles from layout to the last piece of trim: cabinetry, countertops, tile, lighting, plumbing fixtures, appliances and the floor underneath.',
       'Because we hold both a general building licence and a C-15 flooring licence, the cabinets, counters and wood floor are planned together instead of by separate contractors.',
+      'Most kitchen budgets are decided by a few choices: whether the sink, range and walls stay where they are, custom or prefabricated cabinets, the countertop material, and the floor. We price those choices separately so you can see what each one costs and decide where to spend.',
     ],
     scope: ['Custom or prefabricated cabinetry', 'Countertop installation', 'Tile backsplash', 'Recessed and pendant lighting', 'Plumbing fixture replacement', 'Island construction', 'Appliance integration', 'Hardwood or tile flooring', 'Permit management'],
     photos: ['marble-island-kitchen', 'white-kitchen-marble', 'wood-ceiling-kitchen', 'beam-ceiling-kitchen', 'built-in-shelving-kitchen'],
@@ -66,6 +67,7 @@ export const SERVICE_PAGES: ServicePage[] = [
     intro: [
       'From a primary bath with a freestanding tub to a compact guest bath, we coordinate tile, fixtures, vanities, glass, lighting and plumbing as one job under one contract.',
       'No juggling separate trades: one licensed contractor is accountable for the whole room.',
+      'The part of a bathroom you never see matters most: the waterproofing behind and under the shower. It is built and inspected before any tile goes on, and it is listed in the estimate so you know it is there. Tile layout, niches, glass and vanity height are agreed before work starts, so the finished room looks the way you pictured it.',
     ],
     scope: ['Custom tile showers and surrounds', 'Vanity and mirror installation', 'Freestanding and built-in tubs', 'Frameless glass enclosures', 'Heated flooring', 'Plumbing fixture replacement', 'Lighting and ventilation', 'Built-in storage', 'Full gut and rebuild'],
     photos: ['freestanding-tub-bathroom', 'marble-shower', 'tub-and-shower', 'patterned-tile-bathroom', 'double-vanity-bathroom', 'white-vanity', 'grey-tile-bathroom', 'dark-tile-bathroom', 'floating-vanity'],
@@ -77,6 +79,7 @@ export const SERVICE_PAGES: ServicePage[] = [
     intro: [
       'California law makes it easier than ever to add an accessory dwelling unit (ADU) or junior ADU to a single-family lot. Waltco Development builds detached and attached ADUs and garage conversions in Los Angeles, from plan check through final inspection.',
       'We coordinate with your designer and the building department, build the unit, and finish it with the same kitchens, baths and floors we put in main houses.',
+      'An ADU is a small house, so it needs the same things a house needs: a foundation, framing, utilities, a kitchen and a bath. Before construction we check that your electrical service and sewer line can carry the new unit and plan how materials reach the back of the lot, so those questions are answered before the price, not after.',
     ],
     scope: ['Detached and attached ADUs', 'Garage conversions', 'Junior ADUs (JADUs)', 'Permit management', 'Foundation work', 'Electrical and plumbing (licensed subcontractors)', 'Kitchen and bath finish', 'Separate entrance construction', 'Hardwood and tile flooring'],
     photos: ['addition-in-progress', 'framing-telehandler', 'bedroom-wide-plank'],
@@ -88,6 +91,7 @@ export const SERVICE_PAGES: ServicePage[] = [
     intro: [
       'A room addition gives you space without moving. We build ground-floor and second-storey additions that match your home\'s structure and finishes, coordinating with your structural engineer and handling permits and inspections.',
       'Framing, roofing tie-ins, windows, flooring and trim are all done under one contract so the new space blends into the old.',
+      'The hardest part of an addition is the seam between old and new: where the roof lines meet, where the floor continues, where the trim turns the corner. Because we also install wood floors and finish carpentry, the floor and trim can run straight through into the new room instead of stopping at a visible line.',
     ],
     scope: ['Primary suite additions', 'Second-storey additions', 'Family room expansions', 'Home office additions', 'In-law suites', 'Enclosed patios', 'Structural engineering coordination', 'Permit management', 'Matching interior and exterior finishes'],
     photos: ['addition-in-progress', 'framing-telehandler', 'door-install'],
@@ -99,6 +103,7 @@ export const SERVICE_PAGES: ServicePage[] = [
     intro: [
       'We supply and install cabinetry for kitchens, baths, closets and living spaces — custom-built to your measurements, or quality prefabricated lines when the budget calls for it.',
       'Cabinetry is planned with the countertops, flooring and trim around it, so everything lines up when the job is done.',
+      'Custom cabinets are built to the room, which makes the most of awkward corners, sloped ceilings and older walls that are not square. Prefabricated lines come in set sizes and arrive faster. Many kitchens use both: prefabricated boxes for the runs and custom pieces for the island, pantry or built-ins. Hardware, finish and interior fittings are chosen with you before anything is ordered.',
     ],
     scope: ['Kitchen cabinetry', 'Bathroom vanities', 'Closet systems', 'Built-in shelving', 'Entertainment centers', 'Office cabinetry', 'Finish carpentry and millwork', 'Hardware sourcing and installation'],
     photos: ['built-in-shelving-kitchen', 'wood-ceiling-kitchen', 'floating-vanity', 'white-vanity'],
@@ -110,6 +115,8 @@ export const SERVICE_PAGES: ServicePage[] = [
     intro: [
       'Finish carpentry is what makes a house feel complete: casings, baseboards, wainscoting, stair treads and railings, built-ins and mantels.',
       'We do finish carpentry as part of our remodels and new builds, and as stand-alone projects.',
+      'Stairs are where carpentry and flooring meet. We install treads, risers and nosings to match the wood floor, and fit railings and balustrades to the stair, so the staircase reads as one piece with the rooms around it. In older homes we match existing casing and baseboard profiles, or have them milled when a profile is no longer made, so new work blends with old.',
+      'Finish carpentry is the last trade on most jobs and the one people notice first, so it is scheduled after drywall and paint preparation are done and before final paint, to keep joints tight and surfaces clean.',
     ],
     scope: ['Crown molding and coffered ceilings', 'Door and window casing', 'Baseboards and wainscoting', 'Built-in bookshelves', 'Stair treads, railings and balustrades', 'Closet build-outs', 'Fireplace mantels', 'Interior door installation', 'Wood paneling'],
     photos: ['stair-install', 'tile-stair-railing', 'stair-tread-finishing', 'light-oak-floor-stair'],
@@ -121,10 +128,11 @@ export const SERVICE_PAGES: ServicePage[] = [
     intro: [
       'For owners building on their own land, Waltco Development can act as your owner\'s representative: coordinating the architect, engineers, building department and contractors so one person is tracking budget, schedule and decisions for you.',
       'You keep control of the decisions; we keep the project moving and tell you plainly where it stands.',
+      'Owner\'s representation suits people who are building on their own land but do not have the time to manage the details: comparing contractor bids, keeping the plans moving through review, checking invoices against work done, and making sure decisions are made before they hold up the job. You sign the design and construction contracts directly; we work for you, not for them.',
     ],
     scope: ['Owner\'s representation', 'Feasibility review before you buy or build', 'Architect and engineer coordination', 'Permit tracking', 'Budget development and tracking', 'Schedule oversight', 'Contractor bidding and oversight', 'Closeout and final sign-off'],
     photos: ['site-work', 'framing-telehandler'],
-    faq: [estimateFaq],
+    faq: [{ q: 'How is this different from hiring a general contractor?', a: 'A general contractor builds the project and is paid to build it. As your owner\'s representative we sit on your side of the table: we help choose the architect, engineers and contractor, check their work and invoices, and keep decisions moving, while the contracts stay in your name.' }, estimateFaq],
   },
   {
     slug: 'hardwood-flooring',

@@ -5,6 +5,7 @@ import { addressLine, facts, licenceLine, telHref } from '@/content/facts.ts';
 import { photo, PHOTOS } from '@/content/photos.ts';
 import { AREAS, BLOG_POSTS, SERVICES } from '@/content/routes.ts';
 import { servicePage } from '@/content/services.ts';
+import { SERVICE_DETAILS } from '@/content/service-details.ts';
 import { AREA_PAGES, areaPage } from '@/content/areas.ts';
 import { POSTS, post } from '@/content/posts.ts';
 import { articleLd, breadcrumbLd, faqLd, serviceLd } from '@/lib/schema.ts';
@@ -117,6 +118,7 @@ export function ServicePageView({ slug }: { slug: string }) {
   const path = `/services/${slug}`;
   const trail = [HOME, { name: 'Services', path: '/services' }, { name, path }];
   const photos = pg.photos.map(photo);
+  const d = SERVICE_DETAILS[slug];
   return (
     <main>
       <JsonLd data={[breadcrumbLd(trail), serviceLd(name, path, pg.intro[0]), faqLd(pg.faq)]} />
@@ -137,16 +139,37 @@ export function ServicePageView({ slug }: { slug: string }) {
           </div>
         </div>
       </Section>
+      <Section sand>
+        <div className="grid gap-14 lg:grid-cols-2">
+          <div>
+            <p className="eyebrow">Who it&rsquo;s for</p>
+            <p className="mt-4 text-lg text-ink">{d.whoFor}</p>
+            <p className="eyebrow mt-12">How we run the job</p>
+            <ol className="mt-5 space-y-4">
+              {d.howWeRun.map((x, i) => (
+                <li key={x} className="flex gap-4 text-ink-2"><span className="text-xs tracking-label text-gold-ink">{String(i + 1).padStart(2, '0')}</span><span>{x}</span></li>
+              ))}
+            </ol>
+          </div>
+          <div>
+            <p className="eyebrow">What the estimate covers</p>
+            <ul className="mt-5 space-y-3">{d.covers.map((x) => <li key={x} className="flex gap-3 text-ink-2"><span aria-hidden className="text-gold-ink">✓</span>{x}</li>)}</ul>
+            <p className="eyebrow mt-10">Not included unless listed</p>
+            <ul className="mt-5 space-y-3">{d.excludes.map((x) => <li key={x} className="flex gap-3 text-ink-2"><span aria-hidden className="text-muted">—</span>{x}</li>)}</ul>
+            <p className="mt-8 text-sm text-muted">Every number in a Waltco estimate comes from our own price list, and the written estimate lists exactly what is and is not included.</p>
+          </div>
+        </div>
+      </Section>
       {photos.length > 1 && (
-        <Section sand>
+        <Section>
           <SectionHead eyebrow="Our work" title={`${name} photos`} link={{ href: '/portfolio', label: 'Full portfolio' }} />
           <div className="mt-10"><PhotoGrid photos={photos.slice(1, 7)} /></div>
         </Section>
       )}
-      <Section>
+      <Section sand>
         <Faq items={pg.faq} />
       </Section>
-      <Section sand>
+      <Section>
         <SectionHead eyebrow="Also from Waltco" title="Other services" />
         <div className="mt-10"><LinkList items={SERVICES.filter((s) => s.slug !== slug).map((s) => ({ href: `/services/${s.slug}`, label: s.label }))} /></div>
         <p className="mt-10 text-ink-2">We work across Los Angeles, including{' '}
