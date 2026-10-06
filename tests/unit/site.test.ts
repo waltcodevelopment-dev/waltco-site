@@ -36,12 +36,18 @@ test('the claims list catches the removed claims and allows the policy wording',
     assert.deepEqual(bannedIn(ok), [], ok);
 });
 
-test('facts: confirmed facts are filled; the licence line stays plain until the CSLB record is filed', () => {
+test('facts: confirmed facts are filled and sourced; licence line and addresses follow the CSLB record', () => {
   for (const [k, f] of Object.entries(facts)) {
     if (f.status === 'confirmed') assert.ok(Array.isArray(f.value) ? f.value.length : String(f.value).length, `${k} confirmed but empty`);
     assert.ok(f.source.length > 3, `${k} has no source`);
   }
   if (facts.bonded.status !== 'confirmed') assert.equal(licenceLine(), `Licensed general contractor — CSLB #${facts.licenseNumber.value}`);
+  else assert.equal(licenceLine(), `Licensed and bonded — CSLB #${facts.licenseNumber.value}`);
+  assert.notEqual(facts.insured.status, 'confirmed', 'no liability certificate on file');
+  assert.equal(facts.showroom.value.label, 'Shop / Showroom');
+  assert.equal(facts.mailing.value.label, 'Mailing Address');
+  assert.notEqual(facts.showroom.value.street, facts.mailing.value.street);
+  assert.match(facts.mailing.source, /^CSLB/);
   assert.equal(new URL(INTAKE_URL).host, 'gymlogo.vercel.app');
   assert.equal(SITE_URL, 'https://waltcodevelopment.com');
 });

@@ -4,7 +4,7 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync, readdirSync, statSync } from 'node:fs';
 import { join } from 'node:path';
-import { facts, INTAKE_URL, telHref } from '../../content/facts.ts';
+import { addressLine, facts, INTAKE_URL, telHref } from '../../content/facts.ts';
 import { ROUTES } from '../../content/routes.ts';
 import { bannedIn } from '../../content/claims.ts';
 import { canonicalFor } from '../../lib/seo.ts';
@@ -45,6 +45,16 @@ for (const p of pages) {
     for (const m of p.html.matchAll(/href="mailto:([^"]+)"/g)) assert.equal(m[1], facts.email.value, 'mailto matches facts');
     if (facts.classifications.status !== 'confirmed') assert.doesNotMatch(visible(p.html), /C-15|General Building/, 'classifications pending (W0)');
     if (facts.bonded.status !== 'confirmed') assert.doesNotMatch(visible(p.html), /\bbonded\b/i, 'bond status pending (W0)');
-    if (facts.insured.status !== 'confirmed') assert.doesNotMatch(visible(p.html), /\binsured\b/i, 'insurance pending (W0)');
+    if (facts.insured.status !== 'confirmed') assert.doesNotMatch(visible(p.html), /\binsured\b|workers'? comp/i, 'insurance not on file');
+    // Two addresses, always labelled (owner, 5 Oct 2026): showroom first and more prominent, mailing labelled as such.
+    const v = visible(p.html);
+    const shop = `${facts.showroom.value.label}: ${addressLine(facts.showroom.value)}`;
+    const mail = `${facts.mailing.value.label}: ${addressLine(facts.mailing.value)}`;
+    assert.ok(v.includes(shop), 'labelled showroom address');
+    assert.ok(v.includes(mail), 'labelled mailing address');
+    assert.ok(v.indexOf(shop) < v.indexOf(mail), 'showroom before mailing');
+    for (const st of [facts.showroom.value.street, facts.mailing.value.street]) {
+      assert.equal(v.split(st).length - 1, 1, `${st} shown once, with its label`);
+    }
   });
 }

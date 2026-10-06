@@ -4,21 +4,27 @@
 // tests enforce this). Every value records where it came from.
 
 export type Fact<T> = { value: T; status: 'confirmed' | 'pending'; source: string };
+export type Address = { label: string; street: string; locality: string; region: string; postalCode?: string };
+
+const CSLB = 'CSLB public record, checked 5 Oct 2026';
+export const CSLB_CHECKED = '2026-10-05';
 
 export const facts = {
   businessName: { value: 'Waltco Development', status: 'confirmed', source: 'GymLogo tenant record (owner onboarding)' } as Fact<string>,
   licenseNumber: { value: '625535', status: 'confirmed', source: 'GymLogo tenant record; shown on the current site' } as Fact<string>,
-  /** Shown only after Walter reads the CSLB record and files it with a date (W0). */
-  classifications: { value: ['B — General Building', 'C-15 — Flooring'], status: 'pending', source: 'Owner statement; CSLB record not yet read (W0)' } as Fact<string[]>,
-  bonded: { value: false, status: 'pending', source: 'CSLB record not yet read (W0)' } as Fact<boolean>,
-  insured: { value: false, status: 'pending', source: 'No current general-liability policy noted yet (W0)' } as Fact<boolean>,
+  /** CSLB public record, read 5 Oct 2026 (cslb.ca.gov LicenseDetail.aspx?LicNum=625535): current and active. */
+  licenseStatus: { value: 'Current and active', status: 'confirmed', source: CSLB } as Fact<string>,
+  classifications: { value: ['B — General Building', 'C-15 — Flooring and Floor Covering'], status: 'confirmed', source: CSLB } as Fact<string[]>,
+  /** Contractor's bond on file with CSLB. Bond number and surety are not shown on the site. */
+  bonded: { value: true, status: 'confirmed', source: CSLB } as Fact<boolean>,
+  /** CSLB shows a workers' comp exemption (no employees) and no liability policy. Never claim "insured". */
+  insured: { value: false, status: 'pending', source: 'No liability certificate on file; CSLB 5 Oct 2026 shows workers\' comp exempt' } as Fact<boolean>,
   phone: { value: '213-792-5908', status: 'confirmed', source: 'Owner; shown on the current site' } as Fact<string>,
   email: { value: 'info@waltcodevelopment.com', status: 'confirmed', source: 'Owner sign-in email for GymLogo' } as Fact<string>,
-  /** The public business location the owner chooses to show. Never described as the licence-record address. */
-  streetAddress: { value: '9216 S. Vermont Ave', status: 'confirmed', source: 'Owner; shown on the current site' } as Fact<string>,
-  locality: { value: 'Los Angeles', status: 'confirmed', source: 'Owner; shown on the current site' } as Fact<string>,
-  region: { value: 'CA', status: 'confirmed', source: 'Owner; shown on the current site' } as Fact<string>,
-  postalCode: { value: '', status: 'pending', source: 'Not yet in the fact sheet (W0)' } as Fact<string>,
+  /** Customer-facing location (owner, 5 Oct 2026). Label "Shop / Showroom"; never presented as the CSLB record address. */
+  showroom: { value: { label: 'Shop / Showroom', street: '9216 S. Vermont Ave', locality: 'Los Angeles', region: 'CA', postalCode: '90044' }, status: 'confirmed', source: 'Owner, 5 Oct 2026' } as Fact<Address>,
+  /** Mailing and CSLB record address (CSLB 5 Oct 2026; owner approved its use as the mailing address, 5 Oct 2026). */
+  mailing: { value: { label: 'Mailing Address', street: '2725 Live Oak St', locality: 'Los Angeles', region: 'CA', postalCode: '90255' }, status: 'confirmed', source: CSLB } as Fact<Address>,
   hours: { value: 'Mon–Fri 7:00 am – 6:00 pm', status: 'pending', source: 'Fable proposal for the Business Profile; owner to confirm (W0)' } as Fact<string>,
   sameAs: { value: [] as string[], status: 'pending', source: 'Social profiles not yet listed by the owner (W0)' } as Fact<string[]>,
 } as const;
@@ -29,7 +35,7 @@ export const INTAKE_URL = 'https://gymlogo.vercel.app/r/waltco-development?src=w
 /** One host (addendum A): non-www apex, https, no trailing slash. */
 export const SITE_URL = 'https://waltcodevelopment.com';
 
-/** The licence line until the CSLB record is filed (addendum B). */
+/** The licence line (addendum B): "bonded" only once the CSLB record shows the bond. */
 export function licenceLine(): string {
   const f = facts;
   if (f.bonded.status === 'confirmed' && f.bonded.value) return `Licensed and bonded — CSLB #${f.licenseNumber.value}`;
@@ -41,3 +47,5 @@ export function confirmed<T>(f: Fact<T>): T | null {
 }
 
 export const telHref = (phone: string) => `tel:+1${phone.replace(/\D/g, '')}`;
+
+export const addressLine = (a: Address) => `${a.street}, ${a.locality}, ${a.region}${a.postalCode ? ` ${a.postalCode}` : ''}`;

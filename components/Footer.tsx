@@ -1,8 +1,9 @@
-import { facts, licenceLine, telHref } from '@/content/facts.ts';
+import { addressLine, facts, licenceLine, telHref } from '@/content/facts.ts';
 import { AREAS, SERVICES } from '@/content/routes.ts';
 
 export function Footer() {
-  const addr = `${facts.streetAddress.value}, ${facts.locality.value}, ${facts.region.value}`;
+  const shop = facts.showroom.value;
+  const mail = facts.mailing.value;
   return (
     <footer className="mt-16 border-t border-line bg-surface">
       <div className="mx-auto grid max-w-site gap-8 px-4 py-10 text-[15px] sm:grid-cols-3 sm:px-6">
@@ -11,7 +12,8 @@ export function Footer() {
           <p className="mt-2 text-ink-2">{licenceLine()}</p>
           <p className="mt-2"><a href={telHref(facts.phone.value)}>{facts.phone.value}</a></p>
           <p><a href={`mailto:${facts.email.value}`}>{facts.email.value}</a></p>
-          <p className="text-ink-2">{addr}</p>
+          <p className="mt-3" data-address="showroom"><span className="font-medium">{shop.label}:</span> {addressLine(shop)}</p>
+          <p className="mt-1 text-sm text-ink-2" data-address="mailing">{`${mail.label}: ${addressLine(mail)}`}</p>
         </div>
         <div>
           <p className="font-medium">Services</p>
