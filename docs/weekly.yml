@@ -1,0 +1,16 @@
+name: weekly production check
+on:
+  schedule:
+    - cron: '17 15 * * 1'   # Mondays 08:17 Los Angeles (15:17 UTC)
+  workflow_dispatch:
+
+jobs:
+  production:
+    name: waltcodevelopment.com — pages, old URLs, robots, sitemap, www
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 22
+      - run: node scripts/prod-check.ts https://waltcodevelopment.com

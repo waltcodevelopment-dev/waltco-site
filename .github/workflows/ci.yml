@@ -18,3 +18,18 @@ jobs:
       - run: npm run typecheck
       - run: npm run build
       - run: npm run test:built
+
+  lighthouse:
+    name: lighthouse — mobile perf ≥ 90, SEO 100, a11y ≥ 95 (4 pages)
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 22
+      - run: npm install --no-audit --no-fund
+      - run: npm run build
+        env:
+          SITE_INDEXING: 'on'
+      - run: npm start & npx -y wait-on@8 http://localhost:3000
+      - run: node scripts/lighthouse.ts
