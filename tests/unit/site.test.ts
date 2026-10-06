@@ -29,7 +29,7 @@ test('301 map: sources are not live routes, targets are approved routes, no chai
 
 test('the claims list catches the removed claims and allows the policy wording', () => {
   for (const bad of ['30+ years', 'over 30 years in LA', '200+ projects', 'carbon-negative concrete', 'Blue Planet', 'RIPS',
-    'a premier contractor', 'fully insured', '100% licensed', 'we guarantee', 'AI-powered', 'the best builder', '25 years', '12 projects'])
+    'a premier contractor', 'fully insured', '100% licensed', 'we guarantee', 'AI-powered', 'the best builder', '25 years', '12 projects', '35+ years serving Los Angeles', 'best wood flooring company', 'widely regarded', 'premium hardwood', 'elite wood floors', 'proud leaders'])
     assert.ok(bannedIn(bad).length > 0, bad);
   for (const ok of ['decades of hands-on experience', 'a broad range of residential and commercial projects',
     'Licensed general contractor — CSLB #625535', 'Kitchen remodel cost, Los Angeles 2026'])

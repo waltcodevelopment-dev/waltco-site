@@ -1,3 +1,8 @@
+> **Superseded by Fable's ruling** — "Waltco Hardwood Pages and Google Profile Plan", 6 Oct 2026 (Parts A–B). Approved with
+> conditions: slugs `installation`, `wide-plank`, `herringbone-and-parquet`, `reclaimed-wood`, `stain-and-color-matching`,
+> `sanding-and-refinishing`, `stairs`, `floor-removal-and-subfloor`, `beams-and-ceilings`; ≥ 400 words and ≥ 6 captioned
+> photos (city + year) per page; ship after the switch shows zero 404s; Fable's redirect table controls the .org merge.
+
 # Brief — Hardwood flooring pages on waltcodevelopment.com (phase 2, after the switch)
 
 Status: DRAFT for owner approval. Written 5 Oct 2026. Ground rule 5: new pages on a client domain need a written

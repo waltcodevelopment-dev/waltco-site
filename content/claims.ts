@@ -14,6 +14,11 @@ export const BANNED: { label: string; re: RegExp }[] = [
   { label: 'AI', re: /\bAI\b/ },
   { label: 'best', re: /\bbest\b/i },
   { label: 'a number followed by years or projects', re: /\b\d[\d,]*\s*\+?\s*(years|projects)\b/i },
+  // Fable hardwood ruling, 6 Oct 2026 (Part A.6): wording from the old reclaimed-floors sites.
+  { label: 'widely regarded', re: /widely\s+regarded/i },
+  { label: 'premium', re: /\bpremium\b/i },
+  { label: 'elite', re: /\belite\b/i },
+  { label: 'proud leaders', re: /proud\s+leaders?/i },
 ];
 
 export function bannedIn(text: string): string[] {
