@@ -14,6 +14,8 @@ export const facts = {
   licenseNumber: { value: '625535', status: 'confirmed', source: 'GymLogo tenant record; shown on the current site' } as Fact<string>,
   /** CSLB public record, read 5 Oct 2026 (cslb.ca.gov LicenseDetail.aspx?LicNum=625535): current and active. */
   licenseStatus: { value: 'Current and active', status: 'confirmed', source: CSLB } as Fact<string>,
+  /** CSLB issue date 08/19/1991 (record read 5 Oct 2026). Owner approved "Licensed since 1991", 5 Oct 2026. */
+  licensedSince: { value: '1991', status: 'confirmed', source: CSLB } as Fact<string>,
   classifications: { value: ['B — General Building', 'C-15 — Flooring and Floor Covering'], status: 'confirmed', source: CSLB } as Fact<string[]>,
   /** Contractor's bond on file with CSLB. Bond number and surety are not shown on the site. */
   bonded: { value: true, status: 'confirmed', source: CSLB } as Fact<boolean>,

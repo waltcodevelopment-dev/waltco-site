@@ -61,7 +61,7 @@ export function Home() {
             Build with <em className="font-extralight">intention</em>.
           </h1>
           <p className="mt-6 max-w-xl text-white/85">
-            Waltco Development is a licensed general contractor building, remodeling and installing wood floors in homes across Los Angeles.
+            {`Licensed since ${facts.licensedSince.value}, Waltco Development builds, remodels and installs wood floors in homes across Los Angeles.`}
           </p>
           <div className="mt-10 flex flex-wrap gap-3">
             <a href="/portfolio" className="label inline-flex items-center bg-white px-6 py-4 text-ink hover:bg-sand">View our work →</a>
@@ -80,7 +80,7 @@ export function Home() {
           <dl className="grid grid-cols-3 gap-6 border-t border-line pt-6 lg:border-l lg:border-t-0 lg:pl-10 lg:pt-0">
             <div><dt className="label text-muted">Licence</dt><dd className="h-display mt-2 text-3xl">B</dd><dd className="text-sm text-ink-2">General Building</dd></div>
             <div><dt className="label text-muted">Licence</dt><dd className="h-display mt-2 text-3xl">C-15</dd><dd className="text-sm text-ink-2">Flooring</dd></div>
-            <div><dt className="label text-muted">CSLB</dt><dd className="h-display mt-2 text-3xl">#{facts.licenseNumber.value}</dd><dd className="text-sm text-ink-2">Licensed &amp; bonded</dd></div>
+            <div><dt className="label text-muted">CSLB</dt><dd className="h-display mt-2 text-3xl">#{facts.licenseNumber.value}</dd><dd className="text-sm text-ink-2">{`Licensed since ${facts.licensedSince.value} · bonded`}</dd></div>
           </dl>
         </div>
       </section>
