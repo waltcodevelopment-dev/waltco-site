@@ -18,6 +18,7 @@ const pages = walk(ROOT).map((file) => ({ file, html: readFileSync(file, 'utf8')
   .filter((p) => /<link rel="canonical"/.test(p.html));
 const canon = (html: string) => /<link rel="canonical" href="([^"]+)"/.exec(html)?.[1] ?? '';
 const visible = (html: string) => html
+  .replace(/<!--[\s\S]*?-->/g, '') // React's text-node separators, not visible
   .replace(/<script\b(?![^>]*application\/ld\+json)[\s\S]*?<\/script>/gi, ' ')
   .replace(/<style[\s\S]*?<\/style>/gi, ' ')
   .replace(/<[^>]+?(alt|content|title)="([^"]*)"[^>]*>/gi, ' $2 ')

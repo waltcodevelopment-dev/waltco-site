@@ -12,7 +12,7 @@ export function Footer() {
           <p className="mt-2 text-ink-2">{licenceLine()}</p>
           <p className="mt-2"><a href={telHref(facts.phone.value)}>{facts.phone.value}</a></p>
           <p><a href={`mailto:${facts.email.value}`}>{facts.email.value}</a></p>
-          <p className="mt-3" data-address="showroom"><span className="font-medium">{shop.label}:</span> {addressLine(shop)}</p>
+          <p className="mt-3" data-address="showroom"><span className="font-medium">{`${shop.label}:`}</span> {addressLine(shop)}</p>
           <p className="mt-1 text-sm text-ink-2" data-address="mailing">{`${mail.label}: ${addressLine(mail)}`}</p>
         </div>
         <div>
