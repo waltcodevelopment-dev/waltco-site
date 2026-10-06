@@ -5,6 +5,7 @@ import { canonicalFor } from '@/lib/seo.ts';
 import { descriptionFor, titleFor } from '@/lib/meta.ts';
 import { licenceLine } from '@/content/facts.ts';
 import { Cta } from '@/components/Cta';
+import { Home } from '@/components/home/Home';
 
 // One template for all 35 approved URLs during W1. Page copy arrives in W2 (Jasper, from the fact sheet only);
 // until then each page shows its heading, the licence line and the one call to action.
@@ -31,20 +32,19 @@ const EYEBROW: Record<string, string> = {
 export default async function Page({ params }: { params: Promise<{ slug?: string[] }> }) {
   const r = find((await params).slug);
   if (!r) notFound();
-  const home = r.kind === 'home';
+  if (r.kind === 'home') return <Home />;
   return (
     <main>
       {/* Live-site page hero: dark ground (the project photo goes behind it in W2), gold eyebrow, light heading. */}
-      <section className={`on-dark relative bg-charcoal text-white ${home ? 'py-32 sm:py-44' : 'py-20 sm:py-28'}`}>
+      <section className="on-dark relative bg-charcoal py-20 text-white sm:py-28">
         <div className="mx-auto max-w-site px-4 sm:px-6">
           <p className="eyebrow">{EYEBROW[r.kind]}</p>
-          <h1 className={`h-display mt-5 ${home ? 'text-5xl sm:text-7xl lg:text-[86px] lg:leading-[1.02]' : 'text-4xl sm:text-6xl'}`}>
-            {home ? <>Build with <em className="font-extralight">intention</em>.</> : r.label}
+          <h1 className="h-display mt-5 text-4xl sm:text-6xl">
+            {r.label}
           </h1>
           <p className="mt-6 max-w-xl text-on-dark">{licenceLine()}</p>
           <div className="mt-10 flex flex-wrap gap-3">
             <Cta variant="light">Get your estimate</Cta>
-            {home && <a href="/portfolio" className="label inline-flex items-center border border-white/60 px-6 py-4 text-white hover:border-white">View our work</a>}
           </div>
         </div>
       </section>

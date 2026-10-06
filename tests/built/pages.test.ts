@@ -55,8 +55,12 @@ for (const p of pages) {
     assert.ok(v.includes(shop), 'labelled showroom address');
     assert.ok(v.includes(mail), 'labelled mailing address');
     assert.ok(v.indexOf(shop) < v.indexOf(mail), 'showroom before mailing');
-    for (const st of [facts.showroom.value.street, facts.mailing.value.street]) {
-      assert.equal(v.split(st).length - 1, 1, `${st} shown once, with its label`);
+    // Every time a street is shown, its own label is right before it — never the other address's label.
+    for (const [a, other] of [[facts.showroom.value, facts.mailing.value], [facts.mailing.value, facts.showroom.value]]) {
+      for (let i = v.indexOf(a.street); i !== -1; i = v.indexOf(a.street, i + 1)) {
+        const before = v.slice(Math.max(0, i - 40), i);
+        assert.ok(before.includes(a.label) && !before.includes(other.label), `${a.street} shown under its own label`);
+      }
     }
   });
 }
