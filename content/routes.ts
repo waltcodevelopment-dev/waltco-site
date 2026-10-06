@@ -6,6 +6,7 @@ export type Route = { path: string; kind: RouteKind; label: string };
 
 export const SERVICES: { slug: string; label: string; isNew?: true }[] = [
   { slug: 'general-construction', label: 'General Construction' },
+  { slug: 'hardwood-flooring', label: 'Hardwood Flooring', isNew: true },
   { slug: 'new-home-construction', label: 'New Home Construction' },
   { slug: 'full-home-remodeling', label: 'Full Home Remodeling' },
   { slug: 'kitchen-remodeling', label: 'Kitchen Remodeling' },
@@ -15,7 +16,6 @@ export const SERVICES: { slug: string; label: string; isNew?: true }[] = [
   { slug: 'cabinetry', label: 'Custom Cabinetry' },
   { slug: 'finish-carpentry', label: 'Finish Carpentry' },
   { slug: 'development-management', label: 'Development Management' },
-  { slug: 'hardwood-flooring', label: 'Hardwood Flooring', isNew: true },
 ];
 
 export const AREAS: { slug: string; label: string }[] = [

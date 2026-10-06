@@ -20,3 +20,12 @@ Keep the profile identical to the site's fact file (`content/facts.ts`).
 5. **Phone:** keep (213) 792-5908 (matches).
 6. **Description:** remove reclaimed-wood-only wording and any claim not in the fact file (years in business, "best", "premier"); the site's approved copy (W2/W4) supplies the text.
 7. **Products / posts:** review after W4 so nothing contradicts the site.
+
+## Decisions on Claude's advice (owner: "give me the advice and we'll stick to it", 5 Oct 2026)
+
+| Topic | Decision | Revisit when |
+|---|---|---|
+| Ricky and Walter Jr. on the About page | Not listed as staff. CSLB shows a workers' comp exemption certified on "no employees"; a staff list would contradict the public record. About says Waltco is owner-run. | If anyone is hired: get a workers' comp policy, update CSLB, then add a team section. |
+| Development Management | Page stays live through the switch (Fable ruling 2: no URL changes ship with the hosting move), listed last, not on the home page. | Day-14 Search Console reading (W6): no impressions → 301 to /services/general-construction. |
+| Licensed since 1991 | Shown as "Licensed since 1991" (CSLB issue date 08/19/1991). Never "in business since" or a count of years. | — |
+| Hardwood Flooring | Listed second in every services list, after General Construction. | — |

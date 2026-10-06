@@ -28,7 +28,7 @@ export function AboutPage() {
             <div className="mt-6 space-y-4 text-ink-2">
               <p>Waltco Development builds and remodels homes across Los Angeles — new construction, additions, kitchens and baths, cabinetry, finish carpentry and hardwood floors.</p>
               <p>{`Licensed since ${facts.licensedSince.value}: we hold California contractor licence #${facts.licenseNumber.value} from the Contractors State License Board, with B General Building and C-15 Flooring classifications and a contractor's bond on file.`}</p>
-              <p>We are a family-led business. Every client gets a written scope and estimate before work starts, and a direct line to the people running the job.</p>
+              <p>Waltco is owner-run. Walter Contreras is involved in every job, from the first estimate to the final walkthrough, and every client gets a written scope and estimate before work starts.</p>
             </div>
           </div>
           <div className="relative">
