@@ -1,0 +1,496 @@
+{
+  "base": "https://waltcodevelopment.com",
+  "captured": "2026-10-06T08:39:17.879Z",
+  "pages": [
+    {
+      "path": "/",
+      "status": 200,
+      "location": null,
+      "title": "Waltco Development — General Contractor, Los Angeles",
+      "description": "Waltco Development is a licensed general contractor in Los Angeles (CSLB #625535). Every inquiry is answered, and estimates come from our own numbers.",
+      "h1": [
+        "Build with intention."
+      ],
+      "canonical": "https://waltcodevelopment.com",
+      "words": 536,
+      "images": 8,
+      "ogImage": "https://waltcodevelopment.com/og/waltco-development.jpg"
+    },
+    {
+      "path": "/about",
+      "status": 200,
+      "location": null,
+      "title": "About | Waltco Development",
+      "description": "About — Waltco Development, licensed general contractor in Los Angeles (CSLB #625535). Request an estimate online.",
+      "h1": [
+        "Waltco Development"
+      ],
+      "canonical": "https://waltcodevelopment.com/about",
+      "words": 414,
+      "images": 2,
+      "ogImage": "https://waltcodevelopment.com/og/waltco-development.jpg"
+    },
+    {
+      "path": "/services",
+      "status": 200,
+      "location": null,
+      "title": "Services | Waltco Development",
+      "description": "Services — Waltco Development, licensed general contractor in Los Angeles (CSLB #625535). Request an estimate online.",
+      "h1": [
+        "Our Services"
+      ],
+      "canonical": "https://waltcodevelopment.com/services",
+      "words": 927,
+      "images": 12,
+      "ogImage": "https://waltcodevelopment.com/og/waltco-development.jpg"
+    },
+    {
+      "path": "/portfolio",
+      "status": 200,
+      "location": null,
+      "title": "Portfolio | Waltco Development",
+      "description": "Portfolio — Waltco Development, licensed general contractor in Los Angeles (CSLB #625535). Request an estimate online.",
+      "h1": [
+        "Portfolio"
+      ],
+      "canonical": "https://waltcodevelopment.com/portfolio",
+      "words": 421,
+      "images": 28,
+      "ogImage": "https://waltcodevelopment.com/og/waltco-development.jpg"
+    },
+    {
+      "path": "/contact",
+      "status": 200,
+      "location": null,
+      "title": "Contact | Waltco Development",
+      "description": "Contact Waltco Development, licensed general contractor in Los Angeles (CSLB #625535): phone, email, and an online estimate request.",
+      "h1": [
+        "Contact Waltco Development"
+      ],
+      "canonical": "https://waltcodevelopment.com/contact",
+      "words": 261,
+      "images": 0,
+      "ogImage": "https://waltcodevelopment.com/og/waltco-development.jpg"
+    },
+    {
+      "path": "/service-areas",
+      "status": 200,
+      "location": null,
+      "title": "Service Areas | Waltco Development",
+      "description": "Service Areas — Waltco Development, licensed general contractor in Los Angeles (CSLB #625535). Request an estimate online.",
+      "h1": [
+        "Service Areas"
+      ],
+      "canonical": "https://waltcodevelopment.com/service-areas",
+      "words": 302,
+      "images": 1,
+      "ogImage": "https://waltcodevelopment.com/og/waltco-development.jpg"
+    },
+    {
+      "path": "/blog",
+      "status": 200,
+      "location": null,
+      "title": "Resources | Waltco Development",
+      "description": "Resources — Waltco Development, licensed general contractor in Los Angeles (CSLB #625535). Request an estimate online.",
+      "h1": [
+        "Construction Guides for LA Homeowners"
+      ],
+      "canonical": "https://waltcodevelopment.com/blog",
+      "words": 420,
+      "images": 0,
+      "ogImage": "https://waltcodevelopment.com/og/waltco-development.jpg"
+    },
+    {
+      "path": "/services/general-construction",
+      "status": 200,
+      "location": null,
+      "title": "General Construction in Los Angeles — Waltco Development",
+      "description": "General Construction in Los Angeles by Waltco Development, a licensed general contractor (CSLB #625535). Request an estimate online.",
+      "h1": [
+        "General Construction in Los Angeles"
+      ],
+      "canonical": "https://waltcodevelopment.com/services/general-construction",
+      "words": 698,
+      "images": 3,
+      "ogImage": "https://waltcodevelopment.com/og/waltco-development.jpg"
+    },
+    {
+      "path": "/services/hardwood-flooring",
+      "status": 200,
+      "location": null,
+      "title": "Hardwood Flooring in Los Angeles — Waltco Development",
+      "description": "Hardwood Flooring in Los Angeles by Waltco Development, a licensed general contractor (CSLB #625535). Request an estimate online.",
+      "h1": [
+        "Hardwood Flooring in Los Angeles"
+      ],
+      "canonical": "https://waltcodevelopment.com/services/hardwood-flooring",
+      "words": 705,
+      "images": 6,
+      "ogImage": "https://waltcodevelopment.com/og/waltco-development.jpg"
+    },
+    {
+      "path": "/services/new-home-construction",
+      "status": 200,
+      "location": null,
+      "title": "New Home Construction in Los Angeles — Waltco Development",
+      "description": "New Home Construction in Los Angeles by Waltco Development, a licensed general contractor (CSLB #625535). Request an estimate online.",
+      "h1": [
+        "New Home Construction in Los Angeles"
+      ],
+      "canonical": "https://waltcodevelopment.com/services/new-home-construction",
+      "words": 651,
+      "images": 3,
+      "ogImage": "https://waltcodevelopment.com/og/waltco-development.jpg"
+    },
+    {
+      "path": "/services/full-home-remodeling",
+      "status": 200,
+      "location": null,
+      "title": "Full Home Remodeling in Los Angeles — Waltco Development",
+      "description": "Full Home Remodeling in Los Angeles by Waltco Development, a licensed general contractor (CSLB #625535). Request an estimate online.",
+      "h1": [
+        "Full Home Remodeling in Los Angeles"
+      ],
+      "canonical": "https://waltcodevelopment.com/services/full-home-remodeling",
+      "words": 671,
+      "images": 3,
+      "ogImage": "https://waltcodevelopment.com/og/waltco-development.jpg"
+    },
+    {
+      "path": "/services/kitchen-remodeling",
+      "status": 200,
+      "location": null,
+      "title": "Kitchen Remodeling in Los Angeles — Waltco Development",
+      "description": "Kitchen Remodeling in Los Angeles by Waltco Development, a licensed general contractor (CSLB #625535). Request an estimate online.",
+      "h1": [
+        "Kitchen Remodeling in Los Angeles"
+      ],
+      "canonical": "https://waltcodevelopment.com/services/kitchen-remodeling",
+      "words": 695,
+      "images": 5,
+      "ogImage": "https://waltcodevelopment.com/og/waltco-development.jpg"
+    },
+    {
+      "path": "/services/bathroom-remodeling",
+      "status": 200,
+      "location": null,
+      "title": "Bathroom Remodeling in Los Angeles — Waltco Development",
+      "description": "Bathroom Remodeling in Los Angeles by Waltco Development, a licensed general contractor (CSLB #625535). Request an estimate online.",
+      "h1": [
+        "Bathroom Remodeling in Los Angeles"
+      ],
+      "canonical": "https://waltcodevelopment.com/services/bathroom-remodeling",
+      "words": 695,
+      "images": 7,
+      "ogImage": "https://waltcodevelopment.com/og/waltco-development.jpg"
+    },
+    {
+      "path": "/services/adu-construction",
+      "status": 200,
+      "location": null,
+      "title": "ADU Construction in Los Angeles — Waltco Development",
+      "description": "ADU Construction in Los Angeles by Waltco Development, a licensed general contractor (CSLB #625535). Request an estimate online.",
+      "h1": [
+        "ADU Construction in Los Angeles"
+      ],
+      "canonical": "https://waltcodevelopment.com/services/adu-construction",
+      "words": 679,
+      "images": 3,
+      "ogImage": "https://waltcodevelopment.com/og/waltco-development.jpg"
+    },
+    {
+      "path": "/services/room-additions",
+      "status": 200,
+      "location": null,
+      "title": "Room Additions in Los Angeles — Waltco Development",
+      "description": "Room Additions in Los Angeles by Waltco Development, a licensed general contractor (CSLB #625535). Request an estimate online.",
+      "h1": [
+        "Room Additions in Los Angeles"
+      ],
+      "canonical": "https://waltcodevelopment.com/services/room-additions",
+      "words": 665,
+      "images": 3,
+      "ogImage": "https://waltcodevelopment.com/og/waltco-development.jpg"
+    },
+    {
+      "path": "/services/cabinetry",
+      "status": 200,
+      "location": null,
+      "title": "Custom Cabinetry in Los Angeles — Waltco Development",
+      "description": "Custom Cabinetry in Los Angeles by Waltco Development, a licensed general contractor (CSLB #625535). Request an estimate online.",
+      "h1": [
+        "Custom Cabinetry in Los Angeles"
+      ],
+      "canonical": "https://waltcodevelopment.com/services/cabinetry",
+      "words": 649,
+      "images": 4,
+      "ogImage": "https://waltcodevelopment.com/og/waltco-development.jpg"
+    },
+    {
+      "path": "/services/finish-carpentry",
+      "status": 200,
+      "location": null,
+      "title": "Finish Carpentry in Los Angeles — Waltco Development",
+      "description": "Finish Carpentry in Los Angeles by Waltco Development, a licensed general contractor (CSLB #625535). Request an estimate online.",
+      "h1": [
+        "Finish Carpentry in Los Angeles"
+      ],
+      "canonical": "https://waltcodevelopment.com/services/finish-carpentry",
+      "words": 655,
+      "images": 4,
+      "ogImage": "https://waltcodevelopment.com/og/waltco-development.jpg"
+    },
+    {
+      "path": "/services/development-management",
+      "status": 200,
+      "location": null,
+      "title": "Development Management in Los Angeles — Waltco Development",
+      "description": "Development Management in Los Angeles by Waltco Development, a licensed general contractor (CSLB #625535). Request an estimate online.",
+      "h1": [
+        "Development Management in Los Angeles"
+      ],
+      "canonical": "https://waltcodevelopment.com/services/development-management",
+      "words": 646,
+      "images": 2,
+      "ogImage": "https://waltcodevelopment.com/og/waltco-development.jpg"
+    },
+    {
+      "path": "/service-areas/los-angeles",
+      "status": 200,
+      "location": null,
+      "title": "General Contractor Los Angeles | Waltco Development",
+      "description": "Waltco Development works as a licensed general contractor in Los Angeles (CSLB #625535). Request an estimate for your project online.",
+      "h1": [
+        "General Contractor in Los Angeles"
+      ],
+      "canonical": "https://waltcodevelopment.com/service-areas/los-angeles",
+      "words": 380,
+      "images": 0,
+      "ogImage": "https://waltcodevelopment.com/og/waltco-development.jpg"
+    },
+    {
+      "path": "/service-areas/west-los-angeles",
+      "status": 200,
+      "location": null,
+      "title": "General Contractor West Los Angeles | Waltco Development",
+      "description": "Waltco Development works as a licensed general contractor in West Los Angeles (CSLB #625535). Request an estimate for your project online.",
+      "h1": [
+        "General Contractor in West Los Angeles"
+      ],
+      "canonical": "https://waltcodevelopment.com/service-areas/west-los-angeles",
+      "words": 388,
+      "images": 0,
+      "ogImage": "https://waltcodevelopment.com/og/waltco-development.jpg"
+    },
+    {
+      "path": "/service-areas/santa-monica",
+      "status": 200,
+      "location": null,
+      "title": "General Contractor Santa Monica | Waltco Development",
+      "description": "Waltco Development works as a licensed general contractor in Santa Monica (CSLB #625535). Request an estimate for your project online.",
+      "h1": [
+        "General Contractor in Santa Monica"
+      ],
+      "canonical": "https://waltcodevelopment.com/service-areas/santa-monica",
+      "words": 422,
+      "images": 0,
+      "ogImage": "https://waltcodevelopment.com/og/waltco-development.jpg"
+    },
+    {
+      "path": "/service-areas/malibu",
+      "status": 200,
+      "location": null,
+      "title": "General Contractor Malibu | Waltco Development",
+      "description": "Waltco Development works as a licensed general contractor in Malibu (CSLB #625535). Request an estimate for your project online.",
+      "h1": [
+        "General Contractor in Malibu"
+      ],
+      "canonical": "https://waltcodevelopment.com/service-areas/malibu",
+      "words": 435,
+      "images": 0,
+      "ogImage": "https://waltcodevelopment.com/og/waltco-development.jpg"
+    },
+    {
+      "path": "/service-areas/pacific-palisades",
+      "status": 200,
+      "location": null,
+      "title": "General Contractor Pacific Palisades | Waltco Development",
+      "description": "Waltco Development works as a licensed general contractor in Pacific Palisades (CSLB #625535). Request an estimate for your project online.",
+      "h1": [
+        "General Contractor in Pacific Palisades"
+      ],
+      "canonical": "https://waltcodevelopment.com/service-areas/pacific-palisades",
+      "words": 470,
+      "images": 0,
+      "ogImage": "https://waltcodevelopment.com/og/waltco-development.jpg"
+    },
+    {
+      "path": "/service-areas/hollywood",
+      "status": 200,
+      "location": null,
+      "title": "General Contractor Hollywood | Waltco Development",
+      "description": "Waltco Development works as a licensed general contractor in Hollywood (CSLB #625535). Request an estimate for your project online.",
+      "h1": [
+        "General Contractor in Hollywood"
+      ],
+      "canonical": "https://waltcodevelopment.com/service-areas/hollywood",
+      "words": 366,
+      "images": 0,
+      "ogImage": "https://waltcodevelopment.com/og/waltco-development.jpg"
+    },
+    {
+      "path": "/service-areas/encino",
+      "status": 200,
+      "location": null,
+      "title": "General Contractor Encino | Waltco Development",
+      "description": "Waltco Development works as a licensed general contractor in Encino (CSLB #625535). Request an estimate for your project online.",
+      "h1": [
+        "General Contractor in Encino"
+      ],
+      "canonical": "https://waltcodevelopment.com/service-areas/encino",
+      "words": 364,
+      "images": 0,
+      "ogImage": "https://waltcodevelopment.com/og/waltco-development.jpg"
+    },
+    {
+      "path": "/service-areas/venice",
+      "status": 200,
+      "location": null,
+      "title": "General Contractor Venice | Waltco Development",
+      "description": "Waltco Development works as a licensed general contractor in Venice (CSLB #625535). Request an estimate for your project online.",
+      "h1": [
+        "General Contractor in Venice"
+      ],
+      "canonical": "https://waltcodevelopment.com/service-areas/venice",
+      "words": 418,
+      "images": 0,
+      "ogImage": "https://waltcodevelopment.com/og/waltco-development.jpg"
+    },
+    {
+      "path": "/service-areas/manhattan-beach",
+      "status": 200,
+      "location": null,
+      "title": "General Contractor Manhattan Beach | Waltco Development",
+      "description": "Waltco Development works as a licensed general contractor in Manhattan Beach (CSLB #625535). Request an estimate for your project online.",
+      "h1": [
+        "General Contractor in Manhattan Beach"
+      ],
+      "canonical": "https://waltcodevelopment.com/service-areas/manhattan-beach",
+      "words": 414,
+      "images": 0,
+      "ogImage": "https://waltcodevelopment.com/og/waltco-development.jpg"
+    },
+    {
+      "path": "/service-areas/redondo-beach",
+      "status": 200,
+      "location": null,
+      "title": "General Contractor Redondo Beach | Waltco Development",
+      "description": "Waltco Development works as a licensed general contractor in Redondo Beach (CSLB #625535). Request an estimate for your project online.",
+      "h1": [
+        "General Contractor in Redondo Beach"
+      ],
+      "canonical": "https://waltcodevelopment.com/service-areas/redondo-beach",
+      "words": 415,
+      "images": 0,
+      "ogImage": "https://waltcodevelopment.com/og/waltco-development.jpg"
+    },
+    {
+      "path": "/service-areas/mar-vista",
+      "status": 200,
+      "location": null,
+      "title": "General Contractor Mar Vista | Waltco Development",
+      "description": "Waltco Development works as a licensed general contractor in Mar Vista (CSLB #625535). Request an estimate for your project online.",
+      "h1": [
+        "General Contractor in Mar Vista"
+      ],
+      "canonical": "https://waltcodevelopment.com/service-areas/mar-vista",
+      "words": 378,
+      "images": 0,
+      "ogImage": "https://waltcodevelopment.com/og/waltco-development.jpg"
+    },
+    {
+      "path": "/service-areas/reseda",
+      "status": 200,
+      "location": null,
+      "title": "General Contractor Reseda | Waltco Development",
+      "description": "Waltco Development works as a licensed general contractor in Reseda (CSLB #625535). Request an estimate for your project online.",
+      "h1": [
+        "General Contractor in Reseda"
+      ],
+      "canonical": "https://waltcodevelopment.com/service-areas/reseda",
+      "words": 363,
+      "images": 0,
+      "ogImage": "https://waltcodevelopment.com/og/waltco-development.jpg"
+    },
+    {
+      "path": "/blog/contractor-pacific-palisades-guide",
+      "status": 200,
+      "location": null,
+      "title": "Contractor guide: Pacific Palisades | Waltco Development",
+      "description": "Contractor guide: Pacific Palisades — Waltco Development, licensed general contractor in Los Angeles (CSLB #625535). Request an estimate online.",
+      "h1": [
+        "Finding a Contractor in Pacific Palisades"
+      ],
+      "canonical": "https://waltcodevelopment.com/blog/contractor-pacific-palisades-guide",
+      "words": 498,
+      "images": 0,
+      "ogImage": "https://waltcodevelopment.com/og/waltco-development.jpg"
+    },
+    {
+      "path": "/blog/altadena-fire-rebuild-contractor",
+      "status": 200,
+      "location": null,
+      "title": "Altadena fire rebuild contractor | Waltco Development",
+      "description": "Altadena fire rebuild contractor — Waltco Development, licensed general contractor in Los Angeles (CSLB #625535). Request an estimate online.",
+      "h1": [
+        "Altadena Fire Rebuild: What to Know Before Hiring a Contractor"
+      ],
+      "canonical": "https://waltcodevelopment.com/blog/altadena-fire-rebuild-contractor",
+      "words": 500,
+      "images": 0,
+      "ogImage": "https://waltcodevelopment.com/og/waltco-development.jpg"
+    },
+    {
+      "path": "/blog/kitchen-remodel-cost-los-angeles-2026",
+      "status": 200,
+      "location": null,
+      "title": "Kitchen remodel cost, Los Angeles 2026 | Waltco Development",
+      "description": "Kitchen remodel cost, Los Angeles 2026 — Waltco Development, licensed general contractor in Los Angeles (CSLB #625535). Request an estimate online.",
+      "h1": [
+        "Kitchen Remodel Cost in Los Angeles — What Drives the Price"
+      ],
+      "canonical": "https://waltcodevelopment.com/blog/kitchen-remodel-cost-los-angeles-2026",
+      "words": 578,
+      "images": 0,
+      "ogImage": "https://waltcodevelopment.com/og/waltco-development.jpg"
+    },
+    {
+      "path": "/blog/adu-los-angeles-2026-guide",
+      "status": 200,
+      "location": null,
+      "title": "ADU in Los Angeles: 2026 guide | Waltco Development",
+      "description": "ADU in Los Angeles: 2026 guide — Waltco Development, licensed general contractor in Los Angeles (CSLB #625535). Request an estimate online.",
+      "h1": [
+        "ADU Construction in Los Angeles — What to Know Before You Build"
+      ],
+      "canonical": "https://waltcodevelopment.com/blog/adu-los-angeles-2026-guide",
+      "words": 504,
+      "images": 0,
+      "ogImage": "https://waltcodevelopment.com/og/waltco-development.jpg"
+    },
+    {
+      "path": "/blog/how-to-choose-general-contractor-los-angeles",
+      "status": 200,
+      "location": null,
+      "title": "How to choose a general contractor in Los Angeles",
+      "description": "How to choose a general contractor in Los Angeles — Waltco Development, licensed general contractor in Los Angeles (CSLB #625535). Request an estimate online.",
+      "h1": [
+        "How to Choose a Licensed General Contractor in Los Angeles"
+      ],
+      "canonical": "https://waltcodevelopment.com/blog/how-to-choose-general-contractor-los-angeles",
+      "words": 693,
+      "images": 0,
+      "ogImage": "https://waltcodevelopment.com/og/waltco-development.jpg"
+    }
+  ]
+}
