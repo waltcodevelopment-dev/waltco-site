@@ -52,6 +52,8 @@ export function Home() {
   return (
     <main>
       {/* 1 · Hero — full-bleed photo, dark wash, gold eyebrow, light 86px heading (live). */}
+      {/* Preload the hero (the largest paint on the page) so the browser fetches it before CSS and JS. */}
+      <link rel="preload" as="image" type="image/webp" imageSrcSet={`${hero.sm.src.replace(/\.jpg$/, '.webp')} ${hero.sm.w}w, ${hero.lg.src.replace(/\.jpg$/, '.webp')} ${hero.lg.w}w`} imageSizes="100vw" fetchPriority="high" />
       <section className="on-dark relative isolate overflow-hidden bg-charcoal text-white">
         <Img p={hero} eager sizes="100vw" className="absolute inset-0 -z-10 h-full w-full object-cover" />
         <div className="absolute inset-0 -z-10 bg-gradient-to-r from-black/75 via-black/45 to-black/10" />

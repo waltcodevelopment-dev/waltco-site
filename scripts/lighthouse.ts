@@ -10,18 +10,26 @@ const base = process.argv[2] ?? 'http://localhost:3000';
 const PAGES = ['/', '/services/hardwood-flooring', '/service-areas/santa-monica', '/blog/how-to-choose-general-contractor-los-angeles'];
 const MIN = { performance: 90, seo: 100, accessibility: 95 } as const;
 let failed = 0;
+// Each page runs three times and the median counts (Lighthouse's own guidance: single runs on shared CI
+// machines swing ±10 points on performance).
+const RUNS = 3;
+const median = (xs: number[]) => [...xs].sort((a, b) => a - b)[Math.floor(xs.length / 2)];
 for (const p of PAGES) {
-  const out = `lh-${p.replace(/\W+/g, '_') || 'home'}.json`;
-  execFileSync('npx', ['-y', 'lighthouse@12', base + p, '--quiet', '--output=json', `--output-path=${out}`,
-    '--only-categories=performance,seo,accessibility', '--form-factor=mobile',
-    '--skip-audits=canonical', '--chrome-flags=--headless=new --no-sandbox'], { stdio: 'inherit' });
-  const r = JSON.parse(readFileSync(out, 'utf8'));
-  const scores = Object.fromEntries(Object.entries(r.categories).map(([k, v]) => [k, Math.round((v as { score: number }).score * 100)])) as Record<keyof typeof MIN, number>;
+  const runs: { scores: Record<keyof typeof MIN, number>; audits: unknown }[] = [];
+  for (let i = 0; i < RUNS; i++) {
+    const out = `lh-${p.replace(/\W+/g, '_') || 'home'}-${i}.json`;
+    execFileSync('npx', ['-y', 'lighthouse@12', base + p, '--quiet', '--output=json', `--output-path=${out}`,
+      '--only-categories=performance,seo,accessibility', '--form-factor=mobile',
+      '--skip-audits=canonical', '--chrome-flags=--headless=new --no-sandbox'], { stdio: 'inherit' });
+    const r = JSON.parse(readFileSync(out, 'utf8'));
+    runs.push({ scores: Object.fromEntries(Object.entries(r.categories).map(([k, v]) => [k, Math.round((v as { score: number }).score * 100)])) as Record<keyof typeof MIN, number>, audits: r.audits });
+  }
+  const scores = Object.fromEntries((Object.keys(MIN) as (keyof typeof MIN)[]).map((k) => [k, median(runs.map((x) => x.scores[k]))])) as Record<keyof typeof MIN, number>;
   const bad = (Object.keys(MIN) as (keyof typeof MIN)[]).filter((k) => scores[k] < MIN[k]);
-  console.log(`${p}  performance ${scores.performance}  seo ${scores.seo}  accessibility ${scores.accessibility}${bad.length ? `  ✗ ${bad.join(', ')}` : '  ✓'}`);
+  console.log(`${p}  performance ${scores.performance}  seo ${scores.seo}  accessibility ${scores.accessibility}  (runs: ${runs.map((x) => x.scores.performance).join('/')})${bad.length ? `  ✗ ${bad.join(', ')}` : '  ✓'}`);
   if (bad.length) {
     failed++;
-    for (const a of Object.values(r.audits) as { id: string; score: number | null; title: string; scoreDisplayMode: string }[])
+    for (const a of Object.values(runs[0].audits as Record<string, { id: string; score: number | null; title: string; scoreDisplayMode: string }>))
       if (a.score !== null && a.score < 0.9 && a.scoreDisplayMode !== 'informative') console.log(`   - ${a.id}: ${a.title}`);
   }
 }
