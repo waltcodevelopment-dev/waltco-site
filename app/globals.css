@@ -2,5 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-html { background: #FAFAF7; color: #1C1917; }
-body { font-size: 17px; line-height: 1.55; font-variant-numeric: tabular-nums; }
+html { background: #FFFFFF; color: #1A1A1A; -webkit-font-smoothing: antialiased; }
+body { font-size: 16px; line-height: 1.65; }
+
+@layer components {
+  .eyebrow { @apply text-xs uppercase tracking-eyebrow text-gold-ink; }
+  .on-dark .eyebrow, .eyebrow-dark { @apply text-gold; }
+  .label { @apply text-[11px] font-semibold uppercase tracking-label; }
+  .h-display { @apply font-light tracking-tight; }
+}

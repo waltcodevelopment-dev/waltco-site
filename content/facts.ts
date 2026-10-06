@@ -25,7 +25,8 @@ export const facts = {
   showroom: { value: { label: 'Shop / Showroom', street: '9216 S. Vermont Ave', locality: 'Los Angeles', region: 'CA', postalCode: '90044' }, status: 'confirmed', source: 'Owner, 5 Oct 2026' } as Fact<Address>,
   /** Mailing and CSLB record address (CSLB 5 Oct 2026; owner approved its use as the mailing address, 5 Oct 2026). */
   mailing: { value: { label: 'Mailing Address', street: '2725 Live Oak St', locality: 'Los Angeles', region: 'CA', postalCode: '90255' }, status: 'confirmed', source: CSLB } as Fact<Address>,
-  hours: { value: 'Mon–Fri 7:00 am – 6:00 pm', status: 'pending', source: 'Fable proposal for the Business Profile; owner to confirm (W0)' } as Fact<string>,
+  /** Owner, 5 Oct 2026: "by appointment, we work from 7 till 5 pm". Google profile says Mon–Fri 7–5, Sat 24h (owner to fix). */
+  hours: { value: 'By appointment · Work hours 7 AM – 5 PM', status: 'confirmed', source: 'Owner, 5 Oct 2026' } as Fact<string>,
   sameAs: { value: [] as string[], status: 'pending', source: 'Social profiles not yet listed by the owner (W0)' } as Fact<string[]>,
 } as const;
 

@@ -2,27 +2,47 @@ import { facts, telHref } from '@/content/facts.ts';
 import { Cta } from './Cta';
 
 const NAV = [
+  { href: '/', label: 'Home' },
+  { href: '/about', label: 'About' },
   { href: '/services', label: 'Services' },
   { href: '/services/hardwood-flooring', label: 'Wood Flooring' },
   { href: '/portfolio', label: 'Portfolio' },
-  { href: '/service-areas', label: 'Service Areas' },
   { href: '/blog', label: 'Resources' },
-  { href: '/about', label: 'About' },
+  { href: '/service-areas', label: 'Service Areas' },
   { href: '/contact', label: 'Contact' },
 ];
 
+function Logo() {
+  return (
+    <a href="/" className="flex items-center gap-3" aria-label={`${facts.businessName.value} — home`}>
+      <span aria-hidden className="grid h-9 w-9 place-items-center bg-charcoal text-sm font-bold text-gold">W</span>
+      <span className="text-[13px] font-semibold uppercase tracking-label text-ink">{facts.businessName.value}</span>
+    </a>
+  );
+}
+
+// Live-site header: white bar, logo square, uppercase spaced nav, black call to action. On small screens the
+// nav folds into a no-JavaScript <details> menu.
 export function Header() {
   return (
-    <header className="border-b border-line bg-surface">
-      <div className="mx-auto flex max-w-site flex-wrap items-center justify-between gap-4 px-4 py-4 sm:px-6">
-        <a href="/" className="font-display text-xl font-bold tracking-tight text-primary">{facts.businessName.value}</a>
-        <nav aria-label="Main" className="flex flex-wrap gap-x-5 gap-y-1 text-[15px] text-ink-2">
-          {NAV.map((n) => <a key={n.href} href={n.href} className="hover:text-primary">{n.label}</a>)}
+    <header className="sticky top-0 z-40 border-b border-line bg-white/95 backdrop-blur">
+      <div className="mx-auto flex max-w-site items-center justify-between gap-6 px-4 py-3 sm:px-6">
+        <Logo />
+        <nav aria-label="Main" className="hidden items-center gap-6 xl:flex">
+          {NAV.map((n) => <a key={n.href} href={n.href} className="text-[11px] uppercase tracking-label text-ink-2 hover:text-ink">{n.label}</a>)}
         </nav>
-        <div className="flex items-center gap-4">
-          <a href={telHref(facts.phone.value)} className="font-medium text-ink">{facts.phone.value}</a>
+        <div className="hidden items-center gap-5 sm:flex">
+          <a href={telHref(facts.phone.value)} className="text-sm text-ink">{facts.phone.value}</a>
           <Cta>Get your estimate</Cta>
         </div>
+        <details className="relative xl:hidden">
+          <summary className="label cursor-pointer list-none border border-line px-3 py-2 text-ink">Menu</summary>
+          <nav aria-label="Mobile" className="absolute right-0 mt-2 w-64 border border-line bg-white p-4 shadow-lg">
+            {NAV.map((n) => <a key={n.href} href={n.href} className="block py-2 text-[12px] uppercase tracking-label text-ink-2 hover:text-ink">{n.label}</a>)}
+            <a href={telHref(facts.phone.value)} className="mt-2 block py-2 text-sm text-ink">{facts.phone.value}</a>
+            <div className="mt-3"><Cta>Get your estimate</Cta></div>
+          </nav>
+        </details>
       </div>
     </header>
   );

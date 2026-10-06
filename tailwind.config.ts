@@ -8,8 +8,9 @@ export default {
       colors: theme.colors,
       maxWidth: { site: theme.maxWidth },
       borderRadius: { DEFAULT: theme.radius },
-      boxShadow: { DEFAULT: theme.shadow },
-      fontFamily: { display: ['var(--font-display)', 'sans-serif'], sans: ['var(--font-body)', 'sans-serif'] },
+      // The live site uses the system UI sans (SF Pro on Apple devices) at light weights; no web font to download.
+      fontFamily: { sans: ['ui-sans-serif', 'system-ui', '-apple-system', 'Segoe UI', 'Helvetica Neue', 'Arial', 'sans-serif'] },
+      letterSpacing: { label: '0.2em', eyebrow: '0.3em' },
     },
   },
   plugins: [],

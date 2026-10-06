@@ -20,7 +20,7 @@ The public website of Waltco Development (waltcodevelopment.com). Rebuilt off An
 | W2 | Jasper + Opus | Copy for all 35 pages from the fact sheet; page templates |
 | W3 | Opus | Titles/meta, canonicals, sitemap, robots, JSON-LD, OG, breadcrumbs, images, fonts, Lighthouse |
 | W4 | Walter | Page-by-page approval on the noindex preview → `APPROVALS.md` |
-| W5 | Walter + Opus | Domain move to this Vercel project, indexing on, sitemap re-submitted, `after.json`, CTA test lead |
+| W5 | Walter + Opus | Domain move to this Vercel project, indexing on, sitemap re-submitted, `after.json`, CTA test lead, Google Business Profile Website button → https://waltcodevelopment.com (owner, 5 Oct 2026) |
 | W6 | Opus | Day 7 and day 14 Search Console readings |
 
 ## Commands

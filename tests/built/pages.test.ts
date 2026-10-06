@@ -51,6 +51,7 @@ for (const p of pages) {
     const v = visible(p.html);
     const shop = `${facts.showroom.value.label}: ${addressLine(facts.showroom.value)}`;
     const mail = `${facts.mailing.value.label}: ${addressLine(facts.mailing.value)}`;
+    if (facts.hours.status === 'confirmed') assert.ok(v.includes(facts.hours.value), 'hours as the owner gave them');
     assert.ok(v.includes(shop), 'labelled showroom address');
     assert.ok(v.includes(mail), 'labelled mailing address');
     assert.ok(v.indexOf(shop) < v.indexOf(mail), 'showroom before mailing');
