@@ -1,7 +1,7 @@
 // Inventory of the live URLs (Fable ruling 3): status, title, description, H1, canonical, word count, images,
 // OG image. Run on a machine with internet:  node scripts/inventory.ts before [https://www.waltcodevelopment.com]
 // Writes inventory/<name>.json. CI diffs before/after at the switch (W5).
-import { writeFileSync } from 'node:fs';
+import { mkdirSync, writeFileSync } from 'node:fs';
 import { OLD_URLS, ROUTES } from '../content/routes.ts';
 
 const [name = 'before', base = 'https://www.waltcodevelopment.com'] = process.argv.slice(2);
@@ -24,5 +24,6 @@ for (const path of paths) {
   });
   console.log(res.status, path);
 }
+mkdirSync('inventory', { recursive: true });
 writeFileSync(`inventory/${name}.json`, JSON.stringify({ base, captured: new Date().toISOString(), pages: out }, null, 2) + '\n');
 console.log(`wrote inventory/${name}.json (${out.length} URLs)`);

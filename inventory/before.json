@@ -1,0 +1,482 @@
+{
+  "base": "https://www.waltcodevelopment.com",
+  "captured": "2026-10-06T02:27:47.931Z",
+  "pages": [
+    {
+      "path": "/",
+      "status": 200,
+      "location": null,
+      "title": "Waltco Development | General Contractor Los Angeles",
+      "description": "Waltco Development is a premier general contractor in Los Angeles, CA. Specializing in new home construction, remodeling, ADUs, custom cabinetry, and wood flooring. CA CSLB #625535.",
+      "h1": [
+        "Build withintention."
+      ],
+      "canonical": "https://waltcodevelopment.com",
+      "words": 964,
+      "images": 17,
+      "ogImage": "https://dtvoeevhaseb5.cloudfront.net/user-uploads/945c2bf2-7384-4cd8-aece-0b3f39e02fcd.jpg"
+    },
+    {
+      "path": "/about",
+      "status": 200,
+      "location": null,
+      "title": "About Waltco Development | 30+ Years in Los Angeles Construction | Waltco Development",
+      "description": "Meet the team behind Waltco Development — a family-led general contracting company founded by Walter Contreras Sr. with 30+ years building premium homes across Los Angeles. CA CSLB #625535.",
+      "h1": [
+        "Waltco Development"
+      ],
+      "canonical": "https://waltcodevelopment.com/about",
+      "words": 606,
+      "images": 4,
+      "ogImage": "https://dtvoeevhaseb5.cloudfront.net/user-uploads/1b9be129-2293-4e78-8113-bf6d96a08661.png"
+    },
+    {
+      "path": "/services",
+      "status": 200,
+      "location": null,
+      "title": "Construction Services Los Angeles | Waltco Development | Waltco Development",
+      "description": "Waltco Development offers full-service construction in Los Angeles — new home builds, remodeling, ADU construction, kitchen &amp; bathroom renovation, custom cabinetry, flooring, and development management. CA CSLB #625535.",
+      "h1": [
+        "Our Services"
+      ],
+      "canonical": "https://waltcodevelopment.com/services",
+      "words": 587,
+      "images": 10,
+      "ogImage": "https://dtvoeevhaseb5.cloudfront.net/user-uploads/c5588c0f-7322-4cb9-9546-7a90f793fd27.jpg"
+    },
+    {
+      "path": "/portfolio",
+      "status": 200,
+      "location": null,
+      "title": "Project Portfolio | New Home Builds, Remodels &amp; Flooring — Los Angeles | Waltco Development",
+      "description": "Browse Waltco Development&#x27;s completed projects across Los Angeles — new home construction, full remodels, ADUs, custom cabinetry, and premium hardwood flooring. CA CSLB #625535.",
+      "h1": [
+        "Portfolio"
+      ],
+      "canonical": "https://waltcodevelopment.com/portfolio",
+      "words": 289,
+      "images": 26,
+      "ogImage": "https://dtvoeevhaseb5.cloudfront.net/user-uploads/c5588c0f-7322-4cb9-9546-7a90f793fd27.jpg"
+    },
+    {
+      "path": "/contact",
+      "status": 200,
+      "location": null,
+      "title": "Contact Us | Free Consultation — Waltco Development Los Angeles | Waltco Development",
+      "description": "Contact Waltco Development for a free project consultation. Call 213-792-5908 or submit a request online. Serving Los Angeles and surrounding areas. CA CSLB #625535.",
+      "h1": [
+        "Contact Us"
+      ],
+      "canonical": "https://waltcodevelopment.com/contact",
+      "words": 253,
+      "images": 0,
+      "ogImage": "https://dtvoeevhaseb5.cloudfront.net/user-uploads/945c2bf2-7384-4cd8-aece-0b3f39e02fcd.jpg"
+    },
+    {
+      "path": "/service-areas",
+      "status": 200,
+      "location": null,
+      "title": "Service Areas | General Contractor Serving Greater Los Angeles | Waltco Development",
+      "description": "Waltco Development serves greater Los Angeles — including Santa Monica, Malibu, Hollywood, Encino, Venice, Manhattan Beach, Redondo Beach, and more. CA CSLB #625535.",
+      "h1": [
+        "Service Areas"
+      ],
+      "canonical": "https://waltcodevelopment.com/service-areas",
+      "words": 340,
+      "images": 12,
+      "ogImage": "https://dtvoeevhaseb5.cloudfront.net/user-uploads/945c2bf2-7384-4cd8-aece-0b3f39e02fcd.jpg"
+    },
+    {
+      "path": "/blog",
+      "status": 200,
+      "location": null,
+      "title": "Resources &amp; Guides — Contractor Tips, Costs &amp; LA Construction | Waltco Development",
+      "description": "Expert guides from Waltco Development on kitchen remodel costs, fire rebuild advice, ADU rules, and how to choose a licensed contractor in Los Angeles.",
+      "h1": [
+        "Construction Guides for LA Homeowners"
+      ],
+      "canonical": "https://waltcodevelopment.com/blog",
+      "words": 551,
+      "images": 5,
+      "ogImage": "https://dtvoeevhaseb5.cloudfront.net/user-uploads/945c2bf2-7384-4cd8-aece-0b3f39e02fcd.jpg"
+    },
+    {
+      "path": "/services/general-construction",
+      "status": 200,
+      "location": null,
+      "title": "General Contractor Los Angeles | Waltco Development | Waltco Development",
+      "description": "Licensed general contractor in Los Angeles. New home builds, commercial construction, ADUs, and full project management. 30+ years experience. CA CSLB #625535.",
+      "h1": [
+        "General Construction"
+      ],
+      "canonical": "https://waltcodevelopment.com/services/general-construction",
+      "words": 258,
+      "images": 2,
+      "ogImage": "https://dtvoeevhaseb5.cloudfront.net/user-uploads/c5588c0f-7322-4cb9-9546-7a90f793fd27.jpg"
+    },
+    {
+      "path": "/services/new-home-construction",
+      "status": 200,
+      "location": null,
+      "title": "New Home Construction Los Angeles | Waltco Development | Waltco Development",
+      "description": "Custom new home construction in Los Angeles. Ground-up builds, permits through final finish. 30+ years experience. CA CSLB #625535.",
+      "h1": [
+        "New Home Construction"
+      ],
+      "canonical": "https://waltcodevelopment.com/services/new-home-construction",
+      "words": 262,
+      "images": 2,
+      "ogImage": "https://dtvoeevhaseb5.cloudfront.net/user-uploads/c5588c0f-7322-4cb9-9546-7a90f793fd27.jpg"
+    },
+    {
+      "path": "/services/full-home-remodeling",
+      "status": 200,
+      "location": null,
+      "title": "Full Home Remodeling Los Angeles | Waltco Development | Waltco Development",
+      "description": "Complete home remodeling in Los Angeles — gut renovations, layout changes, full rebuilds. One team, one contract. CA CSLB #625535.",
+      "h1": [
+        "Full Home Remodeling"
+      ],
+      "canonical": "https://waltcodevelopment.com/services/full-home-remodeling",
+      "words": 262,
+      "images": 2,
+      "ogImage": "https://dtvoeevhaseb5.cloudfront.net/user-uploads/945c2bf2-7384-4cd8-aece-0b3f39e02fcd.jpg"
+    },
+    {
+      "path": "/services/kitchen-remodeling",
+      "status": 200,
+      "location": null,
+      "title": "Kitchen Remodeling Los Angeles | Waltco Development | Waltco Development",
+      "description": "Custom kitchen remodeling in Los Angeles. Cabinetry, countertops, tile, lighting, plumbing — one team. CA CSLB #625535.",
+      "h1": [
+        "Kitchen Remodeling"
+      ],
+      "canonical": "https://waltcodevelopment.com/services/kitchen-remodeling",
+      "words": 254,
+      "images": 2,
+      "ogImage": "https://dtvoeevhaseb5.cloudfront.net/user-uploads/05fff3cd-de58-46d5-ab89-28adf6dcd12a.jpg"
+    },
+    {
+      "path": "/services/bathroom-remodeling",
+      "status": 200,
+      "location": null,
+      "title": "Bathroom Remodeling Los Angeles | Waltco Development | Waltco Development",
+      "description": "Premium bathroom remodeling in Los Angeles. Custom tile showers, vanities, frameless glass, heated floors. CA CSLB #625535.",
+      "h1": [
+        "Bathroom Remodeling"
+      ],
+      "canonical": "https://waltcodevelopment.com/services/bathroom-remodeling",
+      "words": 249,
+      "images": 2,
+      "ogImage": "https://dtvoeevhaseb5.cloudfront.net/user-uploads/52116931-51e9-4c40-b056-38aab8290de1.jpg"
+    },
+    {
+      "path": "/services/adu-construction",
+      "status": 200,
+      "location": null,
+      "title": "ADU Construction Los Angeles | Waltco Development | Waltco Development",
+      "description": "Licensed ADU contractor in Los Angeles. Detached ADUs, garage conversions, JADUs — permits handled, fully finished. CA CSLB #625535.",
+      "h1": [
+        "ADU Construction"
+      ],
+      "canonical": "https://waltcodevelopment.com/services/adu-construction",
+      "words": 255,
+      "images": 2,
+      "ogImage": "https://dtvoeevhaseb5.cloudfront.net/user-uploads/fac6c5f5-84c5-4ec4-a299-05f67d1da0c2.jpg"
+    },
+    {
+      "path": "/services/room-additions",
+      "status": 200,
+      "location": null,
+      "title": "Room Additions Los Angeles | Waltco Development | Waltco Development",
+      "description": "Seamless room additions in Los Angeles — master suites, second stories, in-law suites. Licensed &amp; insured. CA CSLB #625535.",
+      "h1": [
+        "Room Additions"
+      ],
+      "canonical": "https://waltcodevelopment.com/services/room-additions",
+      "words": 261,
+      "images": 2,
+      "ogImage": "https://dtvoeevhaseb5.cloudfront.net/user-uploads/945c2bf2-7384-4cd8-aece-0b3f39e02fcd.jpg"
+    },
+    {
+      "path": "/services/cabinetry",
+      "status": 200,
+      "location": null,
+      "title": "Custom Cabinetry Los Angeles | Waltco Development | Waltco Development",
+      "description": "Precision-built custom cabinetry in Los Angeles. Kitchens, bathrooms, closets, built-ins — handcrafted to last. CA CSLB #625535.",
+      "h1": [
+        "Custom Cabinetry"
+      ],
+      "canonical": "https://waltcodevelopment.com/services/cabinetry",
+      "words": 258,
+      "images": 2,
+      "ogImage": "https://dtvoeevhaseb5.cloudfront.net/user-uploads/05fff3cd-de58-46d5-ab89-28adf6dcd12a.jpg"
+    },
+    {
+      "path": "/services/finish-carpentry",
+      "status": 200,
+      "location": null,
+      "title": "Finish Carpentry Los Angeles | Waltco Development | Waltco Development",
+      "description": "Premium finish carpentry in Los Angeles. Crown molding, wainscoting, built-ins, stair railings, mantels. CA CSLB #625535.",
+      "h1": [
+        "Finish Carpentry"
+      ],
+      "canonical": "https://waltcodevelopment.com/services/finish-carpentry",
+      "words": 267,
+      "images": 2,
+      "ogImage": "https://dtvoeevhaseb5.cloudfront.net/user-uploads/88912118-6a17-4a73-877b-0b63106850cd.jpg"
+    },
+    {
+      "path": "/services/development-management",
+      "status": 200,
+      "location": null,
+      "title": "Construction Development Management Los Angeles | Waltco Development | Waltco Development",
+      "description": "Owner&#x27;s representation and development management in Los Angeles. Full project oversight from concept to occupancy. CA CSLB #625535.",
+      "h1": [
+        "Development Management"
+      ],
+      "canonical": "https://waltcodevelopment.com/services/development-management",
+      "words": 258,
+      "images": 2,
+      "ogImage": "https://dtvoeevhaseb5.cloudfront.net/user-uploads/9a26debb-3101-4d07-887c-5df1f098e1d3.jpg"
+    },
+    {
+      "path": "/service-areas/los-angeles",
+      "status": 200,
+      "location": null,
+      "title": "General Contractor Los Angeles | Waltco Development | Waltco Development",
+      "description": "Waltco Development is a licensed general contractor serving Los Angeles, CA. New home construction, remodeling, ADUs, cabinetry &amp; flooring. CA CSLB #625535. Call 213-792-5908.",
+      "h1": [
+        "Los Angeles"
+      ],
+      "canonical": "https://waltcodevelopment.com/service-areas/los-angeles",
+      "words": 266,
+      "images": 0,
+      "ogImage": "https://dtvoeevhaseb5.cloudfront.net/user-uploads/945c2bf2-7384-4cd8-aece-0b3f39e02fcd.jpg"
+    },
+    {
+      "path": "/service-areas/west-los-angeles",
+      "status": 200,
+      "location": null,
+      "title": "General Contractor West Los Angeles | Waltco Development | Waltco Development",
+      "description": "Waltco Development is a licensed general contractor serving West Los Angeles, CA. New home construction, remodeling, ADUs, cabinetry &amp; flooring. CA CSLB #625535. Call 213-792-5908.",
+      "h1": [
+        "West Los Angeles"
+      ],
+      "canonical": "https://waltcodevelopment.com/service-areas/west-los-angeles",
+      "words": 266,
+      "images": 0,
+      "ogImage": "https://dtvoeevhaseb5.cloudfront.net/user-uploads/b9714e4a-2a6e-49e2-93d0-7e2ffb487f61.jpg"
+    },
+    {
+      "path": "/service-areas/santa-monica",
+      "status": 200,
+      "location": null,
+      "title": "General Contractor Santa Monica | Waltco Development | Waltco Development",
+      "description": "Waltco Development is a licensed general contractor serving Santa Monica, CA. New home construction, remodeling, ADUs, cabinetry &amp; flooring. CA CSLB #625535. Call 213-792-5908.",
+      "h1": [
+        "Santa Monica"
+      ],
+      "canonical": "https://waltcodevelopment.com/service-areas/santa-monica",
+      "words": 258,
+      "images": 0,
+      "ogImage": "https://dtvoeevhaseb5.cloudfront.net/user-uploads/05fff3cd-de58-46d5-ab89-28adf6dcd12a.jpg"
+    },
+    {
+      "path": "/service-areas/malibu",
+      "status": 200,
+      "location": null,
+      "title": "General Contractor Malibu | Waltco Development | Waltco Development",
+      "description": "Waltco Development is a licensed general contractor serving Malibu, CA. New home construction, remodeling, ADUs, cabinetry &amp; flooring. CA CSLB #625535. Call 213-792-5908.",
+      "h1": [
+        "Malibu"
+      ],
+      "canonical": "https://waltcodevelopment.com/service-areas/malibu",
+      "words": 251,
+      "images": 0,
+      "ogImage": "https://dtvoeevhaseb5.cloudfront.net/user-uploads/8ed7dd36-caaa-42fe-a1cd-e5ed4f131313.jpg"
+    },
+    {
+      "path": "/service-areas/pacific-palisades",
+      "status": 200,
+      "location": null,
+      "title": "General Contractor Pacific Palisades | Waltco Development | Waltco Development",
+      "description": "Waltco Development is a licensed general contractor serving Pacific Palisades, CA. New home construction, remodeling, ADUs, cabinetry &amp; flooring. CA CSLB #625535. Call 213-792-5908.",
+      "h1": [
+        "Pacific Palisades"
+      ],
+      "canonical": "https://waltcodevelopment.com/service-areas/pacific-palisades",
+      "words": 259,
+      "images": 0,
+      "ogImage": "https://dtvoeevhaseb5.cloudfront.net/user-uploads/88912118-6a17-4a73-877b-0b63106850cd.jpg"
+    },
+    {
+      "path": "/service-areas/hollywood",
+      "status": 200,
+      "location": null,
+      "title": "General Contractor Hollywood | Waltco Development | Waltco Development",
+      "description": "Waltco Development is a licensed general contractor serving Hollywood, CA. New home construction, remodeling, ADUs, cabinetry &amp; flooring. CA CSLB #625535. Call 213-792-5908.",
+      "h1": [
+        "Hollywood"
+      ],
+      "canonical": "https://waltcodevelopment.com/service-areas/hollywood",
+      "words": 246,
+      "images": 0,
+      "ogImage": "https://dtvoeevhaseb5.cloudfront.net/user-uploads/71ca267f-3ba7-4813-b480-cc1aaa6e38a9.jpg"
+    },
+    {
+      "path": "/service-areas/encino",
+      "status": 200,
+      "location": null,
+      "title": "General Contractor Encino | Waltco Development | Waltco Development",
+      "description": "Waltco Development is a licensed general contractor serving Encino, CA. New home construction, remodeling, ADUs, cabinetry &amp; flooring. CA CSLB #625535. Call 213-792-5908.",
+      "h1": [
+        "Encino"
+      ],
+      "canonical": "https://waltcodevelopment.com/service-areas/encino",
+      "words": 244,
+      "images": 0,
+      "ogImage": "https://dtvoeevhaseb5.cloudfront.net/user-uploads/52116931-51e9-4c40-b056-38aab8290de1.jpg"
+    },
+    {
+      "path": "/service-areas/venice",
+      "status": 200,
+      "location": null,
+      "title": "General Contractor Venice | Waltco Development | Waltco Development",
+      "description": "Waltco Development is a licensed general contractor serving Venice, CA. New home construction, remodeling, ADUs, cabinetry &amp; flooring. CA CSLB #625535. Call 213-792-5908.",
+      "h1": [
+        "Venice"
+      ],
+      "canonical": "https://waltcodevelopment.com/service-areas/venice",
+      "words": 253,
+      "images": 0,
+      "ogImage": "https://dtvoeevhaseb5.cloudfront.net/user-uploads/558944c1-bf87-4184-8a0b-b6477d7b5254.png"
+    },
+    {
+      "path": "/service-areas/manhattan-beach",
+      "status": 200,
+      "location": null,
+      "title": "General Contractor Manhattan Beach | Waltco Development | Waltco Development",
+      "description": "Waltco Development is a licensed general contractor serving Manhattan Beach, CA. New home construction, remodeling, ADUs, cabinetry &amp; flooring. CA CSLB #625535. Call 213-792-5908.",
+      "h1": [
+        "Manhattan Beach"
+      ],
+      "canonical": "https://waltcodevelopment.com/service-areas/manhattan-beach",
+      "words": 254,
+      "images": 0,
+      "ogImage": "https://dtvoeevhaseb5.cloudfront.net/user-uploads/7b2cc29e-6071-4743-9d9c-287b40795a8a.jpg"
+    },
+    {
+      "path": "/service-areas/redondo-beach",
+      "status": 200,
+      "location": null,
+      "title": "General Contractor Redondo Beach | Waltco Development | Waltco Development",
+      "description": "Waltco Development is a licensed general contractor serving Redondo Beach, CA. New home construction, remodeling, ADUs, cabinetry &amp; flooring. CA CSLB #625535. Call 213-792-5908.",
+      "h1": [
+        "Redondo Beach"
+      ],
+      "canonical": "https://waltcodevelopment.com/service-areas/redondo-beach",
+      "words": 250,
+      "images": 0,
+      "ogImage": "https://dtvoeevhaseb5.cloudfront.net/user-uploads/7ff0c17f-87d0-4f4c-b602-d98c7f738f9e.jpg"
+    },
+    {
+      "path": "/service-areas/mar-vista",
+      "status": 200,
+      "location": null,
+      "title": "General Contractor Mar Vista | Waltco Development | Waltco Development",
+      "description": "Waltco Development is a licensed general contractor serving Mar Vista, CA. New home construction, remodeling, ADUs, cabinetry &amp; flooring. CA CSLB #625535. Call 213-792-5908.",
+      "h1": [
+        "Mar Vista"
+      ],
+      "canonical": "https://waltcodevelopment.com/service-areas/mar-vista",
+      "words": 251,
+      "images": 0,
+      "ogImage": "https://dtvoeevhaseb5.cloudfront.net/user-uploads/5d0c0b72-2651-4ec8-beec-dfe54489702b.jpg"
+    },
+    {
+      "path": "/service-areas/reseda",
+      "status": 200,
+      "location": null,
+      "title": "General Contractor Reseda | Waltco Development | Waltco Development",
+      "description": "Waltco Development is a licensed general contractor serving Reseda, CA. New home construction, remodeling, ADUs, cabinetry &amp; flooring. CA CSLB #625535. Call 213-792-5908.",
+      "h1": [
+        "Reseda"
+      ],
+      "canonical": "https://waltcodevelopment.com/service-areas/reseda",
+      "words": 247,
+      "images": 0,
+      "ogImage": "https://dtvoeevhaseb5.cloudfront.net/user-uploads/26e9015a-1bc3-4be9-ab43-61cbb17500a7.jpg"
+    },
+    {
+      "path": "/blog/contractor-pacific-palisades-guide",
+      "status": 200,
+      "location": null,
+      "title": "Contractor in Pacific Palisades CA — Remodels, Additions &amp; Fire Rebuild | Waltco Development | Waltco Development",
+      "description": "Looking for a licensed contractor in Pacific Palisades? Waltco Development (CSLB #625535) covers kitchen remodels, bathroom renovations, room additions, new construction &amp; fire rebuild. 2026 cost guide.",
+      "h1": [
+        "Finding a Contractor in Pacific Palisades: Your Complete 2026 Guide"
+      ],
+      "canonical": "https://waltcodevelopment.com/blog/contractor-pacific-palisades-guide",
+      "words": 1485,
+      "images": 4,
+      "ogImage": "https://dtvoeevhaseb5.cloudfront.net/user-uploads/945c2bf2-7384-4cd8-aece-0b3f39e02fcd.jpg"
+    },
+    {
+      "path": "/blog/altadena-fire-rebuild-contractor",
+      "status": 200,
+      "location": null,
+      "title": "Altadena Fire Rebuild Contractor — What to Know Before You Hire | Waltco Development | Waltco Development",
+      "description": "Rebuilding in Altadena after the 2025 Eaton Fire? Waltco Development (CSLB #625535) guides you through contractor selection, permits, costs, and LA County rebuilding programs.",
+      "h1": [
+        "Altadena Fire Rebuild: What Homeowners Need to Know Before Hiring a Contractor"
+      ],
+      "canonical": "https://waltcodevelopment.com/blog/altadena-fire-rebuild-contractor",
+      "words": 1222,
+      "images": 4,
+      "ogImage": "https://dtvoeevhaseb5.cloudfront.net/user-uploads/c5588c0f-7322-4cb9-9546-7a90f793fd27.jpg"
+    },
+    {
+      "path": "/blog/kitchen-remodel-cost-los-angeles-2026",
+      "status": 200,
+      "location": null,
+      "title": "Kitchen Remodel Cost Los Angeles 2026 — Real Numbers | Waltco Development | Waltco Development",
+      "description": "How much does a kitchen remodel cost in Los Angeles in 2026? Waltco Development breaks down real costs by scope — from minor refreshes to full gut remodels with custom cabinetry.",
+      "h1": [
+        "Kitchen Remodel Cost in Los Angeles — What You&#x27;ll Actually Pay in 2026"
+      ],
+      "canonical": "https://waltcodevelopment.com/blog/kitchen-remodel-cost-los-angeles-2026",
+      "words": 927,
+      "images": 4,
+      "ogImage": "https://dtvoeevhaseb5.cloudfront.net/user-uploads/5714d7e7-68e7-4310-88df-738fe8fb4736.jpg"
+    },
+    {
+      "path": "/blog/adu-los-angeles-2026-guide",
+      "status": 200,
+      "location": null,
+      "title": "ADU Construction Los Angeles 2026 — Cost, Rules &amp; Permits | Waltco Development | Waltco Development",
+      "description": "Thinking about building an ADU in Los Angeles? Waltco Development (CSLB #625535) breaks down 2026 ADU rules, costs, timelines, and what you need to know before breaking ground.",
+      "h1": [
+        "ADU Construction in Los Angeles — Rules, Costs &amp; What to Know in 2026"
+      ],
+      "canonical": "https://waltcodevelopment.com/blog/adu-los-angeles-2026-guide",
+      "words": 980,
+      "images": 4,
+      "ogImage": "https://dtvoeevhaseb5.cloudfront.net/user-uploads/fac6c5f5-84c5-4ec4-a299-05f67d1da0c2.jpg"
+    },
+    {
+      "path": "/blog/how-to-choose-general-contractor-los-angeles",
+      "status": 200,
+      "location": null,
+      "title": "How to Choose a General Contractor in Los Angeles 2026 | Waltco Development | Waltco Development",
+      "description": "Hiring a general contractor in LA? Waltco Development shares exactly what to verify, what red flags to avoid, and what questions to ask before signing any contract.",
+      "h1": [
+        "How to Choose a Licensed General Contractor in Los Angeles — 2026 Guide"
+      ],
+      "canonical": "https://waltcodevelopment.com/blog/how-to-choose-general-contractor-los-angeles",
+      "words": 1068,
+      "images": 4,
+      "ogImage": "https://dtvoeevhaseb5.cloudfront.net/user-uploads/88912118-6a17-4a73-877b-0b63106850cd.jpg"
+    }
+  ]
+}
