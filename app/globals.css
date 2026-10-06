@@ -1,0 +1,6 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html { background: #FAFAF7; color: #1C1917; }
+body { font-size: 17px; line-height: 1.55; font-variant-numeric: tabular-nums; }
