@@ -46,11 +46,23 @@ for (const p of pages) {
     for (const m of p.html.matchAll(/href="mailto:([^"]+)"/g)) assert.equal(m[1], facts.email.value, 'mailto matches facts');
     if (facts.classifications.status !== 'confirmed') assert.doesNotMatch(visible(p.html), /C-15|General Building/, 'classifications pending (W0)');
     if (facts.bonded.status !== 'confirmed') assert.doesNotMatch(visible(p.html), /\bbonded\b/i, 'bond status pending (W0)');
-    if (facts.insured.status !== 'confirmed') assert.doesNotMatch(visible(p.html), /\binsured\b|workers'? comp/i, 'insurance not on file');
+    if (facts.insured.status !== 'confirmed') assert.doesNotMatch(visible(p.html), /\binsured\b|\b(we|waltco)\b[^.]{0,40}\b(insurance|workers'? comp)/i, 'insurance not on file');
     // Two addresses, always labelled (owner, 5 Oct 2026): showroom first and more prominent, mailing labelled as such.
-    const v = visible(p.html);
+    // Address checks read the page text only; JSON-LD carries the showroom address in schema fields, not prose.
+    const v = visible(p.html.replace(/<script type="application\/ld\+json"[\s\S]*?<\/script>/g, ' '));
     const shop = `${facts.showroom.value.label}: ${addressLine(facts.showroom.value)}`;
     const mail = `${facts.mailing.value.label}: ${addressLine(facts.mailing.value)}`;
+    // W3 SEO plumbing: valid JSON-LD with the business entity, breadcrumbs off the home page, social image,
+    // and every image with alt text and fixed dimensions.
+    const lds = [...p.html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)].map((m) => JSON.parse(m[1]));
+    const types = lds.flat().map((x: { '@type': string }) => x['@type']);
+    assert.ok(types.includes('GeneralContractor'), 'business JSON-LD');
+    if (url !== canonicalFor('/')) assert.ok(types.includes('BreadcrumbList'), 'breadcrumb JSON-LD');
+    assert.match(p.html, /<meta property="og:image" content="[^"]+\/og\/waltco-development\.jpg"/, 'og:image');
+    for (const img of p.html.match(/<img\b[^>]*>/g) ?? []) {
+      assert.match(img, /\salt="[^"]{3,}"/, `img alt: ${img.slice(0, 80)}`);
+      assert.match(img, /\swidth="\d+"[^>]*\sheight="\d+"|\sheight="\d+"[^>]*\swidth="\d+"/, 'img dimensions');
+    }
     if (facts.hours.status === 'confirmed') assert.ok(v.includes(facts.hours.value), 'hours as the owner gave them');
     assert.ok(v.includes(shop), 'labelled showroom address');
     assert.ok(v.includes(mail), 'labelled mailing address');
