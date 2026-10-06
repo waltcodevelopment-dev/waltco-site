@@ -13,7 +13,7 @@ const NAV = [
 
 function Logo() {
   return (
-    <a href="/" className="flex items-center gap-3" aria-label={`${facts.businessName.value} — home`}>
+    <a href="/" className="flex items-center gap-3">
       <span aria-hidden className="grid h-9 w-9 place-items-center bg-charcoal text-sm font-bold text-gold">W</span>
       <span className="whitespace-nowrap text-[13px] font-semibold uppercase tracking-label text-ink">{facts.businessName.value}</span>
     </a>
