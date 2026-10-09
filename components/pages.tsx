@@ -172,9 +172,9 @@ export function ServicePageView({ slug }: { slug: string }) {
       <Section>
         <SectionHead eyebrow="Also from Waltco" title="Other services" />
         <div className="mt-10"><LinkList items={SERVICES.filter((s) => s.slug !== slug).map((s) => ({ href: `/services/${s.slug}`, label: s.label }))} /></div>
-        <p className="mt-10 text-ink-2">We work across Los Angeles, including{' '}
-          {AREAS.slice(0, 6).map((a, i) => <span key={a.slug}>{i ? ', ' : ''}<a href={`/service-areas/${a.slug}`} className="text-gold-ink underline">{a.label}</a></span>)}
-          {' '}and <a href="/service-areas" className="text-gold-ink underline">more areas</a>.</p>
+        <p className="mt-10 text-ink-2">{`${name} from Waltco Development in`}{' '}
+          {AREAS.map((a, i) => <span key={a.slug}>{i ? (i === AREAS.length - 1 ? ' and ' : ', ') : ''}<a href={`/service-areas/${a.slug}`} className="text-gold-ink underline">{a.label}</a></span>)}
+          . <a href="/service-areas" className="text-gold-ink underline">All service areas</a></p>
       </Section>
     </main>
   );
