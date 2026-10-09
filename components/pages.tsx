@@ -7,6 +7,7 @@ import { AREAS, BLOG_POSTS, SERVICES } from '@/content/routes.ts';
 import { servicePage } from '@/content/services.ts';
 import { SERVICE_DETAILS } from '@/content/service-details.ts';
 import { AREA_PAGES, areaPage } from '@/content/areas.ts';
+import { AREA_LOCAL } from '@/content/area-local.ts';
 import { POSTS, post } from '@/content/posts.ts';
 import { articleLd, breadcrumbLd, faqLd, serviceLd } from '@/lib/schema.ts';
 
@@ -273,7 +274,9 @@ export function AreaPageView({ slug }: { slug: string }) {
   const path = `/service-areas/${slug}`;
   const trail = [HOME, { name: 'Service Areas', path: '/service-areas' }, { name, path }];
   const dept = a.jurisdiction === 'LADBS' ? 'the Los Angeles Department of Building and Safety (LADBS)' : a.department!;
+  const local = AREA_LOCAL[slug];
   const faq = [
+    ...(local ? [local.faq] : []),
     { q: `Who issues building permits in ${name}?`, a: `${a.jurisdiction === 'LADBS' ? `${name} is part of the City of Los Angeles, so permits are issued by` : 'Permits are issued by'} ${dept}. We pull the permits for our jobs and schedule the inspections.` },
     ...(a.coastal ? [{ q: `Does my ${name} project need coastal review?`, a: 'Some projects in the coastal zone need a coastal development permit or exemption in addition to building permits. We check this for your address before plans are final.' }] : []),
     ...(a.fire ? [{ q: 'Do you take fire rebuild projects?', a: `Yes. For homes damaged in ${a.fire}, describe your project with "Get your estimate" and we will reply.` }] : []),
@@ -288,6 +291,10 @@ export function AreaPageView({ slug }: { slug: string }) {
           <div className="space-y-4 text-lg text-ink-2">
             <p>{`Waltco Development is a licensed general contractor (CSLB #${facts.licenseNumber.value}) working in ${name} from our shop and showroom on South Vermont Avenue in Los Angeles. We build additions and ADUs, remodel kitchens and baths, and install and refinish hardwood floors under our C-15 flooring licence.`}</p>
             <p>{`Permits for ${name} projects are issued by ${dept}.${a.coastal ? ` Much of ${name} lies in the California coastal zone, where some projects need coastal review as well.` : ''}${a.fire ? ` Many homeowners here are rebuilding after ${a.fire}.` : ''}`}</p>
+            {local && <>
+              <h2 className="h-display pt-6 text-2xl text-ink">{local.heading}</h2>
+              {local.body.map((t) => <p key={t.slice(0, 24)}>{t}</p>)}
+            </>}
           </div>
           <div className="bg-sand p-8">
             <p className="label text-ink">{`Services in ${name}`}</p>

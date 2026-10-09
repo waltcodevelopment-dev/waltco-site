@@ -80,3 +80,19 @@ test('business JSON-LD carries name, url, telephone, address and the CSLB identi
   assert.equal(ld.address.streetAddress, facts.showroom.value.street);
   assert.equal(ld.identifier.value, facts.licenseNumber.value);
 });
+
+// Duplicate-content guard (8 Oct 2026): no two pages may share more than 40% of their main-content wording
+// (5-word shingles, Jaccard). Before the area-local rewrite, area pages paired at 51–62%.
+const mainText = (html: string) => (/<main[\s\S]*?<\/main>/.exec(html)?.[0] ?? '')
+  .replace(/<script[\s\S]*?<\/script>/g, ' ').replace(/<!--[\s\S]*?-->/g, '').replace(/<[^>]+>/g, ' ')
+  .replace(/&[a-z#0-9]+;/gi, ' ').toLowerCase().replace(/[^a-z0-9#' ]/g, ' ').split(/\s+/).filter(Boolean);
+const shingles = (w: string[]) => { const s = new Set<string>(); for (let i = 0; i + 5 <= w.length; i++) s.add(w.slice(i, i + 5).join(' ')); return s; };
+
+test('no two pages share more than 40% of their wording', () => {
+  const sets = pages.map((p) => ({ path: pathOf(p.url), s: shingles(mainText(p.html)) }));
+  for (let a = 0; a < sets.length; a++) for (let b = a + 1; b < sets.length; b++) {
+    let i = 0; for (const g of sets[a].s) if (sets[b].s.has(g)) i++;
+    const j = i / (sets[a].s.size + sets[b].s.size - i || 1);
+    assert.ok(j <= 0.4, `${sets[a].path} and ${sets[b].path} share ${Math.round(j * 100)}% of their wording`);
+  }
+});
