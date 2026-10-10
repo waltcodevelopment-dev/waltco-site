@@ -1,0 +1,11 @@
+metric,value,period,source,captured
+business_profile_interactions,242,May 2026–Oct 2026,Google Business Profile > Performance > Overview (owner screenshot),2026-10-10
+calls,0,May 2026–Oct 2026,GBP Performance > Calls (owner reported),2026-10-10
+bookings,0,May 2026–Oct 2026,GBP Performance > Bookings (owner reported),2026-10-10
+direction_requests,212,May 2026–Oct 2026,GBP Performance > Directions (owner screenshot),2026-10-10
+website_clicks,30,May 2026–Oct 2026,"GBP Performance > Website clicks (owner screenshot); profile website was http://www.reclaimedfloors.org/ until 2026-10-10, so these clicks went to reclaimedfloors.org, not waltcodevelopment.com",2026-10-10
+people_saw_profile_in_search,325,Sep 2026 (last month),GBP card "325 people saw your profile in their search results last month" (owner screenshot),2026-10-10
+profile_name_at_capture,"Waltco Development | Reclaimed Wood",,GBP (owner screenshot),2026-10-10
+reviews_at_capture,"3 reviews, 5.0",,GBP (owner screenshot),2026-10-10
+search_console_verified,waltcodevelopment.com (Domain property),,Search Console; sitemap submitted,2026-10-10
+profile_website_at_capture,http://www.reclaimedfloors.org/,,GBP Contact tab (owner screenshot); changed to waltcodevelopment.com with UTM on 2026-10-10 (pending Google review),2026-10-10

@@ -59,3 +59,13 @@ Open the profile: search "Waltco Development" on Google while signed in → "Edi
 - Add keywords or cities to the business name.
 - Post the Live Oak (mailing) address on the profile — the profile address stays the Vermont Ave showroom.
 - Upload photos that show clients' faces or house numbers.
+
+## Status — 10 Oct 2026 (done by Walter, guided in the build session)
+- Search Console: waltcodevelopment.com Domain property verified (GoDaddy DNS); sitemap submitted, status Success.
+- Baseline saved before edits: docs/gbp-baseline-2026-10.csv (242 interactions May–Oct 2026; website was reclaimedfloors.org).
+- Name → Waltco Development; primary category General contractor + 9 additional; description; website → waltcodevelopment.com (UTM); booking link → GymLogo intake; service areas (14, incl. Orange County; wrong Brentwood 94513 removed); hours Mon–Fri 7–5.
+- Services with descriptions (kitchen, bath, install flooring, reclaimed, refinishing, general construction, ADU, home building, additions).
+- Products: Kitchen, Bathroom, Hardwood Floor Installation, Reclaimed Wood Flooring, Room Additions & ADUs, Custom Cabinetry, Foundations & Panel Wall Construction (neutral wording; panel system is a supplier's).
+- Photos uploaded (logo, cover, finished work, 5 construction). Replied to all 3 reviews.
+- Q&A: Google now shows only its own customer questions ("Answer questions"); answer them as they appear.
+- Still open: exterior shop photo; re-verification if Google asks (record at the shop); Facebook/LinkedIn/Birdeye names; add Facebook under Social profiles after rename.
