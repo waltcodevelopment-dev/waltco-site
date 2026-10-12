@@ -2,6 +2,9 @@
 // no structure change ships together with the hosting change. Tested in tests/unit/routes.test.ts.
 // 10 Oct 2026: /services/architecture was still in Google's index from an earlier version of the old site and
 // returned 404. Architecture-only work is not offered (architect licence required), so it goes to general construction.
+// 11 Oct 2026: /services/wood-flooring (old-site URL, last crawled 6 Oct) reported 404 in Search Console → the wood
+// flooring page.
 export const REDIRECTS: { source: string; destination: string }[] = [
   { source: '/services/architecture', destination: '/services/general-construction' },
+  { source: '/services/wood-flooring', destination: '/services/hardwood-flooring' },
 ];
