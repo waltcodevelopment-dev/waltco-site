@@ -9,6 +9,8 @@ import { SERVICE_DETAILS } from '@/content/service-details.ts';
 import { AREA_PAGES, areaPage } from '@/content/areas.ts';
 import { AREA_LOCAL } from '@/content/area-local.ts';
 import { POSTS, post } from '@/content/posts.ts';
+import { FLOOR_HUB, FLOOR_PAGES, floorPage, floorPath } from '@/content/flooring.ts';
+import { floorPhotos } from '@/content/floor-photos.ts';
 import { articleLd, breadcrumbLd, faqLd, serviceLd } from '@/lib/schema.ts';
 
 const HOME = { name: 'Home', path: '/' };
@@ -134,7 +136,10 @@ export function ServicePageView({ slug }: { slug: string }) {
           <div className="bg-sand p-8">
             <p className="label text-ink">Scope of work</p>
             <ul className="mt-5 space-y-3">
-              {pg.scope.map((s) => <li key={s} className="flex gap-3 text-[15px] text-ink-2"><span aria-hidden className="mt-2 h-1.5 w-1.5 shrink-0 bg-gold" />{s}</li>)}
+              {pg.scope.map((s) => {
+                const sub = slug === 'hardwood-flooring' ? FLOOR_PAGES.find((f) => f.hubScope === s) : undefined;
+                return <li key={s} className="flex gap-3 text-[15px] text-ink-2"><span aria-hidden className="mt-2 h-1.5 w-1.5 shrink-0 bg-gold" />{sub ? <a href={floorPath(sub.slug)} className="underline decoration-line underline-offset-4 hover:text-gold-ink">{s}</a> : s}</li>;
+              })}
             </ul>
             <div className="mt-8"><Cta>Get your estimate</Cta></div>
           </div>
@@ -167,6 +172,12 @@ export function ServicePageView({ slug }: { slug: string }) {
           <div className="mt-10"><PhotoGrid photos={photos.slice(1, 7)} /></div>
         </Section>
       )}
+      {slug === 'hardwood-flooring' && (
+        <Section>
+          <SectionHead eyebrow="Wood floors" title="Hardwood flooring services" />
+          <div className="mt-10"><LinkList items={FLOOR_PAGES.map((f) => ({ href: floorPath(f.slug), label: f.label }))} /></div>
+        </Section>
+      )}
       <Section sand>
         <Faq items={pg.faq} />
       </Section>
@@ -176,6 +187,53 @@ export function ServicePageView({ slug }: { slug: string }) {
         <p className="mt-10 text-ink-2">{`${name} from Waltco Development in`}{' '}
           {AREAS.map((a, i) => <span key={a.slug}>{i ? (i === AREAS.length - 1 ? ' and ' : ', ') : ''}<a href={`/service-areas/${a.slug}`} className="text-gold-ink underline">{a.label}</a></span>)}
           . <a href="/service-areas" className="text-gold-ink underline">All service areas</a></p>
+      </Section>
+    </main>
+  );
+}
+
+// ── Hardwood sub-page ────────────────────────────────────────────────────────────────────────────────────
+export function FloorPageView({ slug }: { slug: string }) {
+  const f = floorPage(slug)!;
+  const path = floorPath(slug);
+  const trail = [HOME, { name: 'Services', path: '/services' }, { name: 'Hardwood Flooring', path: FLOOR_HUB }, { name: f.label, path }];
+  const photos = floorPhotos(slug);
+  return (
+    <main>
+      <JsonLd data={[breadcrumbLd(trail), serviceLd(f.h1, path, f.intro[0]), faqLd(f.faq)]} />
+      <PageHero eyebrow="Hardwood flooring" title={f.h1} tagline={f.tagline} photo={photos[0]} trail={trail} />
+      <Section>
+        <div className="grid gap-14 lg:grid-cols-[1.3fr_1fr]">
+          <div className="space-y-4 text-lg text-ink-2">
+            {f.intro.map((p) => <p key={p.slice(0, 24)}>{p}</p>)}
+            {f.sections.map((sec) => (
+              <div key={sec.h}>
+                <h2 className="h-display pt-6 text-2xl text-ink">{sec.h}</h2>
+                {sec.p.map((p) => <p key={p.slice(0, 24)} className="mt-4">{p}</p>)}
+                {sec.list && <ul className="mt-4 space-y-2">{sec.list.map((l) => <li key={l} className="flex gap-3 text-[17px]"><span aria-hidden className="mt-2.5 h-1.5 w-1.5 shrink-0 bg-gold" />{l}</li>)}</ul>}
+              </div>
+            ))}
+            <p className="pt-4 text-sm text-muted">{licenceLine()}</p>
+          </div>
+          <div className="h-fit bg-sand p-8">
+            <p className="label text-ink">How we run the job</p>
+            <ol className="mt-5 space-y-4">
+              {f.steps.map((x, i) => <li key={x} className="flex gap-4 text-[15px] text-ink-2"><span className="text-xs tracking-label text-gold-ink">{String(i + 1).padStart(2, '0')}</span><span>{x}</span></li>)}
+            </ol>
+            <div className="mt-8"><Cta>Get your estimate</Cta></div>
+          </div>
+        </div>
+      </Section>
+      <Section sand>
+        <SectionHead eyebrow="Our work" title={`${f.label}: job photos`} link={{ href: '/portfolio', label: 'Full portfolio' }} />
+        <div className="mt-10"><PhotoGrid photos={photos.slice(1)} /></div>
+      </Section>
+      <Section>
+        <Faq items={f.faq} />
+      </Section>
+      <Section sand>
+        <SectionHead eyebrow="Hardwood flooring" title="More wood floor services" link={{ href: FLOOR_HUB, label: 'All hardwood flooring' }} />
+        <div className="mt-10"><LinkList items={FLOOR_PAGES.filter((x) => x.slug !== slug).map((x) => ({ href: floorPath(x.slug), label: x.label }))} /></div>
       </Section>
     </main>
   );

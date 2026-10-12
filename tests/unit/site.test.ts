@@ -7,10 +7,12 @@ import { bannedIn } from '../../content/claims.ts';
 import { canonicalFor, robotsRules, sitemapEntries, isIndexable } from '../../lib/seo.ts';
 import { descriptionFor, titleFor } from '../../lib/meta.ts';
 
-test('35 approved URLs: the 34 current ones byte for byte plus /services/hardwood-flooring', () => {
+test('44 approved URLs: the 34 current ones byte for byte, /services/hardwood-flooring and its 9 sub-pages', () => {
   const paths = ROUTES.map((r) => r.path);
-  assert.equal(paths.length, 35);
-  assert.equal(new Set(paths).size, 35);
+  assert.equal(paths.length, 44);
+  assert.equal(new Set(paths).size, 44);
+  for (const s of ['installation', 'wide-plank', 'herringbone-and-parquet', 'reclaimed-wood', 'stain-and-color-matching', 'sanding-and-refinishing', 'stairs', 'floor-removal-and-subfloor', 'beams-and-ceilings'])
+    assert.ok(paths.includes(`/services/hardwood-flooring/${s}`), s);
   assert.equal(OLD_URLS.length, 34);
   assert.ok(paths.includes('/services/hardwood-flooring'));
   for (const p of paths) assert.match(p, /^\/([a-z0-9-]+(\/[a-z0-9-]+)*)?$/, `${p}: lowercase, no trailing slash`);
@@ -68,14 +70,37 @@ test('titles ≤ 60 chars, unique, no doubled suffix; descriptions 70–160 and 
   assert.equal(new Set(descs).size, descs.length, 'descriptions unique');
 });
 
-test('indexing flag: closed by default; production opens robots and the sitemap of exactly 35 URLs', () => {
+test('indexing flag: closed by default; production opens robots and the sitemap of exactly 44 URLs', () => {
   assert.equal(isIndexable({}), false);
   assert.equal(isIndexable({ SITE_INDEXING: 'on' }), true);
   assert.deepEqual(robotsRules(false), { rules: [{ userAgent: '*', disallow: '/' }] });
   assert.equal(robotsRules(true).sitemap, 'https://waltcodevelopment.com/sitemap.xml');
   assert.deepEqual(sitemapEntries(false), []);
   const urls = sitemapEntries(true).map((e) => e.url);
-  assert.equal(urls.length, 35);
+  assert.equal(urls.length, 44);
   assert.equal(urls[0], 'https://waltcodevelopment.com');
   assert.equal(canonicalFor('/about'), 'https://waltcodevelopment.com/about');
+});
+
+// Hardwood sub-pages (Fable hardwood ruling, 6 Oct 2026): ≥ 400 words and ≥ 6 captioned photos (city + year) each,
+// no banned claim, no price.
+import { FLOOR_PAGES } from '../../content/flooring.ts';
+import { FLOOR_PHOTOS, floorPhotos } from '../../content/floor-photos.ts';
+import { existsSync } from 'node:fs';
+
+test('hardwood sub-pages: ≥ 400 words, ≥ 6 captioned photos each, no banned claim or price', () => {
+  for (const f of FLOOR_PAGES) {
+    const text = [f.h1, f.tagline, ...f.intro, ...f.sections.flatMap((s) => [s.h, ...s.p, ...(s.list ?? [])]), ...f.steps, ...f.faq.flatMap((q) => [q.q, q.a])].join(' ');
+    const words = text.split(/\s+/).filter(Boolean).length;
+    assert.ok(words >= 400, `${f.slug}: ${words} words`);
+    assert.deepEqual(bannedIn(text), [], f.slug);
+    assert.doesNotMatch(text, /\$\s*\d/, `${f.slug}: no prices`);
+    const ps = floorPhotos(f.slug);
+    assert.ok(ps.length - 1 >= 6, `${f.slug}: ${ps.length} photos (the first is the hero)`);
+    for (const p of ps) assert.match(p.alt, /— [A-Z][A-Za-z .'-]+, (19|20)\d\d$/, `${p.id}: caption has city and year`);
+  }
+  for (const p of FLOOR_PHOTOS) for (const i of [p.lg, p.sm]) {
+    assert.ok(existsSync(`public${i.src}`), i.src);
+    assert.ok(existsSync(`public${i.src.replace(/\.jpg$/, '.webp')}`), `${i.src} webp`);
+  }
 });

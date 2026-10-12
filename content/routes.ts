@@ -1,7 +1,10 @@
 // The approved URL set (Fable ruling 2, 6 Oct 2026): the 34 URLs of the current site, byte for byte, plus the
 // one approved new page /services/hardwood-flooring = 35. Adding or removing a URL here needs a ruling.
+// + the nine hardwood sub-pages (Fable hardwood ruling, 6 Oct 2026; brief approved by the owner 12 Oct 2026) = 44.
 
-export type RouteKind = 'home' | 'page' | 'service' | 'area' | 'blog-index' | 'blog' | 'contact';
+import { FLOOR_PAGES, floorPath } from './flooring.ts';
+
+export type RouteKind = 'home' | 'page' | 'service' | 'floor' | 'area' | 'blog-index' | 'blog' | 'contact';
 export type Route = { path: string; kind: RouteKind; label: string };
 
 export const SERVICES: { slug: string; label: string; isNew?: true }[] = [
@@ -50,9 +53,10 @@ export const ROUTES: Route[] = [
   { path: '/service-areas', kind: 'page', label: 'Service Areas' },
   { path: '/blog', kind: 'blog-index', label: 'Resources' },
   ...SERVICES.map((s) => ({ path: `/services/${s.slug}`, kind: 'service' as const, label: s.label })),
+  ...FLOOR_PAGES.map((f) => ({ path: floorPath(f.slug), kind: 'floor' as const, label: f.label })),
   ...AREAS.map((a) => ({ path: `/service-areas/${a.slug}`, kind: 'area' as const, label: a.label })),
   ...BLOG_POSTS.map((b) => ({ path: `/blog/${b.slug}`, kind: 'blog' as const, label: b.label })),
 ];
 
 /** The 34 URLs of the current site (from its sitemap.xml, read 6 Oct 2026). Each must stay 200 or 301. */
-export const OLD_URLS: string[] = ROUTES.map((r) => r.path).filter((p) => p !== '/services/hardwood-flooring');
+export const OLD_URLS: string[] = ROUTES.map((r) => r.path).filter((p) => !p.startsWith('/services/hardwood-flooring'));
