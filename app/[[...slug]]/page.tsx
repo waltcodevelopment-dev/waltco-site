@@ -6,7 +6,7 @@ import { descriptionFor, titleFor } from '@/lib/meta.ts';
 import { Home } from '@/components/home/Home';
 import { AboutPage, AreaPageView, AreasIndexPage, BlogIndexPage, ContactPage, FloorPageView, PortfolioPage, PostPageView, ServicePageView, ServicesIndexPage } from '@/components/pages';
 
-// All 44 approved URLs are prerendered from content/*.ts; nothing else exists (dynamicParams = false).
+// All 46 approved URLs are prerendered from content/*.ts; nothing else exists (dynamicParams = false).
 export const dynamicParams = false;
 
 export function generateStaticParams() {

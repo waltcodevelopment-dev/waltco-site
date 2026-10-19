@@ -37,6 +37,8 @@ export const AREAS: { slug: string; label: string }[] = [
 ];
 
 export const BLOG_POSTS: { slug: string; label: string }[] = [
+  { slug: 'box-beams-cost-los-angeles', label: 'Box beams cost in Los Angeles' },
+  { slug: 'how-to-measure-box-beams', label: 'How to measure for box beams' },
   { slug: 'contractor-pacific-palisades-guide', label: 'Contractor guide: Pacific Palisades' },
   { slug: 'altadena-fire-rebuild-contractor', label: 'Altadena fire rebuild contractor' },
   { slug: 'kitchen-remodel-cost-los-angeles-2026', label: 'Kitchen remodel cost, Los Angeles 2026' },
@@ -59,4 +61,6 @@ export const ROUTES: Route[] = [
 ];
 
 /** The 34 URLs of the current site (from its sitemap.xml, read 6 Oct 2026). Each must stay 200 or 301. */
-export const OLD_URLS: string[] = ROUTES.map((r) => r.path).filter((p) => !p.startsWith('/services/hardwood-flooring'));
+// URLs added after the 5 Oct 2026 capture: the hardwood pages (12 Oct) and the beam guides (19 Oct).
+const ADDED = ['/blog/box-beams-cost-los-angeles', '/blog/how-to-measure-box-beams'];
+export const OLD_URLS: string[] = ROUTES.map((r) => r.path).filter((p) => !p.startsWith('/services/hardwood-flooring') && !ADDED.includes(p));

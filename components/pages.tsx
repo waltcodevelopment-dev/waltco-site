@@ -10,7 +10,7 @@ import { AREA_PAGES, areaPage } from '@/content/areas.ts';
 import { AREA_LOCAL } from '@/content/area-local.ts';
 import { POSTS, post } from '@/content/posts.ts';
 import { FLOOR_HUB, FLOOR_PAGES, floorPage, floorPath } from '@/content/flooring.ts';
-import { floorPhotos } from '@/content/floor-photos.ts';
+import { FLOOR_PHOTOS, floorPhotos } from '@/content/floor-photos.ts';
 import { articleLd, breadcrumbLd, faqLd, serviceLd } from '@/lib/schema.ts';
 
 const HOME = { name: 'Home', path: '/' };
@@ -418,6 +418,12 @@ export function PostPageView({ slug }: { slug: string }) {
             {s.list && <ul className="mt-4 space-y-2">{s.list.map((l) => <li key={l} className="flex gap-3 text-ink-2"><span aria-hidden className="mt-2.5 h-1.5 w-1.5 shrink-0 bg-gold" />{l}</li>)}</ul>}
           </section>
         ))}
+        {p.photos && p.photos.length > 0 && (
+          <div className="mt-12"><PhotoGrid cols={2} photos={p.photos.map((id) => FLOOR_PHOTOS.find((f) => f.id === id)!).filter(Boolean)} /></div>
+        )}
+        {p.links && p.links.length > 0 && (
+          <div className="mt-12"><SectionHead eyebrow="Related" title="See also" /><div className="mt-6"><LinkList items={p.links} /></div></div>
+        )}
         <div className="mt-14 bg-sand p-8">
           <p className="label text-ink">Related services</p>
           <ul className="mt-4 flex flex-wrap gap-3">

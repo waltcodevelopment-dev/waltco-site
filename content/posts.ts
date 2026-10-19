@@ -10,6 +10,8 @@ export type Post = {
   sections: { h: string; p: string[]; list?: string[] }[];
   faq: { q: string; a: string }[];
   related: string[]; // service slugs
+  photos?: string[]; // ids from FLOOR_PHOTOS: owner's own job photos, captioned with city and year
+  links?: { href: string; label: string }[]; // in-site pages this guide supports
 };
 
 const UPDATED = '2026-10-06';
@@ -99,6 +101,47 @@ export const POSTS: Post[] = [
       { q: 'What is the difference between a room addition and an ADU?', a: 'An addition enlarges your home; an ADU is a separate dwelling unit with its own kitchen and entrance, permitted under the state ADU rules.' },
     ],
     related: ['new-home-construction', 'room-additions', 'kitchen-remodeling'],
+  },
+  {
+    slug: 'box-beams-cost-los-angeles',
+    title: 'What Custom Box Beams Cost in Los Angeles',
+    dek: 'Box beams are priced per linear foot to build, per beam to install and per foot to finish. How Waltco Development prices them, with a Malibu example.',
+    updated: '2026-10-19',
+    photos: ['floor-beams-and-ceilings-09', 'floor-beams-and-ceilings-04', 'floor-beams-and-ceilings-10', 'floor-beams-and-ceilings-02'],
+    links: [{ href: '/services/hardwood-flooring/beams-and-ceilings', label: 'Beams and wood ceilings' }, { href: '/blog/how-to-measure-box-beams', label: 'How to measure for box beams' }],
+    sections: [
+      { h: 'The short answer', p: ['A box beam is a hollow beam built from three boards mitered together: two sides and a bottom face. It looks like a solid timber but weighs a fraction of one, so it can go up on almost any ceiling.', 'Waltco Development prices built oak box beams from $100 per linear foot. Installing them from scaffolding is priced per beam, and the finish is priced per linear foot. A site measure comes first, because the final drawing sets the final price.'] },
+      { h: 'A real example: four white oak beams in Malibu', p: ['A recent estimate covered four 3-sided mitered white oak beams, 9 inches high and 5¼ to 5½ inches wide: two at 140⅝ inches and two at 181⅝ inches, 53.71 linear feet in all, with a Rubio Monocoat whitewash.', 'Built, delivered, installed from scaffolding and touched up, the beams came to $10,231. The whitewash, with a sample board for approval, added $1,324. That is about $215 per linear foot, finished and installed.'] },
+      { h: 'What moves the price', p: ['Six things change the number more than anything else:'], list: ['Species and surface: oak and white oak cost more than Douglas fir; hand-hewn faces cost more than planed ones.', 'Length: beams longer than 12 feet need 16-foot boards, which are not always in stock.', 'Continuous lumber or splices: one board per face looks cleaner and costs more than spliced pieces.', 'Ceiling height and shape: vaulted ceilings need scaffolding and more setting time.', 'Finish: stain, oil or whitewash, and whether a sample board is needed.', 'How many beams: set-up, delivery and clean-up are shared across the job, so each extra beam costs less.'] },
+      { h: 'How we build the estimate', p: ['Every Waltco beam estimate uses the same steps, so two quotes for the same ceiling come out the same:'], list: ['Linear feet of beam × the rate for the species and surface.', 'Number of beams × the install rate.', 'One scaffold set-up for the job: delivery, floor protection, touch-up and clean-up.', 'One site measure and shop drawing.', 'Linear feet × the finish rate.'] },
+      { h: 'What is not in the beam price', p: ['Ceiling patching and paint, wiring for lights inside a beam, and any structural work are priced separately. A box beam is decorative; if a beam has to carry load, an engineer sizes it first.'] },
+    ],
+    faq: [
+      { q: 'Are box beams cheaper than solid beams?', a: 'Usually, yes. A box beam uses three boards instead of a full timber, and it is light enough to fasten to blocking in the ceiling.' },
+      { q: 'Can a box beam be longer than 16 feet?', a: 'Yes, but longer beams need longer boards or a splice. We tell you which before the estimate is final.' },
+      { q: 'Do you measure before quoting?', a: 'Yes. The first number is a ballpark from your sizes or photos; the final price follows a site measure and drawing.' },
+    ],
+    related: ['hardwood-flooring', 'finish-carpentry'],
+  },
+  {
+    slug: 'how-to-measure-box-beams',
+    title: 'How to Measure for Box Beams: Inside vs Outside',
+    dek: 'Box beam sizes can mean the outside face or the inside opening. Mixing them up changes the size and the price. How to measure, and what to send us.',
+    updated: '2026-10-19',
+    photos: ['floor-beams-and-ceilings-03', 'floor-beams-and-ceilings-06', 'floor-beams-and-ceilings-07', 'floor-beams-and-ceilings-08'],
+    links: [{ href: '/blog/box-beams-cost-los-angeles', label: 'What custom box beams cost in Los Angeles' }, { href: '/services/hardwood-flooring/beams-and-ceilings', label: 'Beams and wood ceilings' }],
+    sections: [
+      { h: 'Outside or inside: say which', p: ['A 3-sided box beam has a face (the bottom) and two sides, open at the top where it meets the ceiling. Its outside size is what you see: the face width and the side height. Its inside size is the opening that fits over the blocking or an existing beam.', 'The two differ by the board thickness. The inside width is the outside width minus two boards; the inside height is the outside height minus one. Always write down which one your numbers are.'] },
+      { h: 'Measure the length wall to wall', p: ['Measure the full length from wall to wall, or from the wall to a post. Write it in feet and inches. Any beam longer than 12 feet needs 16-foot boards; if you want one continuous board per face, tell us, because long stock is not always available.'] },
+      { h: 'What to send for an estimate', p: ['With these details we can give a ballpark before the site measure:'], list: ['Quantity and length of each beam.', 'Face width and side height, and whether they are inside or outside sizes.', 'Species and surface: oak, white oak, Douglas fir; planed, rough sawn or hand hewn.', 'Sides: 3-sided against a flat ceiling, 2-sided in a corner, or 4-sided hanging free.', 'Finish: stain, oil or whitewash, and the colour if you have one.', 'Ceiling: flat or vaulted, and its height.', 'Two or three photos of the room.'] },
+      { h: 'No tape measure? Send photos', p: ['Photos of the ceiling from each end of the room are enough for a first number. We use the doors, windows and floor tiles in the photos as a guide, then confirm every size at the site measure.'] },
+    ],
+    faq: [
+      { q: 'Which size should I give, inside or outside?', a: 'Either works, as long as you say which. Most designers give the outside face size.' },
+      { q: 'How wide is a typical box beam?', a: 'It depends on the room. Beams of about 5 to 8 inches wide are common in homes with standard ceilings; larger rooms take larger beams.' },
+      { q: 'Do I need to measure the ceiling height?', a: 'It helps. High or vaulted ceilings need scaffolding, which changes the install price.' },
+    ],
+    related: ['hardwood-flooring', 'finish-carpentry'],
   },
 ];
 
