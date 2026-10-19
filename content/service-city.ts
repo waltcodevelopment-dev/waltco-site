@@ -51,6 +51,51 @@ export const SVC_CITY: SvcCity[] = [
       { q: 'How is a cabinet job priced?', a: 'By the linear foot of cabinet, with standard, mid-range and high-end options. A single closet or vanity is priced after a site visit.' },
     ],
   },
+  {
+    service: 'kitchen-remodeling', city: 'los-angeles', cityLabel: 'Los Angeles', label: 'Kitchen Remodeling in Los Angeles',
+    h1: 'Kitchen Remodeling in Los Angeles',
+    title: 'LA Kitchen Remodeling: Job Photos & Estimates — Waltco',
+    description: 'Kitchen remodeling across Los Angeles by a licensed general contractor based on South Vermont Avenue. Job photos from our LA kitchens, 2017 to 2024.',
+    tagline: 'From a cabinet refresh to a full rebuild, from our shop on South Vermont Avenue.',
+    intro: [
+      'Waltco Development is based in Los Angeles, with our shop and showroom at 9216 S. Vermont Avenue. We remodel kitchens across the city, and the photos below come from our own LA kitchen jobs between 2017 and 2024.',
+      'Los Angeles kitchens come in every shape: galley kitchens in older homes, open plans with a long island, and lofts with concrete floors. We plan the layout around the room you have, then build it with one crew and one schedule.',
+    ],
+    sections: [
+      { h: 'What we build in LA kitchens', p: ['The work on this page covers a wide range of styles and budgets:'], list: ['Oak and walnut slab cabinets, painted shaker cabinets and glass-front uppers.', 'Stone and quartz counters, waterfall islands and farmhouse sinks.', 'Range walls with stone or tile backsplashes and vented hoods.', 'Wood floors to finish the room, from light oak to dark-stained boards.'] },
+      { h: 'Permits in the City of Los Angeles', p: ['Inside city limits, kitchen permits are issued by the Los Angeles Department of Building and Safety (LADBS). Moving walls, plumbing or gas lines usually needs plans; a like-for-like cabinet and counter change often does not. Cities such as Santa Monica, Culver City and Beverly Hills have their own building departments, and we file with whichever one covers your address.'] },
+      { h: 'Older homes', p: ['Many LA homes were built before 1978. If yours was, we check the work area for lead paint before demolition, and we look at the wiring and plumbing behind the old cabinets before we give a final price.'] },
+      { h: 'Your estimate', p: ['You get a written estimate with standard, mid-range and high-end options from our own price list, so you can see where the money goes before you choose.'] },
+    ],
+    steps: ['Free site measure', 'Layout and material choices', 'Written estimate, three finish levels', 'Permits when the job needs them', 'Demolition, rough work and inspections', 'Cabinets, counters, floors and finish'],
+    faq: [
+      { q: 'Do you remodel small kitchens?', a: 'Yes. Galley and small kitchens are common in Los Angeles; the estimate is built from your room\'s measurements, not a flat package price.' },
+      { q: 'Which building department handles my permit?', a: 'LADBS inside the City of Los Angeles. Cities like Santa Monica or Beverly Hills have their own departments; we file with the one for your address.' },
+      { q: 'Can I see the materials first?', a: 'Yes. Our shop and showroom on South Vermont Avenue is open by appointment.' },
+    ],
+  },
+  {
+    service: 'cabinetry', city: 'los-angeles', cityLabel: 'Los Angeles', label: 'Custom Cabinets & Closets in Los Angeles',
+    h1: 'Custom Cabinets and Closets in Los Angeles',
+    title: 'Custom Cabinets & Closets in Los Angeles — Waltco',
+    description: 'Custom closets, vanities, built-ins and kitchen cabinets in Los Angeles, measured on site and installed by a licensed contractor. Photos from LA jobs.',
+    tagline: 'Closets, vanities and built-ins, measured on site and made to fit.',
+    intro: [
+      'Waltco Development builds custom cabinetry for Los Angeles homes: walk-in closets, bathroom vanities, built-in cabinets and kitchen cabinets. The photos here come from our own LA jobs between 2023 and 2026.',
+      'We measure each wall on site, so drawers, doors and shelves line up with the room instead of leaving filler strips and gaps.',
+    ],
+    sections: [
+      { h: 'Closets and built-ins', p: ['Walk-in closets with drawer banks, shelving and hanging rods, closet lighting, and built-in cabinets for living rooms and halls.'] },
+      { h: 'Vanities and kitchens', p: ['Wood vanities sized to the bathroom, and kitchen cabinets in raised-panel, shaker or flat-slab styles, stained or painted.'] },
+      { h: 'How a cabinet job is priced', p: ['By the linear foot of cabinet, with standard, mid-range and high-end options. A single closet or vanity on its own is priced after a site visit, because access and wall conditions change the work.'] },
+    ],
+    steps: ['Site measure', 'Drawing, wood and finish samples', 'Written estimate', 'Build', 'Install, hardware and lighting', 'Final adjustment'],
+    faq: [
+      { q: 'Can you build a closet in an existing home?', a: 'Yes. We measure, build and install around your schedule, and protect the floors while we work.' },
+      { q: 'Do you add lighting inside closets?', a: 'Yes. LED strips inside shelves and hanging sections are a common add-on.' },
+      { q: 'Do you build bathroom vanities?', a: 'Yes, in wood or painted finishes, sized to the bathroom and topped in stone.' },
+    ],
+  },
 ];
 
 export const svcCityPath = (s: SvcCity) => `/services/${s.service}/${s.city}`;

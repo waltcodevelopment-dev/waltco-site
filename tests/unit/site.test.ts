@@ -7,10 +7,10 @@ import { bannedIn } from '../../content/claims.ts';
 import { canonicalFor, robotsRules, sitemapEntries, isIndexable } from '../../lib/seo.ts';
 import { descriptionFor, titleFor } from '../../lib/meta.ts';
 
-test('48 approved URLs: the 34 current ones byte for byte, /services/hardwood-flooring, its 9 sub-pages, 2 beam guides, 2 service x city pages', () => {
+test('50 approved URLs: the 34 current ones byte for byte, /services/hardwood-flooring, its 9 sub-pages, 2 beam guides, 4 service x city pages', () => {
   const paths = ROUTES.map((r) => r.path);
-  assert.equal(paths.length, 48);
-  assert.equal(new Set(paths).size, 48);
+  assert.equal(paths.length, 50);
+  assert.equal(new Set(paths).size, 50);
   for (const s of ['installation', 'wide-plank', 'herringbone-and-parquet', 'reclaimed-wood', 'stain-and-color-matching', 'sanding-and-refinishing', 'stairs', 'floor-removal-and-subfloor', 'beams-and-ceilings'])
     assert.ok(paths.includes(`/services/hardwood-flooring/${s}`), s);
   assert.equal(OLD_URLS.length, 34);
@@ -70,14 +70,14 @@ test('titles ≤ 60 chars, unique, no doubled suffix; descriptions 70–160 and 
   assert.equal(new Set(descs).size, descs.length, 'descriptions unique');
 });
 
-test('indexing flag: closed by default; production opens robots and the sitemap of exactly 48 URLs', () => {
+test('indexing flag: closed by default; production opens robots and the sitemap of exactly 50 URLs', () => {
   assert.equal(isIndexable({}), false);
   assert.equal(isIndexable({ SITE_INDEXING: 'on' }), true);
   assert.deepEqual(robotsRules(false), { rules: [{ userAgent: '*', disallow: '/' }] });
   assert.equal(robotsRules(true).sitemap, 'https://waltcodevelopment.com/sitemap.xml');
   assert.deepEqual(sitemapEntries(false), []);
   const urls = sitemapEntries(true).map((e) => e.url);
-  assert.equal(urls.length, 48);
+  assert.equal(urls.length, 50);
   assert.equal(urls[0], 'https://waltcodevelopment.com');
   assert.equal(canonicalFor('/about'), 'https://waltcodevelopment.com/about');
 });
