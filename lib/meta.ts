@@ -3,6 +3,9 @@
 import { facts } from '../content/facts.ts';
 import type { Route } from '../content/routes.ts';
 import { floorPage } from '../content/flooring.ts';
+import { svcCity } from '../content/service-city.ts';
+
+const scOf = (r: Route) => { const [, , sv, c] = r.path.split('/'); return svcCity(sv, c)!; };
 
 const floorOf = (r: Route) => floorPage(r.path.split('/').pop()!);
 
@@ -15,6 +18,8 @@ export function titleFor(r: Route): string {
       return fit(`${NAME} — General Contractor & Hardwood Flooring, LA`, `${NAME} — General Contractor, Los Angeles`);
     case 'floor':
       return floorOf(r)!.title;
+    case 'svc-city':
+      return scOf(r).title;
     case 'service':
       return fit(`${r.label} in Los Angeles — ${NAME}`, `${r.label} — ${NAME}`);
     case 'area':
@@ -32,6 +37,8 @@ export function descriptionFor(r: Route): string {
         return `${NAME} is a licensed general contractor in Los Angeles (${lic}). Every inquiry is answered, and estimates come from our own numbers.`;
       case 'floor':
         return floorOf(r)!.description;
+      case 'svc-city':
+        return scOf(r).description;
       case 'service':
         return `${r.label} in Los Angeles by ${NAME}, a licensed general contractor (${lic}). Request an estimate online.`;
       case 'area':

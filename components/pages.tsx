@@ -11,6 +11,8 @@ import { AREA_LOCAL } from '@/content/area-local.ts';
 import { POSTS, post } from '@/content/posts.ts';
 import { FLOOR_HUB, FLOOR_PAGES, floorPage, floorPath } from '@/content/flooring.ts';
 import { FLOOR_PHOTOS, floorPhotos } from '@/content/floor-photos.ts';
+import { SVC_CITY, svcCity, svcCityPath } from '@/content/service-city.ts';
+import { scPhotos } from '@/content/sc-photos.ts';
 import { articleLd, breadcrumbLd, faqLd, serviceLd } from '@/lib/schema.ts';
 
 const HOME = { name: 'Home', path: '/' };
@@ -172,6 +174,12 @@ export function ServicePageView({ slug }: { slug: string }) {
           <div className="mt-10"><PhotoGrid photos={photos.slice(1, 7)} /></div>
         </Section>
       )}
+      {SVC_CITY.some((x) => x.service === slug) && (
+        <Section>
+          <SectionHead eyebrow="By city" title={`${name} near you`} />
+          <div className="mt-10"><LinkList items={SVC_CITY.filter((x) => x.service === slug).map((x) => ({ href: svcCityPath(x), label: x.label }))} /></div>
+        </Section>
+      )}
       {slug === 'hardwood-flooring' && (
         <Section>
           <SectionHead eyebrow="Wood floors" title="Hardwood flooring services" />
@@ -193,6 +201,51 @@ export function ServicePageView({ slug }: { slug: string }) {
 }
 
 // ── Hardwood sub-page ────────────────────────────────────────────────────────────────────────────────────
+export function SvcCityView({ service, city }: { service: string; city: string }) {
+  const c = svcCity(service, city)!;
+  const path = svcCityPath(c);
+  const svcLabel = label(c.service, SERVICES);
+  const trail = [HOME, { name: 'Services', path: '/services' }, { name: svcLabel, path: `/services/${c.service}` }, { name: c.cityLabel, path }];
+  const photos = scPhotos(`${c.service}/${c.city}`);
+  return (
+    <main>
+      <JsonLd data={[breadcrumbLd(trail), serviceLd(c.h1, path, c.intro[0]), faqLd(c.faq)]} />
+      <PageHero eyebrow={c.cityLabel} title={c.h1} tagline={c.tagline} photo={photos[0]} trail={trail} />
+      <Section>
+        <div className="grid gap-14 lg:grid-cols-[1.3fr_1fr]">
+          <div className="space-y-4 text-lg text-ink-2">
+            {c.intro.map((p) => <p key={p.slice(0, 24)}>{p}</p>)}
+            {c.sections.map((sec) => (
+              <div key={sec.h}>
+                <h2 className="h-display pt-6 text-2xl text-ink">{sec.h}</h2>
+                {sec.p.map((p) => <p key={p.slice(0, 24)} className="mt-4">{p}</p>)}
+                {sec.list && <ul className="mt-4 space-y-2">{sec.list.map((l) => <li key={l} className="flex gap-3 text-[17px]"><span aria-hidden className="mt-2.5 h-1.5 w-1.5 shrink-0 bg-gold" />{l}</li>)}</ul>}
+              </div>
+            ))}
+            <p className="pt-4 text-sm text-muted">{licenceLine()}</p>
+          </div>
+          <div className="h-fit bg-sand p-8">
+            <p className="label text-ink">How we run the job</p>
+            <ol className="mt-5 space-y-4">
+              {c.steps.map((x, i) => <li key={x} className="flex gap-4 text-[15px] text-ink-2"><span className="text-xs tracking-label text-gold-ink">{String(i + 1).padStart(2, '0')}</span><span>{x}</span></li>)}
+            </ol>
+            <div className="mt-8"><Cta>Get your estimate</Cta></div>
+          </div>
+        </div>
+      </Section>
+      <Section sand>
+        <SectionHead eyebrow="Our work" title={`Job photos: ${c.cityLabel}`} link={{ href: '/portfolio', label: 'Full portfolio' }} />
+        <div className="mt-10"><PhotoGrid photos={photos.slice(1)} /></div>
+      </Section>
+      <Section><Faq items={c.faq} /></Section>
+      <Section sand>
+        <SectionHead eyebrow={c.cityLabel} title="More from Waltco here" link={{ href: `/service-areas/${c.city}`, label: `${c.cityLabel} contractor` }} />
+        <div className="mt-10"><LinkList items={[{ href: `/services/${c.service}`, label: svcLabel }, ...SVC_CITY.filter((x) => x !== c && x.city === c.city).map((x) => ({ href: svcCityPath(x), label: x.label }))]} /></div>
+      </Section>
+    </main>
+  );
+}
+
 export function FloorPageView({ slug }: { slug: string }) {
   const f = floorPage(slug)!;
   const path = floorPath(slug);
@@ -365,6 +418,9 @@ export function AreaPageView({ slug }: { slug: string }) {
       </Section>
       <Section sand><Faq items={faq} /></Section>
       <Section>
+        {SVC_CITY.some((x) => x.city === slug) && (
+          <div className="mb-16"><SectionHead eyebrow="Our work here" title={`Services in ${name}`} /><div className="mt-10"><LinkList items={SVC_CITY.filter((x) => x.city === slug).map((x) => ({ href: svcCityPath(x), label: x.label }))} /></div></div>
+        )}
         <SectionHead eyebrow="Also serving" title="Nearby areas" link={{ href: '/service-areas', label: 'All service areas' }} />
         <div className="mt-10"><LinkList items={a.near.map((n) => ({ href: `/service-areas/${n}`, label: label(n, AREAS) }))} /></div>
       </Section>
