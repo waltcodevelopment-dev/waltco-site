@@ -143,6 +143,29 @@ export const SVC_CITY: SvcCity[] = [
     ],
   },
   {
+    service: 'bathroom-remodeling', city: 'beverly-hills', cityLabel: 'Beverly Hills', label: 'Bathroom Remodeling in Beverly Hills',
+    h1: 'Bathroom Remodeling in Beverly Hills',
+    title: 'Bathroom Remodeling in Beverly Hills: Job Photos — Waltco',
+    description: 'Beverly Hills bathroom remodels by a licensed LA contractor: new tubs and showers, tile, vanities and plumbing. Before, during and after photos.',
+    tagline: 'Tubs, showers, tile and vanities, from the studs out.',
+    intro: [
+      'The photos on this page follow our own Beverly Hills bathroom work from 2022 to 2024, from the original glass tub enclosure and wallpaper to a new tub with large-format tile, a built-in niche, a marble-look shower and navy vanities.',
+      'You can see the steps in between too: the walls opened to the studs, new copper supply lines, the tile going up and the vanities set before the tops went on.',
+    ],
+    sections: [
+      { h: 'What was built', p: ['Across these bathrooms:'], list: ['A new tub with large-format wall tile and a tiled niche for bottles.', 'A marble-look shower with a glass door.', 'A vanity with a vessel sink, and navy vanities with a lit mirror.', 'New supply lines and drains while the walls were open.'] },
+      { h: 'Opening the walls', p: ['When a bathroom is taken down to the studs, the plumbing behind the tile is in plain view. That is the time to replace old supply lines and drains, move a valve or add a niche, because closing the wall and reopening it later costs far more.'] },
+      { h: 'Permits in Beverly Hills', p: ['Bathroom work that changes plumbing or electrical in Beverly Hills is permitted by the City of Beverly Hills Building and Safety Division. We file the permit and schedule the inspections before the walls are closed.'] },
+      { h: 'Your estimate', p: ['A written estimate with standard, mid-range and high-end options for tile, fixtures and the vanity, so you can compare before you decide.'] },
+    ],
+    steps: ['Measure and look behind access panels', 'Fixture and tile selections', 'Three-level written estimate', 'Permit when the work needs one', 'Demolition, plumbing and inspections', 'Tile, vanity, glass and fixtures'],
+    faq: [
+      { q: 'Can you replace a tub with a shower?', a: 'Yes. We change the drain and valve while the wall is open and build the shower to the size of the space.' },
+      { q: 'How long is the bathroom out of use?', a: 'It depends on the scope and inspections; your estimate includes a schedule so you can plan around it.' },
+      { q: 'Do you build the vanities?', a: 'Yes. We build vanities to the size of the bathroom, or install one you choose.' },
+    ],
+  },
+  {
     service: 'kitchen-remodeling', city: 'santa-monica', cityLabel: 'Santa Monica', label: 'Kitchen Remodeling in Santa Monica',
     h1: 'Kitchen Remodeling in Santa Monica',
     title: 'Santa Monica Kitchen Remodeling: Job Photos — Waltco',
