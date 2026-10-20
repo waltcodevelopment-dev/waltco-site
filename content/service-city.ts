@@ -96,6 +96,96 @@ export const SVC_CITY: SvcCity[] = [
       { q: 'Do you build bathroom vanities?', a: 'Yes, in wood or painted finishes, sized to the bathroom and topped in stone.' },
     ],
   },
+  {
+    service: 'kitchen-remodeling', city: 'beverly-hills', cityLabel: 'Beverly Hills', label: 'Kitchen Remodeling in Beverly Hills',
+    h1: 'Kitchen Remodeling in Beverly Hills',
+    title: 'Kitchen Remodeling in Beverly Hills: Job Photos — Waltco',
+    description: 'Beverly Hills kitchen remodels by a licensed Los Angeles general contractor: custom cabinets, stone islands, three-level estimates. Photos from our jobs.',
+    tagline: 'Custom cabinets, stone islands and full rebuilds, with one crew from start to finish.',
+    intro: [
+      'We have remodeled kitchens in Beverly Hills from a single cabinet run to a full gut and rebuild. Every photo on this page is from one of our own Beverly Hills jobs, from 2019 to 2024, including two kitchens shown while the work was still going in.',
+      'Most kitchens here are large and open to the family room, so the island, the range wall and the floor have to work as one room. We draw that out first, then build the cabinets to the measurements we take on site.',
+    ],
+    sections: [
+      { h: 'The work in these photos', p: ['Two Beverly Hills kitchens make up most of this page:'], list: ['A white kitchen with flat-slab cabinets, floating oak shelves, a six-burner range under a stainless hood, and stone counters.', 'A full rebuild with light wood cabinets, a tall storage wall and a marble waterfall island, photographed during install.'] },
+      { h: 'Permits from the City of Beverly Hills', p: ['Beverly Hills is its own city. Kitchen permits go through the City of Beverly Hills Building and Safety Division, not LADBS, and the city sets its own construction hours and rules for parking and deliveries. We plan the schedule and the material drops around those rules before demolition starts.'] },
+      { h: 'Protecting the rest of the house', p: ['We cover floors and doorways from the street to the kitchen, seal off the work area, and keep one point of contact for you during the job. That matters in a house that stays lived in while the kitchen is torn out.'] },
+      { h: 'Your estimate', p: ['You get a written estimate with standard, mid-range and high-end options, line by line: demolition, cabinets, counters, backsplash, floors, lighting and appliance work, so you can choose where to spend.'] },
+    ],
+    steps: ['Walk-through and measure', 'Layout drawing and finish samples', 'Written three-level estimate', 'Beverly Hills permit when needed', 'Demolition and rough work', 'Cabinets, stone, floors and final details'],
+    faq: [
+      { q: 'Do you pull permits in Beverly Hills?', a: 'Yes. Beverly Hills has its own Building and Safety Division, separate from the City of Los Angeles, and we file there when the work needs a permit.' },
+      { q: 'Can you build a waterfall island?', a: 'Yes. One of the kitchens on this page has a marble waterfall island; we build the base and coordinate the stone fabrication and install.' },
+      { q: 'Do you make the cabinets yourselves?', a: 'Yes. Cabinets are built to the measurements we take on site, in painted, stained or natural wood finishes.' },
+    ],
+  },
+  {
+    service: 'cabinetry', city: 'beverly-hills', cityLabel: 'Beverly Hills', label: 'Custom Cabinets & Built-Ins in Beverly Hills',
+    h1: 'Custom Cabinets and Built-Ins in Beverly Hills',
+    title: 'Custom Cabinets & Built-Ins in Beverly Hills — Waltco',
+    description: 'Custom kitchen cabinets, drawer banks and built-ins for Beverly Hills homes, built to site measurements by a licensed LA contractor. Install photos.',
+    tagline: 'Flat-slab, maple and painted cabinetry, built to the wall it goes on.',
+    intro: [
+      'This page shows cabinet work from our Beverly Hills jobs in 2023 and 2024: white flat-slab kitchen cabinets, deep drawer banks, lit drawers inside a built-in, and light wood cabinets for a full kitchen rebuild.',
+      'Many of the photos were taken during install, before the counters and hardware went on, so you can see how the boxes, the open uppers and the shelving are put together.',
+    ],
+    sections: [
+      { h: 'What we built here', p: ['White slab base cabinets with maple-lined open uppers, a tall pantry cabinet beside the range, banks of wide drawers with bar pulls, and a built-in with lighting inside the drawers.'] },
+      { h: 'Drawers instead of doors', p: ['In the kitchens on this page, most of the base storage is drawers. Wide drawers hold pots and dishes better than shelves behind doors, and they put everything within reach without kneeling.'] },
+      { h: 'How the price is set', p: ['Cabinets are priced by the linear foot, with standard, mid-range and high-end options for the box, the doors and the finish. Built-ins and closets are priced after a site visit.'] },
+    ],
+    steps: ['Measure every wall', 'Drawing with door and drawer layout', 'Wood and finish samples', 'Written estimate', 'Build and install', 'Hardware, lighting and adjustment'],
+    faq: [
+      { q: 'Can you match cabinets to an existing kitchen?', a: 'Often, yes. Bring us a door or a photo; we match the style and finish as closely as the wood allows and tell you up front if it will not be exact.' },
+      { q: 'Do you put lights inside cabinets?', a: 'Yes. One built-in on this page has lighting inside the drawers; LED strips under uppers and inside shelves are also common.' },
+      { q: 'Do you also do the counters?', a: 'Yes. We coordinate stone or quartz counters so they go in right after the cabinets are set.' },
+    ],
+  },
+  {
+    service: 'kitchen-remodeling', city: 'santa-monica', cityLabel: 'Santa Monica', label: 'Kitchen Remodeling in Santa Monica',
+    h1: 'Kitchen Remodeling in Santa Monica',
+    title: 'Santa Monica Kitchen Remodeling: Job Photos — Waltco',
+    description: 'Santa Monica kitchen remodels by a licensed general contractor: cabinets, quartz islands, floors and permits with the city. Photos from our jobs.',
+    tagline: 'Houses and condos near the coast, permitted with the City of Santa Monica.',
+    intro: [
+      'The kitchens on this page are from our Santa Monica jobs between 2020 and 2025: a quartz waterfall island with dark slab cabinets, white shaker kitchens over wide-plank wood floors, and a navy-and-glass kitchen with a stainless hood.',
+      'Santa Monica has a mix of older houses and condos. In a condo the building usually has its own rules for work hours, elevator use and noise, so we get those in writing before we schedule demolition.',
+    ],
+    sections: [
+      { h: 'What these kitchens have', p: ['The work shown here includes:'], list: ['A quartz waterfall island set against dark flat-slab cabinets.', 'White shaker cabinets with an undermount sink, a stainless hood and a dark stone island top.', 'Navy base cabinets with glass-front uppers.', 'A U-shaped white kitchen with a stone backsplash.'] },
+      { h: 'Permits in Santa Monica', p: ['Santa Monica runs its own permits through the City of Santa Monica Building and Safety Division, not LADBS. Moving plumbing, gas or walls needs plans; condo work may also need approval from the building\'s association first.'] },
+      { h: 'Near the ocean', p: ['Salt air is hard on some metal finishes. Close to the beach we lean toward stainless or coated hardware and fixtures, and we seal stone counters and wood floors before you move back in.'] },
+      { h: 'Your estimate', p: ['A written estimate with standard, mid-range and high-end options, broken down by trade, so you can see the cost of each choice.'] },
+    ],
+    steps: ['Measure and photos of the space', 'Layout and selections', 'Three-level written estimate', 'City and building approvals', 'Demolition and rough work', 'Install, finish and clean-up'],
+    faq: [
+      { q: 'Do you remodel condo kitchens in Santa Monica?', a: 'Yes. We work with the building\'s rules on hours, elevators and parking, and get association approval in hand before work starts.' },
+      { q: 'Who issues the permit?', a: 'The City of Santa Monica Building and Safety Division. Santa Monica is a separate city from Los Angeles.' },
+      { q: 'Can you redo the floor at the same time?', a: 'Yes. Several kitchens on this page have new wood floors, and doing the floor with the kitchen avoids patching around new cabinets later.' },
+    ],
+  },
+  {
+    service: 'cabinetry', city: 'santa-monica', cityLabel: 'Santa Monica', label: 'Custom Cabinets & Vanities in Santa Monica',
+    h1: 'Custom Cabinets and Vanities in Santa Monica',
+    title: 'Custom Cabinets & Vanities in Santa Monica — Waltco',
+    description: 'Custom cabinets, pull-out drawers and vanity cabinets in Santa Monica for homes and small businesses, built and installed by a licensed contractor.',
+    tagline: 'Wood cabinetry for homes and small shops, built to fit.',
+    intro: [
+      'Our Santa Monica cabinet work from 2023 and 2024 includes dark wood slab cabinets, maple pull-out drawers, a tall maple cabinet with a mitered edge, and wood station cabinets for a local salon.',
+      'Every piece is built to the measurements we take on site, so it fits the wall, the plumbing and the way the space is used.',
+    ],
+    sections: [
+      { h: 'For homes', p: ['Kitchen and pantry cabinets in dark or natural wood, pull-out drawers inside base cabinets, and tall storage cabinets.'] },
+      { h: 'For small businesses', p: ['We built wood cabinets with glass tops for a Santa Monica salon, sized to each styling station. Commercial cabinetry is planned around the business hours so the shop can stay open.'] },
+      { h: 'Pull-outs and inserts', p: ['Pull-out drawers turn a deep base cabinet into storage you can see from above. We fit them to the box, so there is no wasted space at the sides.'] },
+    ],
+    steps: ['Site measure', 'Drawing and wood choice', 'Written estimate', 'Build in our shop', 'Install', 'Final fit and hardware'],
+    faq: [
+      { q: 'Do you build cabinets for businesses?', a: 'Yes. One job on this page is a set of station cabinets for a Santa Monica salon.' },
+      { q: 'Can you add pull-outs to cabinets I already have?', a: 'Often, yes, if the boxes are sound. We measure them and tell you what fits.' },
+      { q: 'What woods do you use?', a: 'Maple, oak and walnut are common, stained, natural or painted; we show samples before you choose.' },
+    ],
+  },
 ];
 
 export const svcCityPath = (s: SvcCity) => `/services/${s.service}/${s.city}`;

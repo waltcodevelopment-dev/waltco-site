@@ -239,7 +239,7 @@ export function SvcCityView({ service, city }: { service: string; city: string }
       </Section>
       <Section><Faq items={c.faq} /></Section>
       <Section sand>
-        <SectionHead eyebrow={c.cityLabel} title="More from Waltco here" link={{ href: `/service-areas/${c.city}`, label: `${c.cityLabel} contractor` }} />
+        <SectionHead eyebrow={c.cityLabel} title="More from Waltco here" link={areaPage(c.city) ? { href: `/service-areas/${c.city}`, label: `${c.cityLabel} contractor` } : undefined} />
         <div className="mt-10"><LinkList items={[{ href: `/services/${c.service}`, label: svcLabel }, ...SVC_CITY.filter((x) => x !== c && x.city === c.city).map((x) => ({ href: svcCityPath(x), label: x.label }))]} /></div>
       </Section>
     </main>
