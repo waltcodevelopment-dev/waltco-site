@@ -45,7 +45,7 @@ export function Footer() {
             </ul>
           </div>
         </div>
-        <p className="border-t border-white/10 px-4 py-6 text-center text-xs text-on-dark">© {facts.businessName.value} · CSLB #{facts.licenseNumber.value}</p>
+        <p className="border-t border-white/10 px-4 py-6 text-center text-xs text-on-dark">© {facts.businessName.value} · CSLB #{facts.licenseNumber.value} · <a href="https://www.truelocalpros.com/" className="hover:text-white">Find licensed California contractors</a></p>
       </footer>
     </>
   );
