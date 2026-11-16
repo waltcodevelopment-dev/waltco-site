@@ -1,6 +1,7 @@
 import { addressLine, facts, licenceLine, telHref } from '@/content/facts.ts';
 import { AREAS, SERVICES } from '@/content/routes.ts';
 import { Cta } from './Cta';
+import { PlankIcon } from './PlankIcon';
 
 // Live-site closing band (#1A1A1A) and dark footer (#111). Facts come only from content/facts.ts.
 export function Footer() {
@@ -24,6 +25,7 @@ export function Footer() {
       <footer className="on-dark bg-night text-white">
         <div className="mx-auto grid max-w-site gap-10 px-4 py-16 text-sm sm:px-6 md:grid-cols-[1.4fr_1fr_1fr]">
           <div>
+            <PlankIcon dark className="mb-4 h-5 w-auto" />
             <p className="text-[13px] font-semibold uppercase tracking-label">{facts.businessName.value}</p>
             <p className="mt-3 text-gold">{licenceLine()}</p>
             <p className="mt-5"><a href={telHref(facts.phone.value)} className="hover:text-gold">{facts.phone.value}</a></p>

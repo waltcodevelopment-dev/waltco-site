@@ -1,5 +1,6 @@
 import { facts, telHref } from '@/content/facts.ts';
 import { Cta } from './Cta';
+import { PlankIcon } from './PlankIcon';
 
 const NAV = [
   { href: '/about', label: 'About' },
@@ -14,7 +15,7 @@ const NAV = [
 function Logo() {
   return (
     <a href="/" className="flex items-center gap-3">
-      <span aria-hidden className="grid h-9 w-9 place-items-center bg-charcoal text-sm font-bold text-gold">W</span>
+      <PlankIcon className="h-[18px] w-auto shrink-0" />
       <span className="whitespace-nowrap text-[13px] font-semibold uppercase tracking-label text-ink">{facts.businessName.value}</span>
     </a>
   );
