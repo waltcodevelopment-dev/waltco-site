@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body className="min-h-screen bg-surface pb-16 font-sans text-ink sm:pb-0">
+      <body className="min-h-screen bg-surface pb-16 font-sans text-ink md:pb-0">
         <JsonLd data={businessLd()} />
         <Header />
         {children}

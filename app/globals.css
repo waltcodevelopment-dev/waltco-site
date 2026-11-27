@@ -4,6 +4,8 @@
 
 html { background: #FFFFFF; color: #1A1A1A; -webkit-font-smoothing: antialiased; }
 body { font-size: 16px; line-height: 1.65; }
+/* 27 Nov 2026: photos never push the page wider than the screen (phones scrolled sideways before). */
+img { max-width: 100%; min-width: 0; }
 
 @layer components {
   .eyebrow { @apply text-xs uppercase tracking-eyebrow text-gold-ink; }

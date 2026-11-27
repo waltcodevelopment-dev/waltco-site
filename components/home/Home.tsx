@@ -79,10 +79,10 @@ export function Home() {
             <p className="eyebrow">{facts.businessName.value}</p>
             <h2 className="h-display mt-3 text-3xl text-ink sm:text-4xl">From Los Angeles to the coast — we build what others dream.</h2>
           </div>
-          <dl className="grid grid-cols-3 gap-6 border-t border-line pt-6 lg:border-l lg:border-t-0 lg:pl-10 lg:pt-0">
-            <div><dt className="label text-muted">Licence</dt><dd className="h-display mt-2 text-3xl">B</dd><dd className="text-sm text-ink-2">General Building</dd></div>
-            <div><dt className="label text-muted">Licence</dt><dd className="h-display mt-2 text-3xl">C-15</dd><dd className="text-sm text-ink-2">Flooring</dd></div>
-            <div><dt className="label text-muted">CSLB</dt><dd className="h-display mt-2 text-3xl">#{facts.licenseNumber.value}</dd><dd className="text-sm text-ink-2">{`Licensed since ${facts.licensedSince.value} · bonded`}</dd></div>
+          <dl className="grid grid-cols-3 gap-4 border-t border-line pt-6 sm:gap-6 lg:border-l lg:border-t-0 lg:pl-10 lg:pt-0">
+            <div><dt className="label text-muted">Licence</dt><dd className="h-display mt-2 text-2xl sm:text-3xl">B</dd><dd className="text-sm text-ink-2">General Building</dd></div>
+            <div><dt className="label text-muted">Licence</dt><dd className="h-display mt-2 text-2xl sm:text-3xl">C-15</dd><dd className="text-sm text-ink-2">Flooring</dd></div>
+            <div><dt className="label text-muted">CSLB</dt><dd className="h-display mt-2 text-2xl sm:text-3xl">#{facts.licenseNumber.value}</dd><dd className="text-sm text-ink-2">{`Licensed since ${facts.licensedSince.value} · bonded`}</dd></div>
           </dl>
         </div>
       </section>
