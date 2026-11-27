@@ -156,6 +156,31 @@ export const CATALOG: CatPage[] = [
     photos: [c('beverly-hills-04'), k('pacific-palisades-13'), k('pacific-palisades-01'), c('beverly-hills-13'), 'cat-two-tone-westlake-village-362', 'cat-white-shaker-los-angeles-765'],
   },
 
+  {
+    path: `${CAB}/raised-panel-cabinets`, hub: 'cabinetry', kind: 'style', name: 'Raised Panel Cabinets', short: 'Raised panel',
+    title: 'Raised Panel Kitchen Cabinets in Los Angeles — Waltco',
+    description: 'Raised panel kitchen cabinets in Los Angeles: cherry, cream and oak five-piece doors with a raised center panel. Photos from our kitchens.',
+    tagline: 'The traditional door: a center panel that rises toward you, framed by a profiled edge.',
+    intro: [
+      'A raised panel door has a frame around a center panel that is shaped at its edges and stands proud of the frame. The profile catches light and shadow, which gives the door its depth and its traditional look.',
+      'Our raised panel kitchens on this page come in two looks: dark cherry in Westlake Village and Los Angeles, and cream or off-white in Beverly Hills and Los Angeles. Each look has its own page with photos, specs and color notes.',
+    ],
+    sections: [
+      { h: 'Raised panel or Shaker', p: ['Both are five-piece doors. A Shaker panel is flat and set back; a raised panel is shaped and stands forward. Raised panel reads more formal and traditional; Shaker sits closer to modern.'] },
+      { h: 'Where it fits', p: ['Spanish, Mediterranean and traditional houses, kitchens with beams and wood floors, and rooms with crown molding and panelled appliances, like the refrigerator walls in our photos.'] },
+      { h: 'Details that go with it', p: ['Crown molding to the ceiling, panel-front refrigerators, furniture-style feet on an island, and glass-front uppers. Arched or square tops on the upper doors change the look again.'] },
+      { h: 'Pricing', p: ['Raised panel kitchens are priced by the linear foot like every cabinet job: $275 prefabricated, $650 new stained or painted, $1,200 custom built, from our price list.'] },
+    ],
+    faq: [
+      { q: 'Is raised panel out of style?', a: 'It suits traditional and Mediterranean houses, where a flat door can look out of place. In a modern room, Shaker or slab usually fits better.' },
+      { q: 'Are raised panel doors harder to clean?', a: 'The profile collects a little more dust than a flat door; a damp cloth along the edge is enough.' },
+      { q: 'Can raised panel cabinets be painted?', a: 'Yes; the cream and off-white kitchens on this page are painted.' },
+      { q: 'Can you match existing raised panel doors?', a: 'Often. We check the profile and the panel at the site visit and tell you whether a match is possible.' },
+      { q: 'Can a raised panel kitchen have a different island?', a: 'Yes; a painted or stained island in another color is common.' },
+    ],
+    photos: ['cat-raised-cherry-westlake-village-627', 'cat-raised-cream-los-angeles-788', 'cat-raised-oak-los-angeles-138'],
+  },
+
   // ── Looks (level 3, E&K product level) ────────────────────────────────────────────────────────────────
   {
     path: `${CAB}/shaker-cabinets/white-shaker-cabinets`, hub: 'cabinetry', kind: 'look', style: `${CAB}/shaker-cabinets`,
@@ -331,15 +356,14 @@ export const CATALOG: CatPage[] = [
     path: `${CAB}/two-tone-cabinets/navy-blue-cabinets`, hub: 'cabinetry', kind: 'look', style: `${CAB}/two-tone-cabinets`,
     name: 'Navy Blue Cabinets', short: 'Navy Blue', code: 'WC-TWT-NVY',
     title: 'Navy Blue Kitchen Cabinets and Islands, LA — Waltco',
-    description: 'Navy blue kitchen islands, bars and base cabinets in Los Angeles, Manhattan Beach and Santa Monica. Code WC-TWT-NVY, photos from our jobs.',
-    tagline: 'Deep navy on the island, the bar or the base run, against light counters.',
+    description: 'Navy blue kitchen islands and bar cabinets in Manhattan Beach and Los Angeles. Code WC-TWT-NVY: deep navy against light counters, photos from our jobs.',
+    tagline: 'Deep navy on the island or the bar, against light counters and floors.',
     intro: [
       'Navy blue cabinets are usually the accent in a two-tone kitchen: the island, a bar, or the base cabinets under lighter uppers. In Manhattan Beach the navy is a curved island over a herringbone oak floor; in Los Angeles it is a bar between two lit wine walls.',
-      'In Santa Monica, navy base cabinets sit under glass-front uppers and a light stone counter.',
     ],
     tones: 'A deep blue with a hint of black, close to ink in low light. Next to white counters and light oak floors it reads crisp and nautical; with brass or stainless hardware it turns more formal.',
     suits: 'Coastal homes, kitchens with light floors and white or light-gray perimeter cabinets, bars and butler’s pantries.',
-    specs: [['Look code', 'WC-TWT-NVY'], ['Door', 'Shaker or slab'], ['Finish', 'Painted navy, satin'], ['Used for', 'Islands, bars, base cabinets'], ['Pairs with', 'White or light-gray perimeter cabinets'], ['Counters in our photos', 'Light stone'], ['Price per linear foot', PRICE_TIERS]],
+    specs: [['Look code', 'WC-TWT-NVY'], ['Door', 'Shaker or slab'], ['Finish', 'Painted navy, satin'], ['Used for', 'Islands and bars'], ['Pairs with', 'White or light-gray perimeter cabinets'], ['Counters in our photos', 'Light stone'], ['Price per linear foot', PRICE_TIERS]],
     sections: [
       { h: 'Navy as the accent', p: ['A navy island in a light kitchen becomes the piece of furniture in the room. Keeping the perimeter white or light gray stops the room from closing in.'] },
       { h: 'Curves and shapes', p: ['The Manhattan Beach island is curved, with a stone top cut to follow it. Curved cabinets are built from bent or segmented panels and need a template before the stone is cut.'] },
@@ -352,7 +376,7 @@ export const CATALOG: CatPage[] = [
       { q: 'Brass or stainless hardware with navy?', a: 'Both work; brass reads warmer, stainless more modern. We show samples first.' },
       { q: 'How do I order this look?', a: 'Use Get your estimate and mention code WC-TWT-NVY with your room size and photos.' },
     ],
-    photos: ['cat-navy-manhattan-beach-773', 'cat-navy-manhattan-beach-772', 'cat-navy-manhattan-beach-774', 'cat-navy-los-angeles-262', 'cat-navy-santa-monica-581'],
+    photos: ['cat-navy-manhattan-beach-773', 'cat-navy-manhattan-beach-772', 'cat-navy-manhattan-beach-774', 'cat-navy-los-angeles-262'],
     pairs: [`${KIT}/kitchen-islands`, `${CAB}/wet-bars`, `${KIT}/kitchen-wood-floors`],
   },
   {
@@ -382,6 +406,63 @@ export const CATALOG: CatPage[] = [
     ],
     photos: ['cat-warm-wood-slab-los-angeles-574', 'cat-warm-wood-slab-los-angeles-575', 'cat-warm-wood-slab-los-angeles-576', 'cat-warm-wood-slab-los-angeles-577', 'cat-warm-wood-slab-los-angeles-570', 'cat-warm-wood-slab-los-angeles-572', 'cat-warm-wood-slab-los-angeles-749'],
     pairs: [`${CAB}/slab-cabinets/natural-wood-slab-cabinets`, `${KIT}/marble-countertops`, `${CAB}/built-ins`],
+  },
+
+  {
+    path: `${CAB}/raised-panel-cabinets/cherry-raised-panel-cabinets`, hub: 'cabinetry', kind: 'look', style: `${CAB}/raised-panel-cabinets`,
+    name: 'Cherry Raised Panel Cabinets', short: 'Cherry Raised Panel', code: 'WC-RPN-CHR',
+    title: 'Cherry Raised Panel Kitchen Cabinets, LA — Waltco',
+    description: 'Dark cherry raised panel kitchen cabinets in Westlake Village and Los Angeles. Code WC-RPN-CHR: deep red-brown doors, photos from our jobs.',
+    tagline: 'Deep red-brown cherry doors with a raised center panel.',
+    intro: [
+      'Cherry raised panel cabinets are five-piece doors stained a deep red-brown, with a raised center panel. In Westlake Village they line an open kitchen under exposed ceiling beams, with a stone island and a hand-scraped wood floor.',
+      'In Los Angeles we set cherry raised panel base and wall cabinets with granite counters before the new floor went in.',
+    ],
+    tones: 'A deep red-brown with a warm reddish undertone and a satin sheen. The raised panels catch light at their edges, so each door shows two shades. Next to light stone it reads rich; with a dark floor it reads close to espresso.',
+    suits: 'Traditional and Mediterranean houses, kitchens with beams and wood floors, and open kitchens next to family rooms.',
+    specs: [['Look code', 'WC-RPN-CHR'], ['Door', 'Raised panel, five-piece'], ['Finish', 'Cherry-tone stain, satin'], ['Box', 'Prefabricated or custom'], ['Hardware', 'Knobs and pulls in bronze or nickel'], ['Counters in our photos', 'Granite and light stone'], ['Price per linear foot', PRICE_TIERS]],
+    sections: [
+      { h: 'Cherry color on other woods', p: ['The cherry tone can come from cherry wood or from a cherry stain on another hardwood. We show a stained sample door before anything is finished.'] },
+      { h: 'Light counters, warm floors', p: ['Light stone or granite keeps a cherry kitchen from feeling heavy. A hand-scraped wood floor, as in Westlake Village, carries the warmth through the room.'] },
+      { h: 'Lighting', p: ['Dark cabinets need under-cabinet lights and enough ceiling lights. We plan them with the electrician before the walls close.'] },
+    ],
+    faq: [
+      { q: 'Does cherry darken over time?', a: 'Cherry wood darkens with light over the first years; a cherry stain on another wood changes less.' },
+      { q: 'What counters go with cherry cabinets?', a: 'Light granite and stone, as in our photos, give a strong contrast.' },
+      { q: 'Can you install a new floor without removing the cabinets?', a: 'Yes; in Los Angeles the cabinets were set first and the floor went in around them.' },
+      { q: 'Is cherry more expensive?', a: 'The price follows the construction level and wood; the estimate states both.' },
+      { q: 'How do I order this look?', a: 'Use Get your estimate and mention code WC-RPN-CHR with your room size and photos.' },
+    ],
+    photos: ['cat-raised-cherry-westlake-village-627', 'cat-raised-cherry-westlake-village-625', 'cat-raised-cherry-westlake-village-633', 'cat-raised-cherry-westlake-village-632', 'cat-raised-cherry-westlake-village-628', 'cat-raised-cherry-los-angeles-047', 'cat-raised-cherry-los-angeles-046', 'cat-raised-cherry-los-angeles-045'],
+    pairs: [`${KIT}/granite-countertops`, `${KIT}/kitchen-wood-floors`, `${CAB}/raised-panel-cabinets/cream-raised-panel-cabinets`],
+  },
+  {
+    path: `${CAB}/raised-panel-cabinets/cream-raised-panel-cabinets`, hub: 'cabinetry', kind: 'look', style: `${CAB}/raised-panel-cabinets`,
+    name: 'Cream and Off-White Raised Panel Cabinets', short: 'Cream Raised Panel', code: 'WC-RPN-CRM',
+    title: 'Cream Raised Panel Kitchen Cabinets, LA — Waltco',
+    description: 'Cream and off-white raised panel kitchen cabinets in Beverly Hills and Los Angeles. Code WC-RPN-CRM: painted doors, photos from our jobs.',
+    tagline: 'Painted cream and off-white doors with a raised center panel.',
+    intro: [
+      'Cream raised panel cabinets are painted five-piece doors with a raised center panel, in a soft cream or off-white rather than bright white. In Beverly Hills they run around a granite-topped kitchen with a panel-front refrigerator.',
+      'In Los Angeles we have built them around an island with pendant lights over a dark wood floor, with glass-front uppers and a warming drawer in the island end.',
+    ],
+    tones: 'A soft cream to warm off-white with a satin sheen. Warmer than white Shaker, it never looks stark next to granite, travertine or a dark wood floor; the raised panels add gentle shadows.',
+    suits: 'Traditional, Mediterranean and Spanish-style houses, and kitchens with dark wood floors or granite counters.',
+    specs: [['Look code', 'WC-RPN-CRM'], ['Door', 'Raised panel, five-piece'], ['Finish', 'Painted cream or off-white, satin'], ['Appliances', 'Panel-front refrigerators in our photos'], ['Hardware', 'Knobs and pulls in bronze or nickel'], ['Counters in our photos', 'Granite'], ['Price per linear foot', PRICE_TIERS]],
+    sections: [
+      { h: 'Cream, not white', p: ['A cream or off-white keeps a traditional kitchen soft. We paint sample doors and compare them in your room, next to your counter and floor, before finishing.'] },
+      { h: 'Panel-front appliances', p: ['A refrigerator behind matching raised panel doors disappears into the run. Panels are built to the appliance maker’s specifications.'] },
+      { h: 'Islands', p: ['An island in the same cream, with a furniture-style base or a warming drawer at the end, as in our Los Angeles kitchen.'] },
+    ],
+    faq: [
+      { q: 'Cream or white for a traditional kitchen?', a: 'Cream is softer next to granite and dark wood; bright white suits marble and lighter floors.' },
+      { q: 'Can you panel my refrigerator?', a: 'If it is a panel-ready model, yes, with doors that match the cabinets.' },
+      { q: 'Do painted raised panel doors chip?', a: 'Edges near the sink see the most wear; a sprayed finish holds up and can be touched up.' },
+      { q: 'Can I keep my cabinets and repaint them?', a: 'If the boxes and doors are sound, refinishing costs far less than new; we tell you at the site visit.' },
+      { q: 'How do I order this look?', a: 'Use Get your estimate and mention code WC-RPN-CRM with your room size and photos.' },
+    ],
+    photos: ['cat-raised-cream-los-angeles-788', 'cat-raised-cream-los-angeles-789', 'cat-raised-cream-los-angeles-790', 'cat-raised-cream-los-angeles-791', 'cat-raised-cream-los-angeles-365', 'cat-raised-cream-beverly-hills-435', 'cat-raised-cream-beverly-hills-436', 'cat-raised-cream-beverly-hills-437'],
+    pairs: [`${KIT}/granite-countertops`, `${KIT}/kitchen-islands`, `${CAB}/raised-panel-cabinets/cherry-raised-panel-cabinets`],
   },
 
   // ── Cabinetry projects ─────────────────────────────────────────────────────────────────────────────────
@@ -701,7 +782,7 @@ export const CATALOG: CatPage[] = [
       { q: 'Does dark granite show water spots?', a: 'Polished dark stone can; honed or leathered finishes show fewer.' },
       { q: 'How is it priced?', a: 'By the square foot, from the slab you choose; see our pricing page.' },
     ],
-    photos: [k('santa-monica-02'), k('beverly-hills-07'), k('santa-monica-03')],
+    photos: [k('santa-monica-02'), k('beverly-hills-07'), k('santa-monica-03'), 'cat-raised-cherry-los-angeles-047', 'cat-raised-cream-beverly-hills-435'],
   },
 
   // ── Support pages (E&K trust and buying pages) ────────────────────────────────────────────────────────
@@ -858,13 +939,11 @@ export const CATALOG: CatPage[] = [
 
 // Planned pages (E&K catalog completeness): each goes live when it has ≥ 3 of our own photos and its own text.
 export const PLANNED: { path: string; name: string; needs: string }[] = [
-  { path: `${CAB}/raised-panel-cabinets`, name: 'Raised Panel Cabinets', needs: 'photos of our raised-panel kitchens' },
   { path: `${CAB}/inset-cabinets`, name: 'Inset Cabinets', needs: 'photos of inset doors' },
   { path: `${CAB}/shaker-cabinets/sage-green-shaker-cabinets`, name: 'Sage Green Shaker Cabinets', needs: 'green cabinet photos' },
   { path: `${CAB}/shaker-cabinets/stained-oak-shaker-cabinets`, name: 'Stained Oak Shaker Cabinets', needs: 'photos' },
   { path: `${CAB}/slab-cabinets/rift-white-oak-slab-cabinets`, name: 'Rift White Oak Slab Cabinets', needs: 'rift oak photos' },
   { path: `${CAB}/slab-cabinets/walnut-slab-cabinets`, name: 'Walnut Slab Cabinets', needs: 'walnut kitchen photos' },
-  { path: `${CAB}/raised-panel-cabinets/cherry-raised-panel-cabinets`, name: 'Cherry Raised Panel Cabinets', needs: '3+ cherry photos' },
   { path: `${KIT}/quartz-countertops`, name: 'Quartz Countertops', needs: 'quartz counter photos' },
   { path: `${KIT}/quartzite-countertops`, name: 'Quartzite Countertops', needs: 'photos' },
   { path: `${KIT}/butcher-block-countertops`, name: 'Butcher Block Countertops', needs: 'photos' },
