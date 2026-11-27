@@ -46,6 +46,14 @@ export const BLOG_POSTS: { slug: string; label: string }[] = [
   { slug: 'kitchen-remodel-cost-los-angeles-2026', label: 'Kitchen Remodel Cost in Los Angeles (2026)' },
   { slug: 'adu-los-angeles-2026-guide', label: 'ADU in Los Angeles: 2026 guide' },
   { slug: 'how-to-choose-general-contractor-los-angeles', label: 'How to choose a general contractor in Los Angeles' },
+  // Kitchen and cabinet guides (27 Nov 2026)
+  { slug: 'cabinet-door-styles-explained', label: 'Kitchen Cabinet Door Styles Explained' },
+  { slug: 'kitchen-cabinet-cost-per-linear-foot-los-angeles', label: 'Kitchen Cabinet Cost per Linear Foot in Los Angeles' },
+  { slug: 'prefab-vs-custom-kitchen-cabinets', label: 'Prefab vs Custom Kitchen Cabinets' },
+  { slug: 'how-to-measure-kitchen-for-new-cabinets', label: 'How to Measure Your Kitchen for New Cabinets' },
+  { slug: 'quartz-vs-marble-vs-granite-countertops', label: 'Quartz vs Marble vs Granite Countertops' },
+  { slug: 'refinish-or-replace-kitchen-cabinets', label: 'Refinish or Replace Kitchen Cabinets?' },
+  { slug: 'how-to-choose-kitchen-cabinet-colors', label: 'How to Choose Kitchen Cabinet Colors' },
 ];
 
 export const ROUTES: Route[] = [
@@ -70,5 +78,5 @@ export const ROUTES: Route[] = [
 
 /** The 34 URLs of the current site (from its sitemap.xml, read 6 Oct 2026). Each must stay 200 or 301. */
 // URLs added after the 5 Oct 2026 capture: the hardwood pages (12 Oct) and the beam guides (19 Oct).
-const ADDED = ['/blog/box-beams-cost-los-angeles', '/blog/how-to-measure-box-beams', '/services/cabinetry/color-chart', ...CATALOG_LIVE.map((c) => c.path), ...SVC_CITY.map(svcCityPath)];
+const ADDED = ['/blog/box-beams-cost-los-angeles', '/blog/how-to-measure-box-beams', ...['cabinet-door-styles-explained', 'kitchen-cabinet-cost-per-linear-foot-los-angeles', 'prefab-vs-custom-kitchen-cabinets', 'how-to-measure-kitchen-for-new-cabinets', 'quartz-vs-marble-vs-granite-countertops', 'refinish-or-replace-kitchen-cabinets', 'how-to-choose-kitchen-cabinet-colors'].map((s) => `/blog/${s}`), '/services/cabinetry/color-chart', ...CATALOG_LIVE.map((c) => c.path), ...SVC_CITY.map(svcCityPath)];
 export const OLD_URLS: string[] = ROUTES.map((r) => r.path).filter((p) => !p.startsWith('/services/hardwood-flooring') && !ADDED.includes(p));

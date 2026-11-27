@@ -13,6 +13,7 @@ import { FLOOR_HUB, FLOOR_PAGES, floorPage, floorPath } from '@/content/flooring
 import { FLOOR_PHOTOS, floorPhotos } from '@/content/floor-photos.ts';
 import { SVC_CITY, svcCity, svcCityPath } from '@/content/service-city.ts';
 import { KitchenCities, KitchenHubTop, KitchenOrder } from './kitchen';
+import { CAT_PHOTOS } from '@/content/cat-photos.ts';
 import { CatalogHubLinks } from './catalog';
 import { SC_PHOTOS, scPhotos } from '@/content/sc-photos.ts';
 import { articleLd, breadcrumbLd, faqLd, serviceLd } from '@/lib/schema.ts';
@@ -488,7 +489,7 @@ export function PostPageView({ slug }: { slug: string }) {
           </section>
         ))}
         {p.photos && p.photos.length > 0 && (
-          <div className="mt-12"><PhotoGrid cols={2} photos={p.photos.map((id) => [...FLOOR_PHOTOS, ...SC_PHOTOS].find((f) => f.id === id)!).filter(Boolean)} /></div>
+          <div className="mt-12"><PhotoGrid cols={2} photos={p.photos.map((id) => [...FLOOR_PHOTOS, ...SC_PHOTOS, ...CAT_PHOTOS].find((f) => f.id === id)!).filter(Boolean)} /></div>
         )}
         {p.links && p.links.length > 0 && (
           <div className="mt-12"><SectionHead eyebrow="Related" title="See also" /><div className="mt-6"><LinkList items={p.links} /></div></div>

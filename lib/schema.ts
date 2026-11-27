@@ -74,19 +74,19 @@ export function faqLd(faq: { q: string; a: string }[]): Ld {
 }
 
 // Catalog looks (E&K model: Product per finish). Real price-list range per linear foot; no ratings or reviews.
-export function productLd(x: { name: string; path: string; description: string; sku: string; images: string[] }): Ld {
+export function productLd(x: { name: string; path: string; description: string; sku: string; images: string[]; line?: boolean }): Ld {
   return {
     '@context': 'https://schema.org',
     '@type': 'Product',
     name: x.name, description: x.description, sku: x.sku, url: canonicalFor(x.path),
     image: x.images.map((i) => `${SITE_URL}${i}`),
     brand: { '@type': 'Brand', name: facts.businessName.value },
-    manufacturer: { '@id': ORG_ID },
+    ...(x.line ? {} : { manufacturer: { '@id': ORG_ID } }),
     category: 'Kitchen cabinets',
     offers: {
-      '@type': 'AggregateOffer', priceCurrency: 'USD', lowPrice: 275, highPrice: 1200, offerCount: 3,
+      '@type': 'AggregateOffer', priceCurrency: 'USD', lowPrice: 275, highPrice: x.line ? 275 : 1200, offerCount: x.line ? 1 : 3,
       availability: 'https://schema.org/MadeToOrder', seller: { '@id': ORG_ID },
-      priceSpecification: { '@type': 'UnitPriceSpecification', priceCurrency: 'USD', minPrice: 275, maxPrice: 1200, unitText: 'linear foot' },
+      priceSpecification: { '@type': 'UnitPriceSpecification', priceCurrency: 'USD', minPrice: 275, maxPrice: x.line ? 275 : 1200, unitText: 'linear foot' },
     },
   };
 }
