@@ -72,3 +72,31 @@ export function faqLd(faq: { q: string; a: string }[]): Ld {
     mainEntity: faq.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
   };
 }
+
+// Catalog looks (E&K model: Product per finish). Real price-list range per linear foot; no ratings or reviews.
+export function productLd(x: { name: string; path: string; description: string; sku: string; images: string[] }): Ld {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Product',
+    name: x.name, description: x.description, sku: x.sku, url: canonicalFor(x.path),
+    image: x.images.map((i) => `${SITE_URL}${i}`),
+    brand: { '@type': 'Brand', name: facts.businessName.value },
+    manufacturer: { '@id': ORG_ID },
+    category: 'Kitchen cabinets',
+    offers: {
+      '@type': 'AggregateOffer', priceCurrency: 'USD', lowPrice: 275, highPrice: 1200, offerCount: 3,
+      availability: 'https://schema.org/MadeToOrder', seller: { '@id': ORG_ID },
+      priceSpecification: { '@type': 'UnitPriceSpecification', priceCurrency: 'USD', minPrice: 275, maxPrice: 1200, unitText: 'linear foot' },
+    },
+  };
+}
+
+export function collectionLd(name: string, path: string, description: string, parts: { name: string; path: string }[]): Ld {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'CollectionPage',
+    name, description, url: canonicalFor(path),
+    about: { '@id': ORG_ID },
+    ...(parts.length ? { hasPart: parts.map((x) => ({ '@type': 'WebPage', name: x.name, url: canonicalFor(x.path) })) } : {}),
+  };
+}

@@ -4,6 +4,8 @@ import { facts } from '../content/facts.ts';
 import type { Route } from '../content/routes.ts';
 import { floorPage } from '../content/flooring.ts';
 import { svcCity } from '../content/service-city.ts';
+import { post } from '../content/posts.ts';
+import { catPage } from '../content/catalog.ts';
 
 const scOf = (r: Route) => { const [, , sv, c] = r.path.split('/'); return svcCity(sv, c)!; };
 
@@ -20,6 +22,10 @@ export function titleFor(r: Route): string {
       return floorOf(r)!.title;
     case 'svc-city':
       return scOf(r).title;
+    case 'kitchen-chart':
+      return 'Cabinet Color Chart: Kitchen Cabinet Colors in LA | Waltco';
+    case 'cat':
+      return catPage(r.path)!.title;
     case 'service':
       return fit(`${r.label} in Los Angeles — ${NAME}`, `${r.label} — ${NAME}`);
     case 'area':
@@ -39,10 +45,16 @@ export function descriptionFor(r: Route): string {
         return floorOf(r)!.description;
       case 'svc-city':
         return scOf(r).description;
+      case 'kitchen-chart':
+        return 'Cabinet color chart from our own LA jobs: white, natural wood, dark and black, two-tone; marble and stone counters. Pick a look code and order.';
+      case 'cat':
+        return catPage(r.path)!.description;
       case 'service':
         return `${r.label} in Los Angeles by ${NAME}, a licensed general contractor (${lic}). Request an estimate online.`;
       case 'area':
         return `${NAME} works as a licensed general contractor in ${r.label} (${lic}). Request an estimate for your project online.`;
+      case 'blog':
+        return post(r.path.split('/').pop()!)?.description ?? `${r.label} — ${NAME}, licensed general contractor in Los Angeles (${lic}). Request an estimate online.`;
       case 'contact':
         return `Contact ${NAME}, licensed general contractor in Los Angeles (${lic}): phone, email, and an online estimate request.`;
       default:

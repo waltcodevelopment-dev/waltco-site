@@ -4,8 +4,9 @@
 
 import { SVC_CITY, svcCityPath } from './service-city.ts';
 import { FLOOR_PAGES, floorPath } from './flooring.ts';
+import { LIVE as CATALOG_LIVE } from './catalog.ts';
 
-export type RouteKind = 'home' | 'page' | 'service' | 'floor' | 'svc-city' | 'area' | 'blog-index' | 'blog' | 'contact';
+export type RouteKind = 'home' | 'page' | 'service' | 'floor' | 'svc-city' | 'kitchen-chart' | 'cat' | 'area' | 'blog-index' | 'blog' | 'contact';
 export type Route = { path: string; kind: RouteKind; label: string };
 
 export const SERVICES: { slug: string; label: string; isNew?: true }[] = [
@@ -42,7 +43,7 @@ export const BLOG_POSTS: { slug: string; label: string }[] = [
   { slug: 'how-to-measure-box-beams', label: 'How to measure for box beams' },
   { slug: 'contractor-pacific-palisades-guide', label: 'Contractor guide: Pacific Palisades' },
   { slug: 'altadena-fire-rebuild-contractor', label: 'Altadena fire rebuild contractor' },
-  { slug: 'kitchen-remodel-cost-los-angeles-2026', label: 'Kitchen remodel cost, Los Angeles 2026' },
+  { slug: 'kitchen-remodel-cost-los-angeles-2026', label: 'Kitchen Remodel Cost in Los Angeles (2026)' },
   { slug: 'adu-los-angeles-2026-guide', label: 'ADU in Los Angeles: 2026 guide' },
   { slug: 'how-to-choose-general-contractor-los-angeles', label: 'How to choose a general contractor in Los Angeles' },
 ];
@@ -58,11 +59,16 @@ export const ROUTES: Route[] = [
   ...SERVICES.map((s) => ({ path: `/services/${s.slug}`, kind: 'service' as const, label: s.label })),
   ...FLOOR_PAGES.map((f) => ({ path: floorPath(f.slug), kind: 'floor' as const, label: f.label })),
   ...SVC_CITY.map((c) => ({ path: svcCityPath(c), kind: 'svc-city' as const, label: c.label })),
+  // Cabinet color chart (owner direction 24 Nov 2026, Legno beam-system model; moved from the unpublished
+  // /services/kitchen-remodeling/styles-and-colors to the cabinetry hub 27 Nov 2026) = 56.
+  { path: '/services/cabinetry/color-chart', kind: 'kitchen-chart', label: 'Cabinet Color Chart' },
+  // Kitchen & cabinet catalog, E&K model (owner direction 27 Nov 2026): live pages only, gated on own photos.
+  ...CATALOG_LIVE.map((c) => ({ path: c.path, kind: 'cat' as const, label: c.name })),
   ...AREAS.map((a) => ({ path: `/service-areas/${a.slug}`, kind: 'area' as const, label: a.label })),
   ...BLOG_POSTS.map((b) => ({ path: `/blog/${b.slug}`, kind: 'blog' as const, label: b.label })),
 ];
 
 /** The 34 URLs of the current site (from its sitemap.xml, read 6 Oct 2026). Each must stay 200 or 301. */
 // URLs added after the 5 Oct 2026 capture: the hardwood pages (12 Oct) and the beam guides (19 Oct).
-const ADDED = ['/blog/box-beams-cost-los-angeles', '/blog/how-to-measure-box-beams', ...SVC_CITY.map(svcCityPath)];
+const ADDED = ['/blog/box-beams-cost-los-angeles', '/blog/how-to-measure-box-beams', '/services/cabinetry/color-chart', ...CATALOG_LIVE.map((c) => c.path), ...SVC_CITY.map(svcCityPath)];
 export const OLD_URLS: string[] = ROUTES.map((r) => r.path).filter((p) => !p.startsWith('/services/hardwood-flooring') && !ADDED.includes(p));

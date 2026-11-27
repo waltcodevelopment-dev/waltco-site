@@ -58,7 +58,7 @@ export const SVC_CITY: SvcCity[] = [
     description: 'Kitchen remodeling across Los Angeles by a licensed general contractor based on South Vermont Avenue. Job photos from our LA kitchens, 2020 to 2024.',
     tagline: 'From a cabinet refresh to a full rebuild, from our shop on South Vermont Avenue.',
     intro: [
-      'Waltco Development is based in Los Angeles, with our shop and showroom at 9216 S. Vermont Avenue. We remodel kitchens across the city, and the photos below come from our own LA kitchen jobs between 2020 and 2024.',
+      'Waltco Development is based in Los Angeles, with our shop and showroom on South Vermont Avenue. We remodel kitchens across the city, and the photos below come from our own LA kitchen jobs between 2020 and 2024.',
       'Los Angeles kitchens come in every shape: galley kitchens in older homes, open plans with a long island, and lofts with concrete floors. We plan the layout around the room you have, then build it with one crew and one schedule.',
     ],
     sections: [

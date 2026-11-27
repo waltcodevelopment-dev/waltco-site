@@ -6,11 +6,12 @@ export type Post = {
   slug: string;
   title: string;
   dek: string;
+  description?: string; // meta description; falls back to the route default
   updated: string; // ISO date the copy last changed
   sections: { h: string; p: string[]; list?: string[] }[];
   faq: { q: string; a: string }[];
   related: string[]; // service slugs
-  photos?: string[]; // ids from FLOOR_PHOTOS: owner's own job photos, captioned with city and year
+  photos?: string[]; // ids from FLOOR_PHOTOS or SC_PHOTOS: owner's own job photos, captioned with city and year
   links?: { href: string; label: string }[]; // in-site pages this guide supports
 };
 
@@ -38,15 +39,46 @@ export const POSTS: Post[] = [
   },
   {
     slug: 'kitchen-remodel-cost-los-angeles-2026',
-    title: 'Kitchen Remodel Cost in Los Angeles — What Drives the Price',
-    dek: '"How much will it cost?" is the first question every homeowner asks. The honest answer depends on a handful of decisions — here they are, and how to get a real number for yours.',
-    updated: UPDATED,
+    title: 'What a Kitchen Remodel Costs in Los Angeles (2026)',
+    description: 'Kitchen remodel cost in Los Angeles, priced line by line: a 177 sq ft kitchen at $20,146, $37,242 and $60,433 from our 2026 price list.',
+    dek: 'A kitchen is priced line by line: cabinets by the linear foot, counters and floors by the square foot, and the trade work by the job. Here is one Los Angeles kitchen priced three ways from our own price list, and what moves the number.',
+    updated: '2026-11-24',
+    photos: ['sc-kitchen-remodeling-beverly-hills-15', 'sc-kitchen-remodeling-beverly-hills-23', 'sc-kitchen-remodeling-los-angeles-08', 'sc-kitchen-remodeling-santa-monica-02'],
+    links: [
+      { href: '/services/kitchen-remodeling', label: 'Kitchen remodeling' },
+      { href: '/services/kitchen-remodeling/los-angeles', label: 'Kitchen remodeling in Los Angeles' },
+      { href: '/services/kitchen-remodeling/beverly-hills', label: 'Kitchen remodeling in Beverly Hills' },
+      { href: '/services/kitchen-remodeling/santa-monica', label: 'Kitchen remodeling in Santa Monica' },
+      { href: '/services/kitchen-remodeling/pacific-palisades', label: 'Kitchen remodeling in Pacific Palisades' },
+      { href: '/services/cabinetry', label: 'Custom cabinetry' },
+    ],
     sections: [
-      { h: 'The decisions that move the price most', p: ['Two kitchens of the same size can differ several times over in price. These choices account for most of the difference:'], list: ['Layout: keeping the sink, range and walls where they are costs far less than moving plumbing, gas or structure.', 'Cabinets: custom-built cabinets cost more than prefabricated lines; both can look good.', 'Countertops: stone type, thickness, edges and the number of seams.', 'Floors: refinishing an existing wood floor, installing new hardwood, or tile.', 'Permits and inspections: required when plumbing, electrical or walls change.', 'Condition behind the walls: older Los Angeles homes can hide wiring or plumbing that has to be brought up to code.'] },
-      { h: 'Why online averages mislead', p: ['Published cost ranges mix small refreshes with full rebuilds and different cities. They are a poor guide to your kitchen. A price built from line items — demolition, cabinets, counters, tile, floor, permits — tells you where the money goes and what you can change.'] },
-      { h: 'How Waltco prices a kitchen', p: ['Every number in a Waltco estimate comes from our own price list, line by line. Describe your kitchen with "Get your estimate" and you get a reply from Waltco Development; for floors and remodels, a ballpark from that price list arrives before the site visit. After we measure, you get a written estimate.'] },
+      { h: 'The short answer', p: ['For a galley kitchen of about 177 square feet, priced in October 2026 from Waltco Development\'s own price list, the remodel came to $20,146 with standard finishes, $37,242 mid-range and $60,433 high-end. That works out to about $114, $210 and $341 per square foot of kitchen.', 'The room, the layout and the trade work were the same in all three. Only the cabinets, counters, backsplash, floor and fixtures changed, and that alone tripled the price.'] },
+      { h: 'The example: one galley kitchen, three finish levels', p: ['The kitchen measured 8\'4" by 18\'7" plus a 4\' by 5\'7" end area, with 34 linear feet of upper and lower cabinets and 41 square feet of counter. The sink, range and walls stayed where they were. Each option replaced the cabinets, counters and backsplash and put a wood floor in place of the old tile.'], list: [
+        'Standard, $20,146: prefabricated, factory-finished cabinets at $275 per linear foot ($9,350), laminate counters at $40 per sq ft ($1,640), tile backsplash ($1,235) and engineered hardwood at $7 per sq ft ($1,239).',
+        'Mid-range, $37,242: new stained cabinets at $650 per linear foot ($22,100), quartz counters at $100 per sq ft ($4,100), tile backsplash ($1,378) and solid hardwood at $14 per sq ft ($2,478).',
+        'High-end, $60,433: custom cabinets at $1,200 per linear foot ($40,800), higher-grade quartz at $150 per sq ft ($6,150), tile backsplash ($1,841) and solid hardwood at $20 per sq ft ($3,540).',
+      ] },
+      { h: 'The lines that were the same in every option', p: ['$5,354 of each estimate did not change with the finish level, because the work is the same whatever goes in:'], list: [
+        'Demolition and haul-away of the old cabinets and counters: $2,170, plus $443 to take up 177 sq ft of floor tile.',
+        'Sink and faucet reconnected where the plumbing already was: $553.',
+        'Range disconnected, reinstalled and gas leak-tested: $354; two refrigerators moved out and back: $285.',
+        'Six GFCI outlets at the counters: $600; drywall patch after demolition: $570; final clean-up: $380.',
+      ] },
+      { h: 'Cabinets decide most of the price', p: ['Cabinets were the largest line in every option: 46% of the standard price, 59% of the mid-range and 68% of the high-end. That is why the cabinet choice is the first thing to settle. Many kitchens mix the two: prefabricated boxes for the long runs and custom pieces for the island, pantry or a tight corner.', 'If your cabinet boxes are sound, refinishing them and changing the counters costs far less than any of the three options above. We tell you at the site visit whether the boxes are worth keeping.'] },
+      { h: 'What these numbers leave out', p: ['The three estimates were for the work listed above. These were priced separately or not at all:'], list: [
+        'Permit and plan-check fees. Moving plumbing, gas, circuits or walls needs a permit from LADBS inside the City of Los Angeles, or from your city\'s own building department.',
+        'Appliances, the sink, the faucet and light fixtures beyond the allowance: the owner chose and bought them.',
+        'Moving the sink, range or walls. A new layout adds plumbing, gas, electrical and framing lines, and usually plans.',
+        'Floor leveling, and anything found behind the old cabinets, such as wiring or plumbing that has to be brought up to code. Homes built before 1978 are checked for lead paint before demolition.',
+      ] },
+      { h: 'Why online averages mislead', p: ['Published cost ranges mix small refreshes with full rebuilds and different cities, and they rarely say what is in the number. A price per square foot is also a weak guide: a larger kitchen with the same run of cabinets costs only a little more, while a small kitchen with custom cabinets can cost more than a big one with prefabricated lines. A price built from line items tells you where the money goes and what you can change.'] },
+      { h: 'How to get a number for your kitchen', p: ['Send the room size, a few photos and the finish level you have in mind with "Get your estimate". For remodels we reply with a ballpark from the same price list before the site visit. After we measure, you get a written estimate with standard, mid-range and high-end options, like the one above, so you can choose line by line.'] },
     ],
     faq: [
+      { q: 'How much does a kitchen remodel cost in Los Angeles?', a: 'It depends mostly on the cabinets. A 177 sq ft galley kitchen we priced in 2026 came to $20,146 standard, $37,242 mid-range and $60,433 high-end, with the layout unchanged and permits, appliances and fixtures not included.' },
+      { q: 'What is the most expensive part of a kitchen remodel?', a: 'Cabinets. In our example they were 46% to 68% of the total, depending on whether they were prefabricated, stained or custom-built.' },
+      { q: 'Is it cheaper to keep the same layout?', a: 'Yes. Keeping the sink, range and walls where they are avoids new plumbing, gas, electrical and framing work, and often the need for plans.' },
       { q: 'Do I need a permit for a kitchen remodel?', a: 'If you move plumbing, add circuits or change walls, yes. Replacing cabinets and counters in place often needs less. We confirm with the building department for your address.' },
       { q: 'Can I live at home during the remodel?', a: 'Most people do, with a temporary kitchen set up elsewhere in the house. We plan the order of work so the disruption is as short as possible.' },
     ],

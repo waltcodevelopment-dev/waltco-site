@@ -7,10 +7,10 @@ import { bannedIn } from '../../content/claims.ts';
 import { canonicalFor, robotsRules, sitemapEntries, isIndexable } from '../../lib/seo.ts';
 import { descriptionFor, titleFor } from '../../lib/meta.ts';
 
-test('55 approved URLs: the 34 current ones byte for byte, /services/hardwood-flooring, its 9 sub-pages, 2 beam guides, 9 service x city pages', () => {
+test('83 approved URLs: the 34 current ones byte for byte, /services/hardwood-flooring, its 9 sub-pages, 2 beam guides, 9 service x city pages, cabinet color chart, 27 catalog pages', () => {
   const paths = ROUTES.map((r) => r.path);
-  assert.equal(paths.length, 55);
-  assert.equal(new Set(paths).size, 55);
+  assert.equal(paths.length, 83);
+  assert.equal(new Set(paths).size, 83);
   for (const s of ['installation', 'wide-plank', 'herringbone-and-parquet', 'reclaimed-wood', 'stain-and-color-matching', 'sanding-and-refinishing', 'stairs', 'floor-removal-and-subfloor', 'beams-and-ceilings'])
     assert.ok(paths.includes(`/services/hardwood-flooring/${s}`), s);
   assert.equal(OLD_URLS.length, 34);
@@ -70,14 +70,14 @@ test('titles ≤ 60 chars, unique, no doubled suffix; descriptions 70–160 and 
   assert.equal(new Set(descs).size, descs.length, 'descriptions unique');
 });
 
-test('indexing flag: closed by default; production opens robots and the sitemap of exactly 55 URLs', () => {
+test('indexing flag: closed by default; production opens robots and the sitemap of exactly 83 URLs', () => {
   assert.equal(isIndexable({}), false);
   assert.equal(isIndexable({ SITE_INDEXING: 'on' }), true);
   assert.deepEqual(robotsRules(false), { rules: [{ userAgent: '*', disallow: '/' }] });
   assert.equal(robotsRules(true).sitemap, 'https://waltcodevelopment.com/sitemap.xml');
   assert.deepEqual(sitemapEntries(false), []);
   const urls = sitemapEntries(true).map((e) => e.url);
-  assert.equal(urls.length, 55);
+  assert.equal(urls.length, 83);
   assert.equal(urls[0], 'https://waltcodevelopment.com');
   assert.equal(canonicalFor('/about'), 'https://waltcodevelopment.com/about');
 });
@@ -103,4 +103,21 @@ test('hardwood sub-pages: ≥ 400 words, ≥ 6 captioned photos each, no banned 
     assert.ok(existsSync(`public${i.src}`), i.src);
     assert.ok(existsSync(`public${i.src.replace(/\.jpg$/, '.webp')}`), `${i.src} webp`);
   }
+});
+
+test('catalog: unique titles and descriptions within limits, own photos on every look/style/project, no banned words', async () => {
+  const { CATALOG, LIVE, MIN_PHOTOS } = await import('../../content/catalog.ts');
+  const { SC_PHOTOS } = await import('../../content/sc-photos.ts');
+  const ids = new Set(SC_PHOTOS.map((p) => p.id));
+  assert.equal(new Set(CATALOG.map((p) => p.title)).size, CATALOG.length);
+  assert.equal(new Set(CATALOG.map((p) => p.description)).size, CATALOG.length);
+  for (const p of CATALOG) {
+    assert.ok(p.title.length <= 60, p.path);
+    assert.ok(p.description.length >= 70 && p.description.length <= 160, p.path);
+    for (const id of p.photos) assert.ok(ids.has(id), `${p.path}: ${id}`);
+    assert.deepEqual(bannedIn(JSON.stringify(p)), [], p.path);
+    assert.ok(p.faq.length >= 3, p.path);
+  }
+  for (const p of LIVE) if (p.kind !== 'support') assert.ok(p.photos.length >= MIN_PHOTOS, p.path);
+  for (const p of LIVE) if (p.kind === 'look') assert.match(p.code ?? '', /^WC-[A-Z]{3}-[A-Z]{3}$/);
 });

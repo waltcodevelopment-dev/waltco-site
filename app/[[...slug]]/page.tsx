@@ -4,9 +4,11 @@ import { ROUTES } from '@/content/routes.ts';
 import { canonicalFor } from '@/lib/seo.ts';
 import { descriptionFor, titleFor } from '@/lib/meta.ts';
 import { Home } from '@/components/home/Home';
+import { KitchenChartView } from '@/components/kitchen';
+import { CatalogView } from '@/components/catalog';
 import { AboutPage, AreaPageView, AreasIndexPage, BlogIndexPage, ContactPage, FloorPageView, SvcCityView, PortfolioPage, PostPageView, ServicePageView, ServicesIndexPage } from '@/components/pages';
 
-// All 50 approved URLs are prerendered from content/*.ts; nothing else exists (dynamicParams = false).
+// All approved URLs are prerendered from content/*.ts; nothing else exists (dynamicParams = false).
 export const dynamicParams = false;
 
 export function generateStaticParams() {
@@ -39,6 +41,8 @@ export default async function Page({ params }: { params: Promise<{ slug?: string
     case 'home': return <Home />;
     case 'service': return <ServicePageView slug={leaf} />;
     case 'floor': return <FloorPageView slug={leaf} />;
+    case 'kitchen-chart': return <KitchenChartView />;
+    case 'cat': return <CatalogView path={r.path} />;
     case 'svc-city': return <SvcCityView service={r.path.split('/')[2]} city={leaf} />;
     case 'area': return <AreaPageView slug={leaf} />;
     case 'blog': return <PostPageView slug={leaf} />;

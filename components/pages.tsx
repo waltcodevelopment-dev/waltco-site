@@ -12,7 +12,9 @@ import { POSTS, post } from '@/content/posts.ts';
 import { FLOOR_HUB, FLOOR_PAGES, floorPage, floorPath } from '@/content/flooring.ts';
 import { FLOOR_PHOTOS, floorPhotos } from '@/content/floor-photos.ts';
 import { SVC_CITY, svcCity, svcCityPath } from '@/content/service-city.ts';
-import { scPhotos } from '@/content/sc-photos.ts';
+import { KitchenCities, KitchenHubTop, KitchenOrder } from './kitchen';
+import { CatalogHubLinks } from './catalog';
+import { SC_PHOTOS, scPhotos } from '@/content/sc-photos.ts';
 import { articleLd, breadcrumbLd, faqLd, serviceLd } from '@/lib/schema.ts';
 
 const HOME = { name: 'Home', path: '/' };
@@ -147,6 +149,8 @@ export function ServicePageView({ slug }: { slug: string }) {
           </div>
         </div>
       </Section>
+      {slug === 'kitchen-remodeling' && <KitchenHubTop />}
+      {(slug === 'cabinetry' || slug === 'kitchen-remodeling') && <CatalogHubLinks hub={slug} />}
       <Section sand>
         <div className="grid gap-14 lg:grid-cols-2">
           <div>
@@ -176,10 +180,11 @@ export function ServicePageView({ slug }: { slug: string }) {
       )}
       {SVC_CITY.some((x) => x.service === slug) && (
         <Section>
-          <SectionHead eyebrow="By city" title={`${name} near you`} />
-          <div className="mt-10"><LinkList items={SVC_CITY.filter((x) => x.service === slug).map((x) => ({ href: svcCityPath(x), label: x.label }))} /></div>
+          <SectionHead eyebrow="By city" title={`${name} near you`} link={slug === 'kitchen-remodeling' ? { href: KITCHEN_COST, label: 'What a kitchen remodel costs' } : undefined} />
+          <div className="mt-10">{slug === 'kitchen-remodeling' ? <KitchenCities /> : <LinkList items={SVC_CITY.filter((x) => x.service === slug).map((x) => ({ href: svcCityPath(x), label: x.label }))} />}</div>
         </Section>
       )}
+      {slug === 'kitchen-remodeling' && <KitchenOrder />}
       {slug === 'hardwood-flooring' && (
         <Section>
           <SectionHead eyebrow="Wood floors" title="Hardwood flooring services" />
@@ -199,6 +204,8 @@ export function ServicePageView({ slug }: { slug: string }) {
     </main>
   );
 }
+
+import { KITCHEN_CHART, KITCHEN_COST } from '@/content/kitchen.ts';
 
 // ── Hardwood sub-page ────────────────────────────────────────────────────────────────────────────────────
 export function SvcCityView({ service, city }: { service: string; city: string }) {
@@ -238,6 +245,12 @@ export function SvcCityView({ service, city }: { service: string; city: string }
         <div className="mt-10"><PhotoGrid photos={photos.slice(1)} /></div>
       </Section>
       <Section><Faq items={c.faq} /></Section>
+      {c.service === 'kitchen-remodeling' && (
+        <Section>
+          <SectionHead eyebrow={svcLabel} title={`${svcLabel} in other cities`} link={{ href: KITCHEN_COST, label: 'What a kitchen remodel costs' }} />
+          <div className="mt-10"><LinkList items={[...SVC_CITY.filter((x) => x !== c && x.service === c.service).map((x) => ({ href: svcCityPath(x), label: x.label })), { href: KITCHEN_COST, label: 'Kitchen remodel cost in Los Angeles: three priced options' }, { href: KITCHEN_CHART, label: 'Cabinet color chart' }]} /></div>
+        </Section>
+      )}
       <Section sand>
         <SectionHead eyebrow={c.cityLabel} title="More from Waltco here" link={areaPage(c.city) ? { href: `/service-areas/${c.city}`, label: `${c.cityLabel} contractor` } : undefined} />
         <div className="mt-10"><LinkList items={[{ href: `/services/${c.service}`, label: svcLabel }, ...SVC_CITY.filter((x) => x !== c && x.city === c.city).map((x) => ({ href: svcCityPath(x), label: x.label }))]} /></div>
@@ -475,7 +488,7 @@ export function PostPageView({ slug }: { slug: string }) {
           </section>
         ))}
         {p.photos && p.photos.length > 0 && (
-          <div className="mt-12"><PhotoGrid cols={2} photos={p.photos.map((id) => FLOOR_PHOTOS.find((f) => f.id === id)!).filter(Boolean)} /></div>
+          <div className="mt-12"><PhotoGrid cols={2} photos={p.photos.map((id) => [...FLOOR_PHOTOS, ...SC_PHOTOS].find((f) => f.id === id)!).filter(Boolean)} /></div>
         )}
         {p.links && p.links.length > 0 && (
           <div className="mt-12"><SectionHead eyebrow="Related" title="See also" /><div className="mt-6"><LinkList items={p.links} /></div></div>
