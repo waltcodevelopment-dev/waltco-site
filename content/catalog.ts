@@ -70,7 +70,7 @@ export const CATALOG: CatPage[] = [
     tagline: 'One flat door, no frame: the face of most modern kitchens we build.',
     intro: [
       'A slab door is a single flat panel with no frame or profile. With the door edges lined up and tight reveals between them, a run of slab cabinets reads as one calm surface, which is why it is the door we use most in modern kitchens.',
-      'Our slab kitchens on this page come in three looks: white, natural wood and dark or black. Each one has its own page with the photos, specs and colour notes.',
+      'Our slab kitchens come in four looks: white, natural wood, warm wood and dark or black. Each one has its own page with the photos, specs and colour notes.',
     ],
     sections: [
       { h: 'What makes a slab kitchen look right', p: ['Straight, even gaps. On a flat door every reveal shows, so boxes are set level and doors are adjusted after the counters go on. Grain on wood slab doors is matched across a run where the boards allow it.'] },
@@ -108,7 +108,7 @@ export const CATALOG: CatPage[] = [
       { q: 'What shelves go inside glass cabinets?', a: 'Wood shelves painted to match, or glass shelves when there is lighting inside.' },
       { q: 'Are glass uppers practical in a busy kitchen?', a: 'Put everyday dishes behind solid doors and display pieces behind glass; that keeps the glass looking tidy.' },
     ],
-    photos: [k('pacific-palisades-05'), k('santa-monica-04'), k('pacific-palisades-03')],
+    photos: [k('pacific-palisades-05'), k('santa-monica-04'), k('pacific-palisades-03'), 'cat-glass-front-los-angeles-283', 'cat-glass-front-los-angeles-562'],
   },
   {
     path: `${CAB}/open-shelving`, hub: 'cabinetry', kind: 'style', name: 'Open Shelving', short: 'Open shelving',
@@ -130,7 +130,7 @@ export const CATALOG: CatPage[] = [
       { q: 'Can shelves go over a range?', a: 'Not directly above it. We keep shelves to the sides of the hood, as in our Beverly Hills kitchen.' },
       { q: 'Can I add shelves to an existing kitchen?', a: 'Yes, if we can reach the studs or add blocking. That means opening and patching the wall where the shelf goes.' },
     ],
-    photos: [k('beverly-hills-01'), k('beverly-hills-12'), k('beverly-hills-28'), c('beverly-hills-03'), c('los-angeles-04')],
+    photos: [k('beverly-hills-01'), k('beverly-hills-12'), k('beverly-hills-28'), c('beverly-hills-03'), c('los-angeles-04'), 'cat-open-shelving-beverly-hills-609', 'cat-open-shelving-beverly-hills-613'],
     pairs: [`${CAB}/slab-cabinets/white-slab-cabinets`, `${KIT}/range-walls-and-hoods`],
   },
   {
@@ -153,7 +153,7 @@ export const CATALOG: CatPage[] = [
       { q: 'Will two-tone date quickly?', a: 'A neutral main colour with one accent tends to last; the accent is the part people change later.' },
       { q: 'Does two-tone cost more?', a: 'Only if one of the finishes is a higher level, such as a custom wood island. The estimate shows each run separately.' },
     ],
-    photos: [c('beverly-hills-04'), k('pacific-palisades-13'), k('pacific-palisades-01'), c('beverly-hills-13')],
+    photos: [c('beverly-hills-04'), k('pacific-palisades-13'), k('pacific-palisades-01'), c('beverly-hills-13'), 'cat-two-tone-westlake-village-362', 'cat-white-shaker-los-angeles-765'],
   },
 
   // ── Looks (level 3, E&K product level) ────────────────────────────────────────────────────────────────
@@ -182,7 +182,7 @@ export const CATALOG: CatPage[] = [
       { q: 'How long does a white Shaker kitchen take to build?', a: 'It depends on prefabricated or custom; we give you the schedule with the written estimate.' },
       { q: 'How do I order this look?', a: 'Use Get your estimate and mention code WC-SHK-WHT with your room size and photos.' },
     ],
-    photos: [k('pacific-palisades-04'), k('pacific-palisades-11'), k('santa-monica-02'), k('santa-monica-03')],
+    photos: [k('pacific-palisades-04'), k('pacific-palisades-11'), k('santa-monica-02'), k('santa-monica-03'), 'cat-white-shaker-los-angeles-284', 'cat-white-shaker-los-angeles-282', 'cat-white-shaker-los-angeles-234', 'cat-white-shaker-los-angeles-235', 'cat-white-shaker-los-angeles-765'],
     pairs: [`${KIT}/marble-countertops`, `${KIT}/granite-countertops`, `${KIT}/kitchen-wood-floors`],
     guides: ['cabinet-door-styles-explained'],
   },
@@ -211,7 +211,7 @@ export const CATALOG: CatPage[] = [
       { q: 'Does a white slab kitchen feel cold?', a: 'Add wood: open oak shelves or a wood floor, as in our Beverly Hills kitchen.' },
       { q: 'How do I order this look?', a: 'Use Get your estimate and mention code WC-SLB-WHT with your room size and photos.' },
     ],
-    photos: [k('beverly-hills-02'), k('beverly-hills-13'), k('beverly-hills-23'), c('beverly-hills-02'), c('beverly-hills-06'), c('beverly-hills-16')],
+    photos: [k('beverly-hills-02'), k('beverly-hills-13'), k('beverly-hills-23'), c('beverly-hills-02'), c('beverly-hills-06'), c('beverly-hills-16'), 'cat-white-slab-altadena-739', 'cat-white-slab-altadena-740'],
     pairs: [`${CAB}/open-shelving`, `${KIT}/range-walls-and-hoods`, `${CAB}/pantry-cabinets`],
   },
   {
@@ -239,7 +239,7 @@ export const CATALOG: CatPage[] = [
       { q: 'How do I clean wood cabinets?', a: 'A damp cloth and a mild cleaner. Avoid soaking the doors near the sink.' },
       { q: 'How do I order this look?', a: 'Use Get your estimate and mention code WC-SLB-NAT with your room size and photos.' },
     ],
-    photos: [k('los-angeles-08'), k('los-angeles-05'), k('los-angeles-10'), k('los-angeles-12'), k('pacific-palisades-09'), k('beverly-hills-05'), k('beverly-hills-06'), c('santa-monica-03')],
+    photos: [k('los-angeles-08'), k('los-angeles-05'), k('los-angeles-10'), k('los-angeles-12'), k('pacific-palisades-09'), k('beverly-hills-05'), k('beverly-hills-06'), c('santa-monica-03'), 'cat-natural-slab-los-angeles-600', 'cat-natural-slab-los-angeles-603', 'cat-natural-slab-los-angeles-604', 'cat-natural-slab-los-angeles-605', 'cat-natural-slab-los-angeles-664', 'cat-natural-slab-los-angeles-666', 'cat-natural-slab-altadena-756', 'cat-natural-slab-altadena-757', 'cat-natural-slab-altadena-758'],
     pairs: [`${KIT}/kitchen-wood-floors`, `${KIT}/kitchen-islands`, `${CAB}/two-tone-cabinets`],
   },
   {
@@ -267,8 +267,121 @@ export const CATALOG: CatPage[] = [
       { q: 'Can dark cabinets go on just the island?', a: 'Yes; that is a two-tone kitchen. See our two-tone cabinets page.' },
       { q: 'How do I order this look?', a: 'Use Get your estimate and mention code WC-SLB-DRK with your room size and photos.' },
     ],
-    photos: [k('santa-monica-01'), c('santa-monica-01'), c('beverly-hills-18'), c('beverly-hills-20')],
+    photos: [k('santa-monica-01'), c('santa-monica-01'), c('beverly-hills-18'), c('beverly-hills-20'), 'cat-dark-slab-los-angeles-306', 'cat-dark-slab-los-angeles-307', 'cat-dark-slab-santa-monica-199'],
     pairs: [`${KIT}/kitchen-islands`, `${CAB}/built-ins`],
+  },
+
+  {
+    path: `${CAB}/shaker-cabinets/blue-gray-shaker-cabinets`, hub: 'cabinetry', kind: 'look', style: `${CAB}/shaker-cabinets`,
+    name: 'Blue-Gray Shaker Cabinets', short: 'Blue-Gray Shaker', code: 'WC-SHK-BLG',
+    title: 'Blue-Gray Shaker Kitchen Cabinets, Los Angeles — Waltco',
+    description: 'Blue-gray painted Shaker kitchen cabinets in Los Angeles. Code WC-SHK-BLG: a full kitchen and island in a soft blue-gray, photos from our 2026 job.',
+    tagline: 'A soft blue-gray on every cabinet, from the tall wall to the island.',
+    intro: [
+      'Blue-gray Shaker cabinets are five-piece doors painted a muted blue with a gray undertone. In the Los Angeles kitchen on this page the same color runs across a full wall of tall cabinets, the base runs, glass-front uppers and the island.',
+      'The kitchen sits under exposed ceiling beams over a dark wood floor, with white counters and brass hardware, so the color reads calm rather than bold.',
+    ],
+    tones: 'A muted, dusty blue with a gray undertone and a satin finish. In daylight it leans blue; under warm evening light it reads closer to gray-green. Brass and gold hardware warm it up; white counters keep it light.',
+    suits: 'Kitchens with wood floors and beams, transitional and farmhouse houses, and owners who want color without a dark kitchen.',
+    specs: [['Look code', 'WC-SHK-BLG'], ['Door', 'Shaker, five-piece, recessed flat panel'], ['Finish', 'Painted blue-gray, satin'], ['Uppers', 'Solid and glass-front'], ['Hardware', 'Brass pulls and knobs in our photos'], ['Counters in our photos', 'White stone'], ['Price per linear foot', PRICE_TIERS]],
+    sections: [
+      { h: 'One color on every cabinet', p: ['Painting the whole kitchen one color, island included, makes a strong color feel quiet. The tall cabinet wall in this kitchen hides the refrigerator, pantry and a built-in microwave behind the same doors.'] },
+      { h: 'What it sits with', p: ['A dark wood floor, white counters and white walls. The beams and the floor carry the warmth; the blue-gray keeps the room from turning brown.'] },
+      { h: 'Choosing the exact blue', p: ['Blue paint shifts more with light than white or gray. We paint sample doors and look at them in your kitchen in the morning and in the evening before the cabinets are finished.'] },
+    ],
+    faq: [
+      { q: 'Is blue-gray a good long-term cabinet color?', a: 'Muted, grayed colors tend to age better than bright ones, and changing the hardware later can refresh the look.' },
+      { q: 'What floor goes with blue-gray cabinets?', a: 'Warm wood floors, light or dark. We install the floor under the same contract.' },
+      { q: 'Can just the island be blue-gray?', a: 'Yes. See our two-tone and navy pages for kitchens that use color only on the island.' },
+      { q: 'Do painted blue cabinets show wear?', a: 'Edges near the sink and trash see the most wear; a sprayed finish holds up well and can be touched up.' },
+      { q: 'How do I order this look?', a: 'Use Get your estimate and mention code WC-SHK-BLG with your room size and photos.' },
+    ],
+    photos: ['cat-blue-gray-shaker-los-angeles-784', 'cat-blue-gray-shaker-los-angeles-780', 'cat-blue-gray-shaker-los-angeles-786', 'cat-blue-gray-shaker-los-angeles-792', 'cat-blue-gray-shaker-los-angeles-793'],
+    pairs: [`${KIT}/kitchen-wood-floors`, `${CAB}/two-tone-cabinets/navy-blue-cabinets`, `${CAB}/glass-front-cabinets`],
+  },
+  {
+    path: `${CAB}/shaker-cabinets/gray-shaker-cabinets`, hub: 'cabinetry', kind: 'look', style: `${CAB}/shaker-cabinets`,
+    name: 'Gray Shaker Cabinets', short: 'Gray Shaker', code: 'WC-SHK-GRY',
+    title: 'Gray Shaker Cabinets, Los Angeles — Waltco Development',
+    description: 'Gray painted Shaker cabinets in Los Angeles: vanities, desks and built-ins. Code WC-SHK-GRY, photos from our 2021 and 2022 jobs.',
+    tagline: 'A mid gray on five-piece doors, for vanities, desks and built-ins.',
+    intro: [
+      'Gray Shaker cabinets are five-piece painted doors in a soft mid gray. In the Los Angeles house on this page we used the same gray for a double vanity, a bedroom desk, a base cabinet with shelves above, and the primary bathroom vanity.',
+      'Using one door and one color through a house ties the rooms together. A year later we built a gray desk unit with drawers and open shelves in another Los Angeles home.',
+    ],
+    tones: 'A neutral mid gray with a slight cool cast and a satin sheen. It sits between white and charcoal: dark enough to hide scuffs, light enough to keep a small room open. White counters and oak floors make it read softer.',
+    suits: 'Bathrooms, offices and bedrooms, and houses where several rooms share one cabinet style.',
+    specs: [['Look code', 'WC-SHK-GRY'], ['Door', 'Shaker, five-piece, recessed flat panel'], ['Finish', 'Painted gray, satin'], ['Used for', 'Vanities, desks, built-ins'], ['Hardware', 'Bar pulls'], ['Counters in our photos', 'White stone'], ['Price per linear foot', PRICE_TIERS]],
+    sections: [
+      { h: 'One cabinet through the house', p: ['The vanity, desk and built-in in our photos share the same door and paint. That keeps the house consistent and lets us build the pieces in one run.'] },
+      { h: 'Desks and built-ins', p: ['A built-in desk needs knee room, a drawer bank and a top at the right height. We plan outlets and cable holes before the unit is built.'] },
+      { h: 'Gray and white together', p: ['White counters and white walls keep gray cabinets crisp. Against a warm oak floor the gray looks lighter than it does on a sample chip.'] },
+    ],
+    faq: [
+      { q: 'Is gray still a good cabinet color?', a: 'A soft mid gray stays neutral with most counters and floors, which is why it lasts better than strong colors.' },
+      { q: 'Can a gray vanity have a white top?', a: 'Yes; every gray vanity in our photos has a white stone top.' },
+      { q: 'Do you build desks as well as cabinets?', a: 'Yes, built to the wall with drawers and shelving, like the desks on this page.' },
+      { q: 'Warm gray or cool gray?', a: 'We paint two or three sample doors and compare them in your room before deciding.' },
+      { q: 'How do I order this look?', a: 'Use Get your estimate and mention code WC-SHK-GRY with your room size and photos.' },
+    ],
+    photos: ['cat-gray-shaker-los-angeles-250', 'cat-gray-shaker-los-angeles-246', 'cat-gray-shaker-los-angeles-248', 'cat-gray-shaker-los-angeles-249', 'cat-gray-shaker-los-angeles-376', 'cat-gray-shaker-los-angeles-377'],
+    pairs: [`${CAB}/bathroom-vanities`, `${CAB}/built-ins`],
+  },
+  {
+    path: `${CAB}/two-tone-cabinets/navy-blue-cabinets`, hub: 'cabinetry', kind: 'look', style: `${CAB}/two-tone-cabinets`,
+    name: 'Navy Blue Cabinets', short: 'Navy Blue', code: 'WC-TWT-NVY',
+    title: 'Navy Blue Kitchen Cabinets and Islands, LA — Waltco',
+    description: 'Navy blue kitchen islands, bars and base cabinets in Los Angeles, Manhattan Beach and Santa Monica. Code WC-TWT-NVY, photos from our jobs.',
+    tagline: 'Deep navy on the island, the bar or the base run, against light counters.',
+    intro: [
+      'Navy blue cabinets are usually the accent in a two-tone kitchen: the island, a bar, or the base cabinets under lighter uppers. In Manhattan Beach the navy is a curved island over a herringbone oak floor; in Los Angeles it is a bar between two lit wine walls.',
+      'In Santa Monica, navy base cabinets sit under glass-front uppers and a light stone counter.',
+    ],
+    tones: 'A deep blue with a hint of black, close to ink in low light. Next to white counters and light oak floors it reads crisp and nautical; with brass or stainless hardware it turns more formal.',
+    suits: 'Coastal homes, kitchens with light floors and white or light-gray perimeter cabinets, bars and butler’s pantries.',
+    specs: [['Look code', 'WC-TWT-NVY'], ['Door', 'Shaker or slab'], ['Finish', 'Painted navy, satin'], ['Used for', 'Islands, bars, base cabinets'], ['Pairs with', 'White or light-gray perimeter cabinets'], ['Counters in our photos', 'Light stone'], ['Price per linear foot', PRICE_TIERS]],
+    sections: [
+      { h: 'Navy as the accent', p: ['A navy island in a light kitchen becomes the piece of furniture in the room. Keeping the perimeter white or light gray stops the room from closing in.'] },
+      { h: 'Curves and shapes', p: ['The Manhattan Beach island is curved, with a stone top cut to follow it. Curved cabinets are built from bent or segmented panels and need a template before the stone is cut.'] },
+      { h: 'Bars and wine', p: ['Navy works well in a bar: the dark color frames lit wine storage and glassware. Wine fridges are built in with ventilation planned from the appliance specs.'] },
+    ],
+    faq: [
+      { q: 'Does navy work in a small kitchen?', a: 'On the island or base cabinets, with light uppers and counters, yes. A full navy kitchen needs good light.' },
+      { q: 'What floor goes with navy cabinets?', a: 'Light oak, as in our Manhattan Beach job, gives the strongest contrast.' },
+      { q: 'Can you build a curved island?', a: 'Yes. The stone is templated from the finished island before it is cut.' },
+      { q: 'Brass or stainless hardware with navy?', a: 'Both work; brass reads warmer, stainless more modern. We show samples first.' },
+      { q: 'How do I order this look?', a: 'Use Get your estimate and mention code WC-TWT-NVY with your room size and photos.' },
+    ],
+    photos: ['cat-navy-manhattan-beach-773', 'cat-navy-manhattan-beach-772', 'cat-navy-manhattan-beach-774', 'cat-navy-los-angeles-262', 'cat-navy-santa-monica-581'],
+    pairs: [`${KIT}/kitchen-islands`, `${CAB}/wet-bars`, `${KIT}/kitchen-wood-floors`],
+  },
+  {
+    path: `${CAB}/slab-cabinets/warm-wood-slab-cabinets`, hub: 'cabinetry', kind: 'look', style: `${CAB}/slab-cabinets`,
+    name: 'Warm Wood Slab Cabinets', short: 'Warm Wood Slab', code: 'WC-SLB-WRM',
+    title: 'Warm Wood Slab Kitchen Cabinets, Los Angeles — Waltco',
+    description: 'Warm brown wood-grain slab kitchen cabinets in Los Angeles. Code WC-SLB-WRM: flat doors with the grain running across the run, photos from our 2023 job.',
+    tagline: 'Flat doors in a warm medium-brown grain, matched across the run.',
+    intro: [
+      'Warm wood slab cabinets are flat doors in a medium-brown wood grain, darker than our natural wood look and lighter than dark espresso. The Los Angeles kitchen on this page went in during 2023: base and upper runs, tall cabinets and an island, with stone counters and a stone slab backsplash.',
+      'The photos show the cabinets being set before the counters and backsplash, so you can see how the grain lines up from door to door.',
+    ],
+    tones: 'A warm medium brown with honey and amber in the grain and a soft low-sheen finish. Against light stone it reads rich and mid-century; with white walls it keeps the kitchen warm without going dark.',
+    suits: 'Mid-century and modern houses, open kitchens next to living rooms, and kitchens with light stone counters.',
+    specs: [['Look code', 'WC-SLB-WRM'], ['Door', 'Slab (flat panel)'], ['Finish', 'Warm brown wood grain, low sheen'], ['Grain', 'Matched across neighbouring doors'], ['Hardware', 'Edge pulls or bar pulls'], ['Counters in our photos', 'Light stone with a slab backsplash'], ['Price per linear foot', PRICE_TIERS]],
+    sections: [
+      { h: 'Grain that runs across the kitchen', p: ['On a slab kitchen the grain is the pattern. We lay the doors out in order so the grain continues from one door to the next where the material allows.'] },
+      { h: 'Stone with warm wood', p: ['A light stone with gray or gold veining, carried up the wall as a slab backsplash, sets off the warm wood. Stone is templated after the cabinets are set, as the in-progress photos show.'] },
+      { h: 'Built-ins in the same tone', p: ['The same warm tone works for built-ins and shelving in nearby rooms, like the lit walnut-tone unit at the end of the photos.'] },
+    ],
+    faq: [
+      { q: 'Is warm wood coming back?', a: 'Many of our recent kitchens use wood slab doors instead of white; warm browns pair well with light stone.' },
+      { q: 'Real wood or a wood-grain finish?', a: 'Both exist at different prices; the estimate states the material for your kitchen.' },
+      { q: 'Does warm wood make a kitchen dark?', a: 'Not with light counters and walls, as in our photos.' },
+      { q: 'Can the island be a different color?', a: 'Yes; a white or stone island in front of warm wood runs is a common two-tone layout.' },
+      { q: 'How do I order this look?', a: 'Use Get your estimate and mention code WC-SLB-WRM with your room size and photos.' },
+    ],
+    photos: ['cat-warm-wood-slab-los-angeles-574', 'cat-warm-wood-slab-los-angeles-575', 'cat-warm-wood-slab-los-angeles-576', 'cat-warm-wood-slab-los-angeles-577', 'cat-warm-wood-slab-los-angeles-570', 'cat-warm-wood-slab-los-angeles-572', 'cat-warm-wood-slab-los-angeles-749'],
+    pairs: [`${CAB}/slab-cabinets/natural-wood-slab-cabinets`, `${KIT}/marble-countertops`, `${CAB}/built-ins`],
   },
 
   // ── Cabinetry projects ─────────────────────────────────────────────────────────────────────────────────
@@ -292,7 +405,7 @@ export const CATALOG: CatPage[] = [
       { q: 'Do you build islands in walk-in closets?', a: 'Yes, when the room is wide enough to walk around them.' },
       { q: 'Can closet units match the kitchen cabinets?', a: 'Yes, we can use the same door and finish.' },
     ],
-    photos: [c('pacific-palisades-02'), c('pacific-palisades-01'), c('pacific-palisades-03'), c('pacific-palisades-06'), c('los-angeles-01'), c('los-angeles-02'), c('beverly-hills-15')],
+    photos: [c('pacific-palisades-02'), c('pacific-palisades-01'), c('pacific-palisades-03'), c('pacific-palisades-06'), c('los-angeles-01'), c('los-angeles-02'), c('beverly-hills-15'), 'cat-closet-los-angeles-287', 'cat-closet-los-angeles-297', 'cat-closet-los-angeles-157', 'cat-closet-los-angeles-158', 'cat-closet-los-angeles-590', 'cat-closet-los-angeles-592', 'cat-closet-los-angeles-192', 'cat-closet-los-angeles-193'],
   },
   {
     path: `${CAB}/bathroom-vanities`, hub: 'cabinetry', kind: 'project', name: 'Bathroom Vanities', short: 'Bathroom vanities',
@@ -314,7 +427,7 @@ export const CATALOG: CatPage[] = [
       { q: 'Do you install the top and faucets?', a: 'We install the vanity and top; the faucets and plumbing connections are done by licensed trades on the same schedule.' },
       { q: 'How is a vanity priced?', a: 'By its width and construction level; it appears as its own line on the estimate.' },
     ],
-    photos: [c('pacific-palisades-04'), c('los-angeles-03'), b('beverly-hills-03'), b('beverly-hills-05'), b('beverly-hills-12')],
+    photos: [c('pacific-palisades-04'), c('los-angeles-03'), b('beverly-hills-03'), b('beverly-hills-05'), b('beverly-hills-12'), 'cat-vanity-los-angeles-309', 'cat-vanity-los-angeles-310', 'cat-vanity-los-angeles-222', 'cat-vanity-los-angeles-608', 'cat-vanity-los-angeles-750', 'cat-vanity-los-angeles-097'],
     pairs: ['/services/bathroom-remodeling'],
   },
   {
@@ -337,7 +450,7 @@ export const CATALOG: CatPage[] = [
       { q: 'Do you build media walls?', a: 'Yes, with the TV, wiring and ventilation for equipment planned on the drawing.' },
       { q: 'How are built-ins priced?', a: 'After a site visit, from the drawing, by the units and finish.' },
     ],
-    photos: [c('pacific-palisades-05'), c('beverly-hills-17'), c('beverly-hills-21'), c('beverly-hills-09'), c('los-angeles-05')],
+    photos: [c('pacific-palisades-05'), c('beverly-hills-17'), c('beverly-hills-21'), c('beverly-hills-09'), c('los-angeles-05'), 'cat-built-in-redondo-beach-395', 'cat-built-in-redondo-beach-389', 'cat-built-in-beverly-hills-672', 'cat-built-in-beverly-hills-684'],
   },
   {
     path: `${CAB}/pantry-cabinets`, hub: 'cabinetry', kind: 'project', name: 'Pantry Cabinets', short: 'Pantry cabinets',
@@ -359,7 +472,7 @@ export const CATALOG: CatPage[] = [
       { q: 'Do you install the appliances?', a: 'We build and fit the cabinets around them; appliance connections are done by licensed trades.' },
       { q: 'How is a pantry priced?', a: 'As part of the cabinet linear footage, at the construction level you choose.' },
     ],
-    photos: [k('beverly-hills-22'), c('beverly-hills-14'), c('beverly-hills-11'), k('beverly-hills-30')],
+    photos: [k('beverly-hills-22'), c('beverly-hills-14'), c('beverly-hills-11'), k('beverly-hills-30'), 'cat-pantry-los-angeles-240', 'cat-pantry-los-angeles-241', 'cat-pantry-los-angeles-506', 'cat-pantry-los-angeles-507'],
   },
   {
     path: `${CAB}/drawer-pull-outs`, hub: 'cabinetry', kind: 'project', name: 'Drawer Pull-Outs and Organizers', short: 'Pull-outs',
@@ -381,7 +494,76 @@ export const CATALOG: CatPage[] = [
       { q: 'How are pull-outs priced?', a: 'Per drawer, on its own line of the estimate.' },
       { q: 'Do pull-outs work in bathroom vanities?', a: 'Yes, cut around the plumbing.' },
     ],
-    photos: [c('beverly-hills-12'), c('santa-monica-02'), c('beverly-hills-07'), c('beverly-hills-10')],
+    photos: [c('beverly-hills-12'), c('santa-monica-02'), c('beverly-hills-07'), c('beverly-hills-10'), 'cat-pull-out-beverly-hills-621', 'cat-pull-out-beverly-hills-622', 'cat-pull-out-beverly-hills-355', 'cat-pull-out-los-angeles-009'],
+  },
+
+  {
+    path: `${CAB}/wet-bars`, hub: 'cabinetry', kind: 'project', name: 'Wet Bars and Bar Cabinets', short: 'Wet bars',
+    title: 'Wet Bars and Bar Cabinets in Los Angeles — Waltco',
+    description: 'Custom wet bars and bar cabinets in Los Angeles: lit shelves, stone backsplashes, wine fridges and wine racks. Photos from our jobs.',
+    tagline: 'Bars built into a niche or a wall: cabinets, a sink, wine storage and lit shelves.',
+    intro: [
+      'A wet bar is a small kitchen of its own: base cabinets, a sink, a stone top and somewhere to show bottles and glassware. The bars on this page include a U-shaped bar with lit floating shelves on a stone wall, a white built-in bar with a wine rack in Los Angeles, and a navy bar between two lit wine walls.',
+      'Most bars fit into a niche or the end of a room, so they are measured and drawn as carefully as a kitchen.',
+    ],
+    sections: [
+      { h: 'Lit shelves and stone', p: ['Floating shelves with LED strips in a recessed channel light the backsplash from above and below. A stone slab carried up the wall behind them turns the bar into the focal point of the room.'] },
+      { h: 'Wine and refrigeration', p: ['Under-counter wine fridges, beverage fridges and ice makers need exact openings and ventilation. We build the cabinets from the appliance specifications.'] },
+      { h: 'Plumbing and power', p: ['A bar sink needs a supply and drain; lighting needs a circuit and a driver placed where it can be reached. Both are planned before the wall is closed.'] },
+    ],
+    faq: [
+      { q: 'Do I need a permit for a wet bar?', a: 'If it adds plumbing or a new circuit, usually yes. We confirm with your building department.' },
+      { q: 'Can a bar go in a closet or niche?', a: 'Yes; several bars in our photos are built into a niche.' },
+      { q: 'What cabinets go in a bar?', a: 'The same doors as a kitchen: painted, wood or slab, matched to the room.' },
+      { q: 'How is a bar priced?', a: 'By the cabinet length at your construction level, plus the top, lighting and plumbing lines.' },
+    ],
+    photos: ['cat-wet-bar-job-798', 'cat-wet-bar-job-797', 'cat-wet-bar-job-800', 'cat-wet-bar-los-angeles-363', 'cat-wet-bar-los-angeles-312'],
+    pairs: [`${CAB}/two-tone-cabinets/navy-blue-cabinets`, `${CAB}/built-ins`, `${CAB}/open-shelving`],
+  },
+  {
+    path: `${CAB}/laundry-room-cabinets`, hub: 'cabinetry', kind: 'project', name: 'Laundry Room Cabinets', short: 'Laundry rooms',
+    title: 'Laundry Room Cabinets in Los Angeles — Waltco Development',
+    description: 'Laundry room cabinets built in Los Angeles: white Shaker cabinets, a farmhouse sink and marble counters around the washer and dryer.',
+    tagline: 'Cabinets, a sink and a folding counter around the washer and dryer.',
+    intro: [
+      'A laundry room needs a counter for folding, a sink for soaking and closed storage for detergents. In the Los Angeles house on this page we built white Shaker cabinets with a farmhouse sink and marble counters next to a side-by-side washer and dryer.',
+      'The same door and finish as the kitchen keeps the house consistent.',
+    ],
+    sections: [
+      { h: 'Planning around the machines', p: ['Front-loaders need room for the doors to open and clearance behind for hoses and venting. We work from the machine dimensions before the cabinets are drawn.'] },
+      { h: 'Sinks and counters', p: ['A deep farmhouse sink handles soaking and cleaning. A counter over front-loaders turns the top into a folding surface.'] },
+      { h: 'Storage', p: ['Uppers for detergents, a tall cabinet for the ironing board and brooms, and drawers for small items.'] },
+    ],
+    faq: [
+      { q: 'Can a counter go over the washer and dryer?', a: 'Yes, over front-loading machines, with room left to pull them out for service.' },
+      { q: 'Do you move laundry hookups?', a: 'Yes, through licensed plumbing and electrical trades, with a permit where needed.' },
+      { q: 'Which counter holds up in a laundry room?', a: 'Stone and quartz both work; the room in our photos uses marble.' },
+      { q: 'How is a laundry room priced?', a: 'By the cabinet length at your construction level, plus the top and sink.' },
+    ],
+    photos: ['cat-laundry-los-angeles-276', 'cat-laundry-los-angeles-261', 'cat-laundry-los-angeles-269'],
+    pairs: [`${CAB}/shaker-cabinets/white-shaker-cabinets`, `${CAB}/pantry-cabinets`],
+  },
+  {
+    path: `${CAB}/garage-cabinets`, hub: 'cabinetry', kind: 'project', name: 'Garage Cabinets', short: 'Garage cabinets',
+    title: 'Garage Cabinets and Storage in Los Angeles — Waltco',
+    description: 'Garage cabinets built in Los Angeles: tall gray storage units and upper cabinets beside a garage refrigerator. Photos from our 2021 job.',
+    tagline: 'Tall storage and upper cabinets that clear the garage floor.',
+    intro: [
+      'Garage cabinets get things off the floor and out of sight. In the Los Angeles garage on this page we built a wall of gray tall units and upper cabinets beside a full-size refrigerator, with open bays for bulk supplies.',
+      'Garage storage is built for weight and wear: heavier shelves, sturdy hardware and finishes that wipe clean.',
+    ],
+    sections: [
+      { h: 'Uppers above the car', p: ['Upper cabinets keep the floor clear for parking. We set them high enough to clear car doors and the hood.'] },
+      { h: 'Tall units', p: ['Full-height cabinets hold tools, sports gear and cleaning supplies. Adjustable shelves let you change the layout later.'] },
+      { h: 'Refrigerators and power', p: ['A garage refrigerator or freezer needs a dedicated outlet and clearance for air. We plan it with the cabinets.'] },
+    ],
+    faq: [
+      { q: 'What finish works in a garage?', a: 'Painted or laminate finishes that wipe clean; the cabinets in our photos are painted gray.' },
+      { q: 'Can garage cabinets sit on a sloped floor?', a: 'Yes, on a leveled base or legs, so the doors stay aligned.' },
+      { q: 'Can you add a work surface?', a: 'Yes, a counter or workbench along one wall.' },
+      { q: 'How are garage cabinets priced?', a: 'By the units and length, after a site visit.' },
+    ],
+    photos: ['cat-garage-los-angeles-357', 'cat-garage-los-angeles-358', 'cat-garage-los-angeles-359'],
   },
 
   // ── Kitchen projects ───────────────────────────────────────────────────────────────────────────────────
@@ -428,7 +610,7 @@ export const CATALOG: CatPage[] = [
       { q: 'Can you move plumbing into the island?', a: 'Yes, through the floor; on a slab it means cutting the concrete. We price it after the site visit.' },
       { q: 'Which stone works for an island?', a: 'Marble and quartz are both in our photos; see our countertop pages for the trade-offs.' },
     ],
-    photos: [k('los-angeles-02'), k('los-angeles-09'), k('los-angeles-11'), k('los-angeles-07'), k('pacific-palisades-06'), k('beverly-hills-04')],
+    photos: [k('los-angeles-02'), k('los-angeles-09'), k('los-angeles-11'), k('los-angeles-07'), k('pacific-palisades-06'), k('beverly-hills-04'), 'cat-island-los-angeles-602', 'cat-island-los-angeles-173', 'cat-island-los-angeles-174', 'cat-island-los-angeles-167', 'cat-island-los-angeles-165'],
     pairs: [`${KIT}/marble-countertops`, `${CAB}/two-tone-cabinets`],
   },
   {
@@ -451,7 +633,7 @@ export const CATALOG: CatPage[] = [
       { q: 'Marble behind the range: is it practical?', a: 'It needs sealing and stains can show; many clients accept that for the look.' },
       { q: 'How is a range wall priced?', a: 'Its parts are lines on the kitchen estimate: hood install, backsplash, cabinets.' },
     ],
-    photos: [k('pacific-palisades-07'), k('pacific-palisades-08'), k('beverly-hills-29'), k('beverly-hills-12')],
+    photos: [k('pacific-palisades-07'), k('pacific-palisades-08'), k('beverly-hills-29'), k('beverly-hills-12'), 'cat-range-wall-los-angeles-289', 'cat-range-wall-los-angeles-291', 'cat-range-wall-los-angeles-243', 'cat-range-wall-los-angeles-242'],
   },
   {
     path: `${KIT}/kitchen-wood-floors`, hub: 'kitchen-remodeling', kind: 'project', name: 'Wood Floors in the Kitchen', short: 'Kitchen floors',
@@ -644,7 +826,7 @@ export const CATALOG: CatPage[] = [
       { q: 'Who installs the cabinets?', a: 'Our crew, under our licence, on the same schedule as the rest of the kitchen.' },
       { q: 'What if a door drifts out of line later?', a: 'Hinges are adjustable; we adjust them at the walk-through and after you have lived with the kitchen.' },
     ],
-    photos: [k('beverly-hills-08'), k('beverly-hills-09'), k('beverly-hills-21'), c('beverly-hills-13')],
+    photos: [k('beverly-hills-08'), k('beverly-hills-09'), k('beverly-hills-21'), c('beverly-hills-13'), 'cat-build-los-angeles-413', 'cat-build-los-angeles-414', 'cat-build-los-angeles-415', 'cat-build-los-angeles-716', 'cat-build-los-angeles-718'],
   },
   {
     path: `${CAB}/real-wood-vs-thermofoil`, hub: 'cabinetry', kind: 'support', name: 'Real Wood vs. Thermofoil and Laminate Cabinets', short: 'Real wood vs. thermofoil',
@@ -672,8 +854,6 @@ export const CATALOG: CatPage[] = [
 export const PLANNED: { path: string; name: string; needs: string }[] = [
   { path: `${CAB}/raised-panel-cabinets`, name: 'Raised Panel Cabinets', needs: 'photos of our raised-panel kitchens' },
   { path: `${CAB}/inset-cabinets`, name: 'Inset Cabinets', needs: 'photos of inset doors' },
-  { path: `${CAB}/shaker-cabinets/navy-shaker-cabinets`, name: 'Navy Shaker Cabinets', needs: '3+ navy cabinet photos' },
-  { path: `${CAB}/shaker-cabinets/blue-gray-shaker-cabinets`, name: 'Blue-Gray Shaker Cabinets', needs: '3+ blue-gray photos' },
   { path: `${CAB}/shaker-cabinets/sage-green-shaker-cabinets`, name: 'Sage Green Shaker Cabinets', needs: 'green cabinet photos' },
   { path: `${CAB}/shaker-cabinets/stained-oak-shaker-cabinets`, name: 'Stained Oak Shaker Cabinets', needs: 'photos' },
   { path: `${CAB}/slab-cabinets/rift-white-oak-slab-cabinets`, name: 'Rift White Oak Slab Cabinets', needs: 'rift oak photos' },
@@ -691,6 +871,7 @@ export const PLANNED: { path: string; name: string; needs: string }[] = [
   { path: `${KIT}/fire-rebuild-kitchens`, name: 'Fire Rebuild Kitchens', needs: 'rebuild kitchen photos' },
   { path: `${KIT}/adu-kitchens`, name: 'ADU Kitchens', needs: 'ADU kitchen photos' },
   { path: `${KIT}/backsplash`, name: 'Kitchen Backsplash', needs: 'photos' },
+  { path: `${CAB}/mudroom-cabinets`, name: 'Mudroom Cabinets', needs: 'photos' },
 ];
 
 export const MIN_PHOTOS = 3;

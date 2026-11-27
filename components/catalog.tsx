@@ -4,13 +4,15 @@ import { Calculator } from './Calculator';
 import { KitchenOrder } from './kitchen';
 import { Faq, JsonLd, LinkList, PageHero, PhotoGrid, Section, SectionHead } from './ui';
 import { SC_PHOTOS } from '@/content/sc-photos.ts';
+import { CAT_PHOTOS } from '@/content/cat-photos.ts';
 import { BLOG_POSTS } from '@/content/routes.ts';
 import { CAB, KIT, COLOR_CHART, LIVE, PLANNED, PROJECTS, STYLES, SUPPORT, catPage, looksOf, type CatPage } from '@/content/catalog.ts';
 import { breadcrumbLd, collectionLd, faqLd, productLd, serviceLd } from '@/lib/schema.ts';
 
 // E&K-model catalog page: hub → style → look, projects and buying pages, each with photos, specs, FAQ, schema
 // and links to its parent, siblings and pairings.
-const ph = (id: string) => SC_PHOTOS.find((p) => p.id === id)!;
+const ALL = [...SC_PHOTOS, ...CAT_PHOTOS];
+const ph = (id: string) => ALL.find((p) => p.id === id)!;
 const HUB = { cabinetry: { name: 'Custom Cabinetry', path: CAB }, 'kitchen-remodeling': { name: 'Kitchen Remodeling', path: KIT } } as const;
 const linkOf = (path: string) => {
   const p = catPage(path);
