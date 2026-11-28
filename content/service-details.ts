@@ -70,6 +70,12 @@ export const SERVICE_DETAILS: Record<string, ServiceDetail> = {
     covers: ['Materials and installation listed in the estimate', 'Profile matching where listed', 'Preparation for paint or stain'],
     excludes: ['Painting unless listed', 'Custom-milled profiles unless listed', 'Wall repairs found during removal'],
   },
+  'windows-and-doors': {
+    whoFor: 'Owners building, adding on or remodeling who need new windows or exterior doors installed, from a single entry door to a full wall of glass.',
+    howWeRun: ['Measure the openings and agree the units and finishes.', 'Check sizes against the order or shop drawings before it is placed.', 'Prepare and flash the openings.', 'Set, shim and fasten each unit; test the operation.', 'Seal, trim and final walkthrough.'],
+    covers: ['Installation of the units listed in the estimate', 'Sill pans, flashing and sealant', 'Casing and trim where listed', 'Removal and haul-away of old units on replacements'],
+    excludes: ['Windows and doors themselves unless listed', 'Stucco, siding or drywall patching unless listed', 'Structural changes and permits unless listed', 'Painting unless listed'],
+  },
   'development-management': {
     whoFor: 'Owners building on their own land who want someone on their side tracking the architect, engineers, building department and contractors.',
     howWeRun: ['Review your goals, budget and site.', 'Coordinate design and engineering through plan check.', 'Bid the work and review contractor proposals with you.', 'Track budget and schedule during construction.', 'Close out and sign-off.'],

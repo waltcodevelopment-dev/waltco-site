@@ -15,8 +15,10 @@ import { SVC_CITY, svcCity, svcCityPath } from '@/content/service-city.ts';
 import { KitchenCities, KitchenHubTop, KitchenOrder } from './kitchen';
 import { CAT_PHOTOS } from '@/content/cat-photos.ts';
 import { CatalogHubLinks } from './catalog';
+import { WD_GROUPS, WD_HUB, WD_PAGES, wdPage, wdPath } from '@/content/windows-doors.ts';
+import { wdPhotos } from '@/content/wd-photos.ts';
 import { SC_PHOTOS, scPhotos } from '@/content/sc-photos.ts';
-import { articleLd, breadcrumbLd, faqLd, serviceLd } from '@/lib/schema.ts';
+import { articleLd, breadcrumbLd, faqLd, serviceLd, videoLd } from '@/lib/schema.ts';
 
 const HOME = { name: 'Home', path: '/' };
 const label = (slug: string, list: { slug: string; label: string }[]) => list.find((x) => x.slug === slug)?.label ?? slug;
@@ -120,6 +122,76 @@ export function ServicesIndexPage() {
 }
 
 // ── Service page ─────────────────────────────────────────────────────────────────────────────────────────
+export function WdPageView({ slug }: { slug: string }) {
+  const w = wdPage(slug)!;
+  const path = wdPath(slug);
+  const trail = [HOME, { name: 'Services', path: '/services' }, { name: 'Windows & Doors', path: WD_HUB }, { name: w.label, path }];
+  const photos = wdPhotos(w.photos, 10, w.offset ?? 0);
+  const siblings = WD_PAGES.filter((x) => x.group === w.group && x.slug !== slug);
+  const others = WD_GROUPS.filter((g) => g !== w.group).map((g) => WD_PAGES.find((x) => x.group === g)!).filter(Boolean);
+  return (
+    <main>
+      <JsonLd data={[breadcrumbLd(trail), w.group === 'Guides' ? articleLd(w.h1, path, w.intro[0], '2026-11-28') : serviceLd(w.h1, path, w.intro[0]), faqLd(w.faq)]} />
+      <PageHero eyebrow={w.group === 'Guides' ? 'Windows & doors guide' : 'Windows & doors'} title={w.h1} tagline={w.tagline} photo={photos[0]} trail={trail} />
+      <Section>
+        <div className="grid gap-14 lg:grid-cols-[1.3fr_1fr]">
+          <div className="space-y-4 text-lg text-ink-2">
+            {w.intro.map((p) => <p key={p.slice(0, 24)}>{p}</p>)}
+            {w.sections.map((sec) => (
+              <div key={sec.h}>
+                <h2 className="h-display pt-6 text-2xl text-ink">{sec.h}</h2>
+                {sec.p.map((p) => <p key={p.slice(0, 24)} className="mt-4">{p}</p>)}
+                {sec.list && <ul className="mt-4 space-y-2">{sec.list.map((l) => <li key={l} className="flex gap-3 text-[17px]"><span aria-hidden className="mt-2.5 h-1.5 w-1.5 shrink-0 bg-gold" />{l}</li>)}</ul>}
+              </div>
+            ))}
+            <p className="pt-4 text-sm text-muted">{licenceLine()}</p>
+          </div>
+          <div className="h-fit bg-sand p-8">
+            <p className="label text-ink">{w.group === 'Guides' ? 'In short' : 'How we run the job'}</p>
+            <ol className="mt-5 space-y-4">
+              {w.steps.map((x, i) => <li key={x} className="flex gap-4 text-[15px] text-ink-2"><span className="text-xs tracking-label text-gold-ink">{String(i + 1).padStart(2, '0')}</span><span>{x}</span></li>)}
+            </ol>
+            <div className="mt-8"><Cta>Get your estimate</Cta></div>
+          </div>
+        </div>
+      </Section>
+      {photos.length > 1 && (
+        <Section sand>
+          <SectionHead eyebrow="Our work" title="Job photos" link={{ href: WD_HUB, label: 'All windows & doors' }} />
+          <div className="mt-10"><PhotoGrid photos={photos.slice(1)} /></div>
+        </Section>
+      )}
+      <Section>
+        <Faq items={w.faq} />
+      </Section>
+      <Section sand>
+        <SectionHead eyebrow="Windows & doors" title={`More: ${w.group.toLowerCase()}`} link={{ href: WD_HUB, label: 'Windows & doors overview' }} />
+        <div className="mt-10"><LinkList items={[...siblings, ...others].map((x) => ({ href: wdPath(x.slug), label: x.label }))} /></div>
+      </Section>
+    </main>
+  );
+}
+
+export function WdHubLinks() {
+  return (
+    <Section>
+      <SectionHead eyebrow="Windows & doors" title="Explore by type, installation and area" />
+      <div className="mt-10 grid gap-10 md:grid-cols-2 lg:grid-cols-3">
+        {WD_GROUPS.map((g) => (
+          <div key={g}>
+            <p className="label text-ink">{g}</p>
+            <ul className="mt-4 space-y-2">
+              {WD_PAGES.filter((x) => x.group === g).map((x) => (
+                <li key={x.slug}><a href={wdPath(x.slug)} className="text-[15px] text-ink-2 underline decoration-line underline-offset-4 hover:text-gold-ink">{x.label}</a></li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </div>
+    </Section>
+  );
+}
+
 export function ServicePageView({ slug }: { slug: string }) {
   const pg = servicePage(slug)!;
   const name = label(slug, SERVICES);
@@ -129,7 +201,7 @@ export function ServicePageView({ slug }: { slug: string }) {
   const d = SERVICE_DETAILS[slug];
   return (
     <main>
-      <JsonLd data={[breadcrumbLd(trail), serviceLd(name, path, pg.intro[0]), faqLd(pg.faq)]} />
+      <JsonLd data={[breadcrumbLd(trail), serviceLd(name, path, pg.intro[0]), faqLd(pg.faq), ...(pg.video ? [videoLd(`${name} installation — Waltco Development`, pg.video.caption, pg.video.src, pg.video.poster, '2026-11-28')] : [])]} />
       <PageHero eyebrow="Services" title={`${name} in Los Angeles`} tagline={pg.tagline} photo={photos[0]} trail={trail} />
       <Section>
         <div className="grid gap-14 lg:grid-cols-[1.3fr_1fr]">
@@ -150,6 +222,18 @@ export function ServicePageView({ slug }: { slug: string }) {
           </div>
         </div>
       </Section>
+      {pg.video && (
+        <Section sand>
+          <SectionHead eyebrow="On the job" title="Watch an install" />
+          <figure className="mt-10">
+            <video className="aspect-video w-full bg-ink object-cover" controls muted playsInline preload="none" poster={pg.video.poster} width={1280} height={720}>
+              <source src={pg.video.src} type="video/mp4" />
+            </video>
+            <figcaption className="mt-3 text-sm text-muted">{pg.video.caption}</figcaption>
+          </figure>
+        </Section>
+      )}
+      {slug === 'windows-and-doors' && <WdHubLinks />}
       {slug === 'kitchen-remodeling' && <KitchenHubTop />}
       {(slug === 'cabinetry' || slug === 'kitchen-remodeling') && <CatalogHubLinks hub={slug} />}
       <Section sand>

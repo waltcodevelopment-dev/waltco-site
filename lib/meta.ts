@@ -3,6 +3,7 @@
 import { facts } from '../content/facts.ts';
 import type { Route } from '../content/routes.ts';
 import { floorPage } from '../content/flooring.ts';
+import { wdPage } from '../content/windows-doors.ts';
 import { svcCity } from '../content/service-city.ts';
 import { post } from '../content/posts.ts';
 import { catPage } from '../content/catalog.ts';
@@ -20,6 +21,8 @@ export function titleFor(r: Route): string {
       return fit(`${NAME} — General Contractor & Hardwood Flooring, LA`, `${NAME} — General Contractor, Los Angeles`);
     case 'floor':
       return floorOf(r)!.title;
+    case 'wd':
+      return wdPage(r.path.split('/').pop()!)!.title;
     case 'svc-city':
       return scOf(r).title;
     case 'kitchen-chart':
@@ -43,6 +46,8 @@ export function descriptionFor(r: Route): string {
         return `${NAME} is a licensed general contractor in Los Angeles (${lic}). Every inquiry is answered, and estimates come from our own numbers.`;
       case 'floor':
         return floorOf(r)!.description;
+      case 'wd':
+        return wdPage(r.path.split('/').pop()!)!.description;
       case 'svc-city':
         return scOf(r).description;
       case 'kitchen-chart':

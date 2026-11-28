@@ -55,6 +55,17 @@ export function serviceLd(name: string, path: string, description: string, area?
   };
 }
 
+export function videoLd(name: string, description: string, src: string, poster: string, uploadDate: string): Ld {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'VideoObject',
+    name, description, uploadDate,
+    contentUrl: `${SITE_URL}${src}`,
+    thumbnailUrl: `${SITE_URL}${poster}`,
+    publisher: { '@id': ORG_ID },
+  };
+}
+
 export function articleLd(title: string, path: string, description: string, updated: string): Ld {
   return {
     '@context': 'https://schema.org',

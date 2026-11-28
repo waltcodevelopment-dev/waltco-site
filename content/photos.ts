@@ -32,6 +32,10 @@ export const PHOTOS: Photo[] = [
   { id: 'door-install', alt: "Installing a large glass door system", tags: ["construction"], lg: {"src": "/images/door-install-lg.jpg", "w": 1200, "h": 1600}, sm: {"src": "/images/door-install-sm.jpg", "w": 600, "h": 800}, lowRes: false, source: '7b2cc29e-6071-4743-9d9c-287b40795a8a.jpg' },
   { id: 'glass-panel-install', alt: "Setting a glass panel during installation", tags: ["construction"], lg: {"src": "/images/glass-panel-install-lg.jpg", "w": 1200, "h": 1600}, sm: {"src": "/images/glass-panel-install-sm.jpg", "w": 600, "h": 800}, lowRes: false, source: '5d0c0b72-2651-4ec8-beec-dfe54489702b.jpg' },
   { id: 'oak-floor-fireplace', alt: "Living room with light oak floor and a marble fireplace", tags: ["flooring", "remodel"], lg: {"src": "/images/oak-floor-fireplace-lg.jpg", "w": 1200, "h": 1600}, sm: {"src": "/images/oak-floor-fireplace-sm.jpg", "w": 600, "h": 800}, lowRes: false, source: '7ff0c17f-87d0-4f4c-b602-d98c7f738f9e.jpg' },
+  // Windows & doors (owner direction 28 Nov 2026): stills from the owner's install video IMG_2803.MOV.
+  { id: 'glass-door-tilt-up', alt: "Tilting a large glass door unit upright before setting it in the opening", tags: ["construction", "windows-doors"], lg: {"src": "/images/glass-door-tilt-up-lg.jpg", "w": 1600, "h": 900}, sm: {"src": "/images/glass-door-tilt-up-sm.jpg", "w": 800, "h": 450}, lowRes: false, source: 'IMG_2803.MOV @ 3.0 s' },
+  { id: 'glass-door-lift', alt: "Carrying a large glass door unit across the subfloor by hand", tags: ["construction", "windows-doors"], lg: {"src": "/images/glass-door-lift-lg.jpg", "w": 1600, "h": 900}, sm: {"src": "/images/glass-door-lift-sm.jpg", "w": 800, "h": 450}, lowRes: false, source: 'IMG_2803.MOV @ 1.5 s' },
+  { id: 'glass-door-set-opening', alt: "Setting a tall glass door unit into a wrapped wall opening", tags: ["construction", "windows-doors"], lg: {"src": "/images/glass-door-set-opening-lg.jpg", "w": 1600, "h": 900}, sm: {"src": "/images/glass-door-set-opening-sm.jpg", "w": 800, "h": 450}, lowRes: false, source: 'IMG_2803.MOV @ 13 s' },
 ];
 
 export const photo = (id: string): Photo => {

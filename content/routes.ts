@@ -5,8 +5,9 @@
 import { SVC_CITY, svcCityPath } from './service-city.ts';
 import { FLOOR_PAGES, floorPath } from './flooring.ts';
 import { LIVE as CATALOG_LIVE } from './catalog.ts';
+import { WD_PAGES, wdPath } from './windows-doors.ts';
 
-export type RouteKind = 'home' | 'page' | 'service' | 'floor' | 'svc-city' | 'kitchen-chart' | 'cat' | 'area' | 'blog-index' | 'blog' | 'contact';
+export type RouteKind = 'home' | 'page' | 'service' | 'floor' | 'svc-city' | 'kitchen-chart' | 'cat' | 'area' | 'blog-index' | 'blog' | 'contact' | 'wd';
 export type Route = { path: string; kind: RouteKind; label: string };
 
 export const SERVICES: { slug: string; label: string; isNew?: true }[] = [
@@ -20,6 +21,7 @@ export const SERVICES: { slug: string; label: string; isNew?: true }[] = [
   { slug: 'room-additions', label: 'Room Additions' },
   { slug: 'cabinetry', label: 'Custom Cabinetry' },
   { slug: 'finish-carpentry', label: 'Finish Carpentry' },
+  { slug: 'windows-and-doors', label: 'Windows & Doors', isNew: true },
   { slug: 'development-management', label: 'Development Management' },
 ];
 
@@ -72,11 +74,13 @@ export const ROUTES: Route[] = [
   { path: '/services/cabinetry/color-chart', kind: 'kitchen-chart', label: 'Cabinet Color Chart' },
   // Kitchen & cabinet catalog, E&K model (owner direction 27 Nov 2026): live pages only, gated on own photos.
   ...CATALOG_LIVE.map((c) => ({ path: c.path, kind: 'cat' as const, label: c.name })),
+  // Windows & doors section (owner direction 28 Nov 2026): 49 sub-pages under /services/windows-and-doors.
+  ...WD_PAGES.map((w) => ({ path: wdPath(w.slug), kind: 'wd' as const, label: w.label })),
   ...AREAS.map((a) => ({ path: `/service-areas/${a.slug}`, kind: 'area' as const, label: a.label })),
   ...BLOG_POSTS.map((b) => ({ path: `/blog/${b.slug}`, kind: 'blog' as const, label: b.label })),
 ];
 
 /** The 34 URLs of the current site (from its sitemap.xml, read 6 Oct 2026). Each must stay 200 or 301. */
 // URLs added after the 5 Oct 2026 capture: the hardwood pages (12 Oct) and the beam guides (19 Oct).
-const ADDED = ['/blog/box-beams-cost-los-angeles', '/blog/how-to-measure-box-beams', ...['cabinet-door-styles-explained', 'kitchen-cabinet-cost-per-linear-foot-los-angeles', 'prefab-vs-custom-kitchen-cabinets', 'how-to-measure-kitchen-for-new-cabinets', 'quartz-vs-marble-vs-granite-countertops', 'refinish-or-replace-kitchen-cabinets', 'how-to-choose-kitchen-cabinet-colors'].map((s) => `/blog/${s}`), '/services/cabinetry/color-chart', ...CATALOG_LIVE.map((c) => c.path), ...SVC_CITY.map(svcCityPath)];
+const ADDED = ['/blog/box-beams-cost-los-angeles', '/blog/how-to-measure-box-beams', ...['cabinet-door-styles-explained', 'kitchen-cabinet-cost-per-linear-foot-los-angeles', 'prefab-vs-custom-kitchen-cabinets', 'how-to-measure-kitchen-for-new-cabinets', 'quartz-vs-marble-vs-granite-countertops', 'refinish-or-replace-kitchen-cabinets', 'how-to-choose-kitchen-cabinet-colors'].map((s) => `/blog/${s}`), '/services/cabinetry/color-chart', '/services/windows-and-doors', ...WD_PAGES.map((w) => wdPath(w.slug)), ...CATALOG_LIVE.map((c) => c.path), ...SVC_CITY.map(svcCityPath)];
 export const OLD_URLS: string[] = ROUTES.map((r) => r.path).filter((p) => !p.startsWith('/services/hardwood-flooring') && !ADDED.includes(p));

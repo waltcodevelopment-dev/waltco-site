@@ -10,6 +10,7 @@ export type ServicePage = {
   scope: string[];
   photos: string[];      // ids in content/photos.ts; first is the hero
   faq: { q: string; a: string }[];
+  video?: { src: string; poster: string; caption: string };
 };
 
 const permitFaq = { q: 'Who pulls the permits?', a: 'We do. Permits, inspections and sign-offs are part of the job, handled under our licence with the city that has jurisdiction — LADBS in the City of Los Angeles, or the local building department in Santa Monica, Malibu, Manhattan Beach and Redondo Beach.' };
@@ -121,6 +122,25 @@ export const SERVICE_PAGES: ServicePage[] = [
     scope: ['Crown molding and coffered ceilings', 'Door and window casing', 'Baseboards and wainscoting', 'Built-in bookshelves', 'Stair treads, railings and balustrades', 'Closet build-outs', 'Fireplace mantels', 'Interior door installation', 'Wood paneling'],
     photos: ['stair-install', 'tile-stair-railing', 'stair-tread-finishing', 'light-oak-floor-stair'],
     faq: [{ q: 'Can you match existing trim?', a: 'Usually. We match profiles from stock or have them milled when an older home has a profile that is no longer made.' }, estimateFaq],
+  },
+  {
+    slug: 'windows-and-doors',
+    tagline: 'Windows, entry doors and large glass door systems — set plumb, level and weathertight.',
+    intro: [
+      'Waltco Development installs windows and exterior doors in new homes, additions and remodels across Los Angeles: single windows, window walls, entry doors, French doors, and large sliding, multi-slide and folding glass door systems. We also take stand-alone jobs: one new entry door, a patio door, or a set of replacement windows.',
+      'Large glass units are heavy and unforgiving. They are carried and set by hand, shimmed plumb, level and square, and fastened to the manufacturer\'s installation instructions, so the panels roll and lock the way they should for years.',
+      'Most leaks around windows and doors come from the opening, not the unit. Before a unit goes in we check the rough opening size and level, slope and flash the sill, and lap the flashing tape and building wrap so water runs out and away. On remodels we cut the old unit out, repair any damaged framing we find, and fit new casing and trim inside so the opening looks finished.',
+      'Glass door systems are often ordered months ahead. We measure the openings, check them against the manufacturer\'s shop drawings before the order is placed, and plan the delivery and the number of hands needed on install day.',
+    ],
+    scope: ['New construction windows', 'Replacement windows', 'Window walls and picture windows', 'Entry doors', 'French and patio doors', 'Sliding and multi-slide glass doors', 'Folding (bi-fold) glass doors', 'Sill pans, flashing and weatherproofing', 'Rough opening framing and header changes', 'Interior and exterior casing and trim'],
+    photos: ['glass-door-tilt-up', 'glass-door-lift', 'glass-door-set-opening', 'door-install', 'glass-panel-install'],
+    video: { src: '/videos/windows-doors-install.mp4', poster: '/images/glass-door-tilt-up-lg.jpg', caption: 'A large glass door unit carried, tilted up and set in its opening by hand.' },
+    faq: [
+      { q: 'Do you supply the windows and doors, or can I buy them?', a: 'Either. We can price the units with the installation, or install windows and doors you have ordered. If you order them yourself, send us the order before it is placed so we can check sizes against the openings.' },
+      { q: 'Can a wall be opened up for a larger glass door?', a: 'Usually, with a new header sized by an engineer and a permit. We frame the new opening, then install and flash the door system.' },
+      { q: 'Do window and door replacements need a permit?', a: 'Changing the size of an opening, or work in a fire zone or on a historic home, needs a permit. Same-size replacements may not. We check with the building department that has jurisdiction and pull the permit when one is needed.' },
+      estimateFaq,
+    ],
   },
   {
     slug: 'development-management',
