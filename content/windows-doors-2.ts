@@ -30,7 +30,7 @@ const DOORS2: WdPage[] = [
       { q: 'Can a pivot door go into an existing entry?', a: 'Often, if the floor can take the box and the head can take the top pivot. The opening may need to be widened.' },
       q('a pivot door'),
     ],
-    photos: ['mar-steel', 'mar-wood', 'mar-black'],
+    photos: ['steel-finished', 'mar-gates'], offset: 3,
   },
   {
     slug: 'steel-and-glass-doors', group: 'Doors', label: 'Steel & Glass Doors',
@@ -40,7 +40,7 @@ const DOORS2: WdPage[] = [
     tagline: 'Thin steel lines and big glass — on frames built to carry the weight.',
     intro: [
       'Steel doors with glass are some of the heaviest doors in a house. Their slim frames look light, but the steel and the insulated glass add up quickly, and the frame has to be anchored to solid framing that will not move.',
-      'The photos on this page are from the Marinette Rd houses in Pacific Palisades, where we installed steel-and-glass doors, measured and cut their hardware, and fitted the glass.',
+      'The photos on this page show finished steel-and-glass doors on the Marinette Rd houses in Pacific Palisades: French doors, garden and balcony doors, a glass entry and large black-frame openings.',
     ],
     sections: [
       { h: 'Framing for steel', p: ['We add solid blocking at every anchor point before drywall, so the frame fastens into wood or steel, not just studs at the edges. Openings are framed to the door maker\'s rough-opening sizes, checked for plumb and square, and corrected before the doors arrive.'] },
@@ -52,7 +52,7 @@ const DOORS2: WdPage[] = [
       { q: 'Do steel doors rust near the ocean?', a: 'Steel needs a proper factory finish and occasional rinsing near the coast. Small scratches should be touched up promptly.' },
       q('steel and glass doors'),
     ],
-    photos: ['mar-steel', 'mar-black'], offset: 4,
+    photos: ['steel-finished'],
   },
   {
     slug: 'stained-wood-doors', group: 'Doors', label: 'Stained Wood Doors',
@@ -119,7 +119,7 @@ const DOORS2: WdPage[] = [
       { q: 'Can glass be added to my solid front door?', a: 'Sometimes a lite kit can be cut in, but usually a new door gives a better result.' },
       q('a glass entry door'),
     ],
-    photos: ['mar-steel', 'mar-black', 'mar-wood'], offset: 14,
+    photos: ['steel-finished', 'sm-finished'], offset: 3,
   },
   {
     slug: 'tall-doors', group: 'Doors', label: 'Tall Doors',
@@ -1624,7 +1624,7 @@ const PROJECTS2: WdPage[] = [
     tagline: 'Heavy doors with slim lines — measured, mortised and hung.',
     intro: [
       'Several entries and interior openings on the Marinette Rd houses use steel-and-glass doors. Their slim frames look light, but they are among the heaviest doors in the houses.',
-      'The photos show the work most people never see: measuring each door, marking and cutting hinge and lock locations, and hanging the leaves.',
+      'The first photos show the finished doors; further down is the work most people never see: measuring each door, marking and cutting hinge and lock locations, and hanging the leaves.',
     ],
     sections: [
       { h: 'Measuring every door', p: ['Hinge and lock positions were measured from a fixed reference on each door and frame, so pairs line up and handles sit at the same height through the house.'] },
@@ -1639,7 +1639,7 @@ const PROJECTS2: WdPage[] = [
       { q: 'Are steel doors hard to adjust later?', a: 'Good hinges allow adjustment; heavy doors may need two people.' },
       q('steel doors'),
     ],
-    photos: ['mar-steel'],
+    photos: ['steel-finished', 'mar-steel'],
   },
   {
     slug: 'marinette-window-walls', group: 'Projects', label: 'Marinette: Glass Walls',
@@ -1902,7 +1902,7 @@ const GUIDES2: WdPage[] = [
       { q: 'Are wood doors less secure?', a: 'Not necessarily; security depends more on the frame and lock than the material.' },
       q('a door'),
     ],
-    photos: ['mar-steel', 'mar-gates', 'sm-finished'], offset: 7,
+    photos: ['steel-finished', 'mar-gates', 'sm-finished'], offset: 6,
   },
   {
     slug: 'window-frame-material-guide', group: 'Guides', label: 'Window Frames Compared',
