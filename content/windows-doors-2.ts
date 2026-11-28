@@ -1674,7 +1674,7 @@ const PROJECTS2: WdPage[] = [
     tagline: 'Warm wood at the street — on frames built to stay straight.',
     intro: [
       'From the street, the Marinette Rd houses show stained wood: wide driveway and side gates and wood doors that warm up the white walls and black windows.',
-      'The photos show the gates and doors being built, stained and hung.',
+      'The first photos show the finished gates: the main driveway gate and the side gates in the same stain, with the stained wood garage doors finished to match. Further down are the gates being built, stained and hung.',
     ],
     sections: [
       { h: 'Steel-framed gates', p: ['The wide gates are built on welded steel frames with wood boards fastened to them, so they stay square and do not sag across their width.'] },
@@ -1689,7 +1689,7 @@ const PROJECTS2: WdPage[] = [
       { q: 'Can gates be automated?', a: 'Yes, if planned before building.' },
       q('wood gates'),
     ],
-    photos: ['mar-wood'], offset: 5,
+    photos: ['mar-gates', 'mar-wood'],
   },
 ];
 const PROJECTS2B: WdPage[] = [
