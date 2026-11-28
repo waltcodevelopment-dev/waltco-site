@@ -7,10 +7,10 @@ import { bannedIn } from '../../content/claims.ts';
 import { canonicalFor, robotsRules, sitemapEntries, isIndexable } from '../../lib/seo.ts';
 import { descriptionFor, titleFor } from '../../lib/meta.ts';
 
-test('162 approved URLs: the 34 current ones byte for byte, /services/hardwood-flooring, its 9 sub-pages, 2 beam guides, 9 service x city pages, cabinet color chart, 49 catalog pages, 7 kitchen guides, windows & doors hub and its 49 sub-pages', () => {
+test('262 approved URLs: the 34 current ones byte for byte, /services/hardwood-flooring, its 9 sub-pages, 2 beam guides, 9 service x city pages, cabinet color chart, 49 catalog pages, 7 kitchen guides, windows & doors hub and its 149 sub-pages', () => {
   const paths = ROUTES.map((r) => r.path);
-  assert.equal(paths.length, 162);
-  assert.equal(new Set(paths).size, 162);
+  assert.equal(paths.length, 262);
+  assert.equal(new Set(paths).size, 262);
   for (const s of ['installation', 'wide-plank', 'herringbone-and-parquet', 'reclaimed-wood', 'stain-and-color-matching', 'sanding-and-refinishing', 'stairs', 'floor-removal-and-subfloor', 'beams-and-ceilings'])
     assert.ok(paths.includes(`/services/hardwood-flooring/${s}`), s);
   assert.equal(OLD_URLS.length, 34);
@@ -70,14 +70,14 @@ test('titles ≤ 60 chars, unique, no doubled suffix; descriptions 70–160 and 
   assert.equal(new Set(descs).size, descs.length, 'descriptions unique');
 });
 
-test('indexing flag: closed by default; production opens robots and the sitemap of exactly 162 URLs', () => {
+test('indexing flag: closed by default; production opens robots and the sitemap of exactly 262 URLs', () => {
   assert.equal(isIndexable({}), false);
   assert.equal(isIndexable({ SITE_INDEXING: 'on' }), true);
   assert.deepEqual(robotsRules(false), { rules: [{ userAgent: '*', disallow: '/' }] });
   assert.equal(robotsRules(true).sitemap, 'https://waltcodevelopment.com/sitemap.xml');
   assert.deepEqual(sitemapEntries(false), []);
   const urls = sitemapEntries(true).map((e) => e.url);
-  assert.equal(urls.length, 162);
+  assert.equal(urls.length, 262);
   assert.equal(urls[0], 'https://waltcodevelopment.com');
   assert.equal(canonicalFor('/about'), 'https://waltcodevelopment.com/about');
 });
@@ -130,12 +130,12 @@ test('catalog: unique titles and descriptions within limits, own photos on every
 
 // Windows & doors sub-pages (owner direction 28 Nov 2026): own job photos on every page, title/description limits,
 // enough words to stand on their own, no banned claim and no dollar price.
-test('windows & doors sub-pages: 49 pages, ≥ 300 words, ≥ 5 own photos, limits, no banned claim or price', async () => {
+test('windows & doors sub-pages: 149 pages, ≥ 300 words, ≥ 5 own photos, limits, no banned claim or price', async () => {
   const { WD_PAGES } = await import('../../content/windows-doors.ts');
   const { wdPhotos } = await import('../../content/wd-photos.ts');
-  assert.equal(WD_PAGES.length, 49);
-  assert.equal(new Set(WD_PAGES.map((w) => w.title)).size, 49, 'titles unique');
-  assert.equal(new Set(WD_PAGES.map((w) => w.description)).size, 49, 'descriptions unique');
+  assert.equal(WD_PAGES.length, 149);
+  assert.equal(new Set(WD_PAGES.map((w) => w.title)).size, 149, 'titles unique');
+  assert.equal(new Set(WD_PAGES.map((w) => w.description)).size, 149, 'descriptions unique');
   for (const w of WD_PAGES) {
     assert.ok(w.title.length <= 60, `${w.slug}: title ${w.title.length}`);
     assert.ok(w.description.length >= 70 && w.description.length <= 160, `${w.slug}: description ${w.description.length}`);

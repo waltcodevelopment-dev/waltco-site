@@ -4,7 +4,7 @@
 // door price list not supplied yet); no claims from content/claims.ts. Photos: content/wd-photos.ts (own jobs).
 
 export type WdSection = { h: string; p: string[]; list?: string[] };
-export type WdGroup = 'Doors' | 'Windows' | 'Installation' | 'Projects' | 'Guides' | 'Areas';
+export type WdGroup = 'Doors' | 'Windows' | 'Installation' | 'Casing & Trim' | 'Glass & Repair' | 'Projects' | 'Guides' | 'Areas';
 export type WdPage = {
   slug: string;
   group: WdGroup;
@@ -20,6 +20,8 @@ export type WdPage = {
   photos: string[];     // photo groups in content/wd-photos.ts, first group leads
   offset?: number;
 };
+
+import { WD_PAGES_2 } from './windows-doors-2.ts';
 
 export const WD_HUB = '/services/windows-and-doors';
 export const wdPath = (slug: string) => `${WD_HUB}/${slug}`;
@@ -1158,6 +1160,6 @@ const GUIDES: WdPage[] = [
   },
 ];
 
-export const WD_PAGES: WdPage[] = [...DOORS, ...WINDOWS, ...INSTALL, ...PROJECTS, ...GUIDES, ...AREAS_WD];
-export const WD_GROUPS: WdGroup[] = ['Doors', 'Windows', 'Installation', 'Projects', 'Guides', 'Areas'];
+export const WD_PAGES: WdPage[] = [...DOORS, ...WINDOWS, ...INSTALL, ...PROJECTS, ...GUIDES, ...AREAS_WD, ...WD_PAGES_2];
+export const WD_GROUPS: WdGroup[] = ['Doors', 'Windows', 'Installation', 'Casing & Trim', 'Glass & Repair', 'Projects', 'Guides', 'Areas'];
 export const wdPage = (slug: string) => WD_PAGES.find((p) => p.slug === slug);
