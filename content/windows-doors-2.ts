@@ -74,7 +74,7 @@ const DOORS2: WdPage[] = [
       { q: 'Can an old stained door be refreshed?', a: 'Usually. See our door refinishing page.' },
       q('a stained wood door'),
     ],
-    photos: ['mar-wood', 'sm-wood'],
+    photos: ['sm-finished', 'mar-gates'],
   },
   {
     slug: 'custom-wood-gates', group: 'Doors', label: 'Custom Wood Gates',
@@ -96,7 +96,7 @@ const DOORS2: WdPage[] = [
       { q: 'Can a gate be automated later?', a: 'Yes, if the frame and posts are built for it. Tell us at the start so the gate is designed for an opener.' },
       q('a wood gate'),
     ],
-    photos: ['mar-wood'], offset: 10,
+    photos: ['mar-gates', 'mar-wood'],
   },
   {
     slug: 'glass-panel-entry-doors', group: 'Doors', label: 'Glass-Panel Entry Doors',
@@ -351,7 +351,7 @@ const DOORS2: WdPage[] = [
       { q: 'How long does weatherstrip last?', a: 'Several years on a sheltered door; less on doors in full sun or near the coast.' },
       q('door weatherstripping'),
     ],
-    photos: ['mar-wood', 'entry', 'sm-wood'], offset: 6,
+    photos: ['sm-finished', 'entry', 'mar-gates'], offset: 6,
   },
   {
     slug: 'door-hinges-and-pivots', group: 'Doors', label: 'Hinges & Pivots',
@@ -446,7 +446,7 @@ const DOORS2: WdPage[] = [
       { q: 'Which costs more?', a: 'Stained doors usually cost more because they need better wood and more careful joinery and finishing.' },
       q('door finishing'),
     ],
-    photos: ['mar-wood', 'mar-intdoor', 'sm-wood'], offset: 30,
+    photos: ['sm-finished', 'mar-gates', 'mar-intdoor'], offset: 3,
   },
   {
     slug: 'mahogany-and-walnut-doors', group: 'Doors', label: 'Mahogany & Walnut Doors',
@@ -470,7 +470,7 @@ const DOORS2: WdPage[] = [
       { q: 'Is mahogany hard to source?', a: 'Several species are sold as mahogany. We tell you which one a door is made from and how it is expected to weather.' },
       q('a mahogany or walnut door'),
     ],
-    photos: ['mar-wood', 'sm-wood'], offset: 20,
+    photos: ['sm-finished', 'mar-gates'], offset: 5,
   },
 ];
 
@@ -1059,7 +1059,7 @@ const TRIM_B: WdPage[] = [
       { q: 'Can stain-grade trim match my floors?', a: 'Often closely, by using the same species and stain samples.' },
       q('stain-grade trim'),
     ],
-    photos: ['mar-wood', 'trim', 'mar-intdoor'], offset: 25,
+    photos: ['mar-gates', 'trim', 'mar-intdoor'], offset: 2,
   },
   {
     slug: 'paint-grade-casing', group: 'Casing & Trim', label: 'Paint-Grade Casing',
@@ -1312,7 +1312,7 @@ const GLASS: WdPage[] = [
       { q: 'Can decorative glass be matched?', a: 'Often closely; some patterned glass is no longer made, in which case we suggest the nearest match.' },
       q('door glass replacement'),
     ],
-    photos: ['sm-repair', 'sm-wood'],
+    photos: ['sm-repair', 'sm-finished'],
   },
   {
     slug: 'fogged-window-glass', group: 'Glass & Repair', label: 'Fogged Window Glass',
@@ -1385,7 +1385,7 @@ const GLASS: WdPage[] = [
       { q: 'Does it stop break-ins?', a: 'It slows them down considerably, which is why it suits entries.' },
       q('laminated glass'),
     ],
-    photos: ['mar-steel', 'sm-wood', 'mar-black'], offset: 10,
+    photos: ['mar-steel', 'sm-finished', 'mar-black'], offset: 10,
   },
   {
     slug: 'privacy-glass', group: 'Glass & Repair', label: 'Privacy Glass',
@@ -1434,7 +1434,7 @@ const GLASS: WdPage[] = [
       { q: 'How long does refinishing take?', a: 'Usually a few days, mostly drying time between coats.' },
       q('door refinishing'),
     ],
-    photos: ['sm-repair', 'sm-wood', 'mar-wood'], offset: 3,
+    photos: ['sm-finished', 'sm-repair'],
   },
   {
     slug: 'sliding-door-roller-repair', group: 'Glass & Repair', label: 'Sliding Door Repair',
@@ -1793,7 +1793,7 @@ const PROJECTS2B: WdPage[] = [
       { q: 'Do you work on doors you did not install?', a: 'Yes. Repair and refinishing are welcome jobs.' },
       q('stained doors'),
     ],
-    photos: ['sm-wood'],
+    photos: ['sm-finished', 'sm-wood'],
   },
   {
     slug: 'santa-monica-door-glass-repair', group: 'Projects', label: 'Santa Monica Door Glass Repair',
@@ -1819,7 +1819,7 @@ const PROJECTS2B: WdPage[] = [
       { q: 'How long did the repair take?', a: 'The openings were secured right away; most of the wait was for the safety glass to be made.' },
       q('door glass repair'),
     ],
-    photos: ['sm-repair', 'sm-wood'], offset: 2,
+    photos: ['sm-repair', 'sm-finished'], offset: 2,
   },
   {
     slug: 'santa-monica-black-windows', group: 'Projects', label: 'Santa Monica Black Windows',
@@ -1873,7 +1873,7 @@ const AREAS2: WdPage[] = [
       { q: 'Do you handle Santa Monica permits?', a: 'Yes, through the Santa Monica building department when needed.' },
       q('a Santa Monica home'),
     ],
-    photos: ['sm-wood', 'sm-res', 'sm-repair'],
+    photos: ['sm-finished', 'sm-res'],
   },
 ];
 
@@ -1902,7 +1902,7 @@ const GUIDES2: WdPage[] = [
       { q: 'Are wood doors less secure?', a: 'Not necessarily; security depends more on the frame and lock than the material.' },
       q('a door'),
     ],
-    photos: ['mar-steel', 'mar-wood', 'sm-wood'], offset: 7,
+    photos: ['mar-steel', 'mar-gates', 'sm-finished'], offset: 7,
   },
   {
     slug: 'window-frame-material-guide', group: 'Guides', label: 'Window Frames Compared',
@@ -2178,7 +2178,7 @@ const GUIDES2B: WdPage[] = [
       { q: 'Does stain need a topcoat?', a: 'Yes; stain colours the wood, the topcoat protects it.' },
       q('stained doors'),
     ],
-    photos: ['mar-wood', 'sm-wood'], offset: 35,
+    photos: ['mar-gates', 'sm-finished'],
   },
 ];
 const GUIDES2C: WdPage[] = [
@@ -2254,7 +2254,7 @@ const GUIDES2C: WdPage[] = [
       { q: 'Should the bottom edge be sealed?', a: 'Yes — unsealed bottoms soak up water and swell.' },
       q('door maintenance'),
     ],
-    photos: ['sm-wood', 'mar-wood'], offset: 12,
+    photos: ['sm-finished', 'mar-gates'], offset: 7,
   },
   {
     slug: 'planning-a-glass-wall', group: 'Guides', label: 'Planning a Glass Wall',
@@ -2409,7 +2409,7 @@ const GUIDES2D: WdPage[] = [
       { q: 'What colour front door suits a white house?', a: 'Stained wood, black or a strong colour all work; sample in daylight.' },
       q('a front door'),
     ],
-    photos: ['mar-wood', 'mar-steel', 'mar-exterior'], offset: 40,
+    photos: ['mar-gates', 'mar-steel', 'mar-exterior'], offset: 4,
   },
   {
     slug: 'hillside-home-windows-and-doors', group: 'Guides', label: 'Hillside Homes',
